@@ -30,117 +30,10 @@
 
     <!--MY LINK-->
     <link rel="stylesheet" href="assets/css/master.css">
-    <!-- <link rel="stylesheet" href="assets/css/progress.css"> -->
-    <style>
-        #canvas .circle {
-            display: inline-flex;
-            text-align: center;
-            margin: 1em;
-        }
-
-        .circles-decimals {
-            font-size: .4em;
-        }
-
-        .containbar {
-            position: relative;
-            width: auto;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .containbar .cardbar {
-            position: relative;
-            background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            border-radius: 4px;
-            text-align: center;
-            overflow: hidden;
-            height: 100%;
-            transition: 0.5s;
-        }
-
-        .containbar .cardbar:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-        }
-
-        .containbar .cardbar:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.03);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .cardbar:hover .percent .number h2 span {
-            color: #fff;
-        }
-
-        .cardbar:hover .text {
-            color: #fff;
-        }
-
-        /* .coulditbeaclue{
-		clue : "fxxk vghmdtfw : eka_smr_u9";
-	}*/
-    </style>
 
     <script src="assets/js/circles.js"></script>
 
 <body>
-    <!-- ***** Preloader Start ***** -->
-    <!-- <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div> -->
-    <!-- ***** Preloader End ***** -->
-
-    <!-- Popup Video Starts -->
-    <!-- <div class="modal fade popup" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content" style="float:right;">
-                <div class="modal-header ">
-                    <p class="close">&times;</p>
-                    <div class="emodal-header-border">
-                        <div class="">
-                            <center>
-                                <div class="title">
-                                    <h2 class="modal__title">We are Back!</h2>
-                                    <h4 style="color: #fff;">On Saturday, November 5, 2022</h4>
-                                </div>
-                                <div class="video1"><iframe class="digi-popup"
-                                        src="https://www.youtube.com/embed/GnA4j9RnEAU"
-                                        title="K.C. Garg Memorial, Inter School Tech Symposium Digilogous 8.0 is back !!"
-                                        frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                        allowfullscreen></iframe>
-                                    <a style="color: #fff;" href="">
-                                        <h4>Results</h4>
-                                    </a>
-                                </div>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Popup Video Ends -->
-
     <div id="demo-content">
         <div id="content">
             <!-- ***** Header Area Start ***** -->
@@ -173,7 +66,6 @@
                                     </li>
                                     <li class="scroll-to-section"><a href="#team">Our Team</a></li>
                                     <li class="scroll-to-section"><a href="#contact-us-too">Contact Us</a></li>
-                                    <!--<li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Get Your Quote</a></div></li> -->
                                 </ul>
                                 <a class="menu-trigger">
                                     <span>Menu</span>
@@ -193,51 +85,44 @@
                 const canvas = document.getElementById('Matrix');
                 const context = canvas.getContext('2d');
 
-                const katakana = '9.0  ';
-                const latin = '';
+                const katakana = '10.0  ';
                 const nums = 'DIGILOGOUS ';
 
                 const alphabet = katakana + nums;
 
                 const fontSize = 16;
-                const columns = canvas.width;
-
 
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
 
+                const rows = Math.floor(canvas.height / fontSize);
                 const rainDrops = [];
 
-                for (let x = 0; x < columns; x++) {
-                    rainDrops[x] = 1;
+                for (let y = 0; y < rows; y++) {
+                    rainDrops[y] = Math.floor(Math.random() * canvas.width / fontSize);
                 }
 
                 const draw = () => {
-                    context.fillStyle = 'rgba(0,0,0,0.05)'
+                    context.fillStyle = 'rgba(0, 0, 0, 0.05)';
                     context.fillRect(0, 0, canvas.width, canvas.height);
 
                     context.fillStyle = '#4DA699';
                     context.font = fontSize + 'px monospace';
 
-                    //    for(let i = 0; i < rainDrops.length; i++)
-                    for (let i = rainDrops.length; i > 0; i--) {
-                        // change the below line as
-                        //       const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
-                        //new line
-                        // const text = alphabet.charAt((rainDrops[i] - 1) % alphabet.length);
-                        const text = alphabet.charAt((rainDrops[i] - 1) % alphabet.length);
-                        context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+                    for (let i = 0; i < rainDrops.length; i++) {
+                        const text = alphabet.charAt((rainDrops[i]) % alphabet.length);
+                        context.fillText(text, rainDrops[i] * fontSize, i * fontSize);
 
-                        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-                            rainDrops[i] = 1;
+                        if (rainDrops[i] * fontSize > canvas.width && Math.random() > 0.975) {
+                            rainDrops[i] = 0;
                         }
+
                         rainDrops[i]++;
                     }
                 }
 
                 setInterval(draw, 100);
             </script>
-
 
 
 
@@ -474,9 +359,9 @@
                             <h5 style="text-align:justify; color: rgba(255, 255, 255, 0.747);">In this competition, you
                                 will work as an individual to help a company enhance their marketing strategy. The idea
                                 is to create digital marketing content for them in the form of presentation.</h5><br>
-<h5 style="text-align:justify; color: rgba(255, 255, 255, 0.747);">Competition Day :
-You'll give a 2-3 minute presentation on your work mentioning how the company will
-benefit from your design ideas/Marketing Strategies</h5><br>
+                            <h5 style="text-align:justify; color: rgba(255, 255, 255, 0.747);">Competition Day :
+                                You'll give a 2-3 minute presentation on your work mentioning how the company will
+                                benefit from your design ideas/Marketing Strategies</h5><br>
 
                             <ul>
                                 <li>
@@ -489,13 +374,13 @@ benefit from your design ideas/Marketing Strategies</h5><br>
                                 <li>
                                     <h5>&bull; Create marketing content for the company using any platform.</h5>
                                 </li>
- <li>
+                                <li>
                                     <h5>&bull; The presentation can be in the form of a video clip/PPT/audio/
-Hard copy Posters/Images/Graphics. </h5>
+                                        Hard copy Posters/Images/Graphics. </h5>
                                 </li>
-<li>
+                                <li>
                                     <h5>&bull; Presentation of the marketing content should be presented
-within 3 minutes.</h5>
+                                        within 3 minutes.</h5>
                                 </li>
                             </ul>
                             <br>
@@ -517,7 +402,7 @@ within 3 minutes.</h5>
                             </p>
                             <br>
                             <p>
-                            
+
                             </p>
                             <br>
                             <p>
@@ -559,10 +444,12 @@ within 3 minutes.</h5>
                                 competition that challenges the participants to write code without being able to see it.
                                 Participants are given a programming problem and have a set amount of time to write a
                                 code with their computer screen turned off.</h5><br>
- <h5 style="color: rgba(255, 255, 255, 0.747);">The purpose of this competition is to test a programmer's ability to write clean, efficient, and
-error-free code while relying solely on your knowledge of programming language and logic.
-Competition Day :
-The theme will be allocated at the venue and total time to code will be 1 Hour.</h5><br>
+                            <h5 style="color: rgba(255, 255, 255, 0.747);">The purpose of this competition is to test a
+                                programmer's ability to write clean, efficient, and
+                                error-free code while relying solely on your knowledge of programming language and
+                                logic.
+                                Competition Day :
+                                The theme will be allocated at the venue and total time to code will be 1 Hour.</h5><br>
 
                             <ul>
                                 <li>
@@ -600,8 +487,8 @@ The theme will be allocated at the venue and total time to code will be 1 Hour.<
                             </p>
                             <br>
                             <p>
-                            
-                            </ul>
+
+                                </ul>
                             </p>
                             <br>
                             <p>
@@ -780,7 +667,7 @@ The theme will be allocated at the venue and total time to code will be 1 Hour.<
                             <br>
                             <br>
                             <p>
-                            
+
                             </p>
                             <br>
                             <p>
@@ -868,7 +755,7 @@ The theme will be allocated at the venue and total time to code will be 1 Hour.<
                             </p>
                             <br>
                             <p>
-                           
+
                             </p>
 
                             <br>
@@ -956,7 +843,7 @@ The theme will be allocated at the venue and total time to code will be 1 Hour.<
                             </p>
                             <br>
                             <p>
-                           
+
                             </p>
 
                             <br>
@@ -1014,26 +901,32 @@ The theme will be allocated at the venue and total time to code will be 1 Hour.<
                             <br>
                             <ul>
                                 <li>
-                                    <h5>&bull; Language Requirement: The competition will exclusively focus on programming in the
-Python language. Participants must utilize Python for all coding tasks.
+                                    <h5>&bull; Language Requirement: The competition will exclusively focus on
+                                        programming in the
+                                        Python language. Participants must utilize Python for all coding tasks.
                                     </h5>
                                 </li>
                                 <li>
-                                    <h5>&bull; Two Competition Rounds: The event will consist of two rounds to test participants'
-programming skills and problem-solving abilities. 	
+                                    <h5>&bull; Two Competition Rounds: The event will consist of two rounds to test
+                                        participants'
+                                        programming skills and problem-solving abilities.
                                     </h5>
                                 </li>
                                 <li>
-                                    <h5>&bull; Round 1 - Pen and Paper: In the first round, participants will engage in a pen-and-paper
-assessment. Successful completion of this round will qualify participants for the next stage.
+                                    <h5>&bull; Round 1 - Pen and Paper: In the first round, participants will engage in
+                                        a pen-and-paper
+                                        assessment. Successful completion of this round will qualify participants for
+                                        the next stage.
                                     </h5>
                                 </li>
-<li>
-                                    <h5>&bull; Round 2 - Real-Life Problem: The second round will present participants with a real-life
-problem scenario, such as simulating an ATM system. Participants will be required to
-develop a solution using Python within the shortest time possible.
+                                <li>
+                                    <h5>&bull; Round 2 - Real-Life Problem: The second round will present participants
+                                        with a real-life
+                                        problem scenario, such as simulating an ATM system. Participants will be
+                                        required to
+                                        develop a solution using Python within the shortest time possible.
                                     </h5>
-                                </li> 	
+                                </li>
                             </ul>
                             <br>
                             <p>
@@ -1044,7 +937,7 @@ develop a solution using Python within the shortest time possible.
                             <h5><b>Number of Participants</b>: 1</h5>
                             </p>
                             <br>
-			    <p>
+                            <p>
                             <h5><b>Number of teams per school</b>: 1-2</h5>
                             </p>
                             <br>
@@ -1057,7 +950,7 @@ develop a solution using Python within the shortest time possible.
                             </p>
                             <br>
                             <p>
-                           
+
                             </p>
 
                             <br>
@@ -1152,10 +1045,10 @@ develop a solution using Python within the shortest time possible.
                             <h5><b>Number of Rounds</b>: To Be Announced</h5>
                             </p>
                             <br>
-                             <p>
+                            <p>
                             <h5><b>Teams allowed per School </b>:
-1 to 2 Teams</h5>
-                            </p> 
+                                1 to 2 Teams</h5>
+                            </p>
 
 
                             <br>
@@ -1164,7 +1057,7 @@ develop a solution using Python within the shortest time possible.
                             <h5><b>Contact Number</b> : 9899900032</h5>
                             </p>
                             <br>
-                          </div>
+                        </div>
                     </div>
                 </div>
                 <!-- The Modal -->
@@ -1226,7 +1119,8 @@ develop a solution using Python within the shortest time possible.
                                 <li>
                                     <h5>&bull;Deadline: The vlog should be submitted to the host school by August 3rd
                                         2023 Midnight in
-                                        video format through a google form link : : https://forms.gle/R1io3vyNFXgqe3TU6</h5>
+                                        video format through a google form link : : https://forms.gle/R1io3vyNFXgqe3TU6
+                                    </h5>
                                 </li>
                             </ul><br>
                             <p>
@@ -1250,7 +1144,7 @@ develop a solution using Python within the shortest time possible.
                             </p>
                             <br>
                             <p>
-                            
+
                             </p>
 
                             <br>
@@ -1259,11 +1153,11 @@ develop a solution using Python within the shortest time possible.
                             <h5><b>Contact Number</b> : 8700972522</h5>
                             </p>
                             <br>
-                             <center>
+                            <center>
                                 <a href="https://forms.gle/R1io3vyNFXgqe3TU6" target="_blank"
                                     class="modal__btn">Register
                                     &rarr;</a>
-                            </center> 
+                            </center>
                             <br>
                         </div>
                     </div>
@@ -1348,7 +1242,7 @@ develop a solution using Python within the shortest time possible.
                             </p>
                             <br>
                             <p>
-                           
+
                             </p>
 
                             <br>
@@ -1429,11 +1323,11 @@ develop a solution using Python within the shortest time possible.
                             <h5><b>Eligibility</b>: IX-XII</h5>
                             </p>
                             <br>
-          		    <p>
+                            <p>
                             <h5><b>Number of Participants</b>: 2 </h5>
                             </p>
                             <br>
-		            <p>
+                            <p>
                             <h5><b>Number of teams per school</b>: 1-2 </h5>
                             </p>
                             <br>
@@ -1560,7 +1454,7 @@ develop a solution using Python within the shortest time possible.
                             </p>
                             <br>
                             <p>
-                            
+
                             </p>
                             <br>
                             <p>
@@ -1666,7 +1560,7 @@ develop a solution using Python within the shortest time possible.
                             <br>
                             <br>
                             <p>
-                            
+
                             </p>
                             <br>
                             <p>
@@ -1761,7 +1655,7 @@ develop a solution using Python within the shortest time possible.
                             <br>
                             <br>
                             <p>
-                            
+
                             </p>
                             <br>
                             <p>
@@ -1863,7 +1757,7 @@ develop a solution using Python within the shortest time possible.
                             <br>
                             <br>
                             <p>
-                           
+
                             </p>
                             <br>
                             <p>
@@ -1960,7 +1854,7 @@ develop a solution using Python within the shortest time possible.
                             <br>
                             <br>
                             <p>
-                           
+
                             </p>
                             <br>
                             <p>
