@@ -372,7 +372,6 @@ header
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  top: 0px;
   left: 0px;
   right: 0px;
   z-index: 100;
@@ -559,7 +558,6 @@ header
 
 .header-area .main-nav .menu-trigger {
   cursor: pointer;
-  display: block;
   position: absolute;
   top: 33px;
   width: 32px;
@@ -604,7 +602,6 @@ header
   background-color: #fff;
   display: block;
   position: absolute;
-  width: 30px;
   height: 2px;
   left: 0;
   width: 75%;
