@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Digilogous - Rukmini Devi Public School">
+    <meta name="author" content="Rukmini Devi Public School">
+
+    <link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+
+    <title>The Digilogous</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!--MY LINK-->
+    <link rel="stylesheet" href="assets/css/master.css">
+    <!-- <link rel="stylesheet" href="assets/css/progress.css"> -->
+    <style>
+        #canvas .circle {
+            display: inline-flex;
+            text-align: center;
+            margin: 1em;
+        }
+
+        .circles-decimals {
+            font-size: .4em;
+        }
+
+        .containbar {
+            position: relative;
+            width: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .containbar .cardbar {
+            position: relative;
+            background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            border-radius: 4px;
+            text-align: center;
+            overflow: hidden;
+            transition: 0.5s;
+        }
+
+        .containbar .cardbar:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .containbar .cardbar:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .cardbar:hover .percent .number h2 span {
+            color: #fff;
+        }
+
+        .cardbar:hover .text {
+            color: #fff;
+        }
+
+        /*  */
+        /* * {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} */
+        :root {
+            --hue: 223;
+            --bg: hsl(var(--hue), 90%, 95%);
+            --fg: hsl(var(--hue), 90%, 5%);
+            --trans-dur: 0.3s;
+            /* font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320)); */
+        }
+
+        /* body {
+	background-color: var(--bg);
+	color: var(--fg);
+	font: 1em/1.5 sans-serif;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	transition: background-color var(--trans-dur);
+} */
+        .ip {
+            width: 16em;
+            height: 8em;
+        }
+
+        .ip__track {
+            stroke: hsl(var(--hue), 90%, 90%);
+            transition: stroke var(--trans-dur);
+        }
+
+        .ip__worm1,
+        .ip__worm2 {
+            animation: worm1 2s linear infinite;
+        }
+
+        .ip__worm2 {
+            animation-name: worm2;
+        }
+
+        /* Dark theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: hsl(var(--hue), 90%, 5%);
+                --fg: hsl(var(--hue), 90%, 95%);
+            }
+
+            .ip__track {
+                stroke: hsl(var(--hue), 90%, 15%);
+            }
+        }
+
+        /* Animation */
+        @keyframes worm1 {
+            from {
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                animation-timing-function: steps(1);
+                stroke-dashoffset: -358;
+            }
+
+            50.01% {
+                animation-timing-function: linear;
+                stroke-dashoffset: 358;
+            }
+
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes worm2 {
+            from {
+                stroke-dashoffset: 358;
+            }
+
+            50% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -358;
+            }
+        }
+    </style>
+
+    <script src="assets/js/circles.js"></script>
+</head>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+        <main>
+            <svg class="ip" viewBox="0 0 256 128" width="256px" height="128px" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#5ebd3e" />
+                        <stop offset="33%" stop-color="#ffb900" />
+                        <stop offset="67%" stop-color="#f78200" />
+                        <stop offset="100%" stop-color="#e23838" />
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
+                        <stop offset="0%" stop-color="#e23838" />
+                        <stop offset="33%" stop-color="#973999" />
+                        <stop offset="67%" stop-color="#009cdf" />
+                        <stop offset="100%" stop-color="#5ebd3e" />
+                    </linearGradient>
+                </defs>
+                <g fill="none" stroke-linecap="round" stroke-width="16">
+                    <g class="ip__track" stroke="#ddd">
+                        <path d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                        <path d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+                    </g>
+                    <g stroke-dasharray="180 656">
+                        <path class="ip__worm1" stroke="url(#grad1)" stroke-dashoffset="0"
+                            d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                        <path class="ip__worm2" stroke="url(#grad2)" stroke-dashoffset="358"
+                            d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+                    </g>
+                </g>
+            </svg>
+        </main>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Popup Video Starts -->
+    <!-- <div class="modal fade popup" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content" style="float:right;">
+                <div class="modal-header ">
+                    <p class="close">&times;</p>
+                    <div class="emodal-header-border">
+                        <div class="">
+                            <center>
+                                <div class="title">
+                                    <h2 class="modal__title">We are Back!</h2>
+                                    <h4 style="color: rgba(255, 255, 255, 0.747);">On Saturday, August 5, 2023</h4>
+                                </div>
+                                <div class="video1"><iframe class="digi-popup"
+                                        src="https://www.youtube.com/embed/GnA4j9RnEAU"
+                                        title="K.C. Garg Memorial, Inter School Tech Symposium Digilogous 8.0 is back !!"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <a style="color: #fff;" href="">
+                                        <h4>Results</h4>
+                                    </a>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Popup Video Ends -->
+
+    <div id="demo-content">
+        <div id="content">
+
+            <!-- ***** Header Area Start ***** -->
+            <header style="margin-bottom: 40px;" class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12">
+                            <nav class="main-nav h-100">
+                                <a style="margin-left: -100px;" href="#top" class="logo d-flex align-items-center">
+                                    <h4 class="mt-0"> <img style="width: 100px;" src="assets/images/schlogo.png"
+                                            alt="logo" class="mt-0">
+                                    </h4>
+                                </a>
+
+                                <!-- ***** Logo Start ***** -->
+                                <div class="logo align-items-center">
+                                    <h4 class="mt-0"> <img src="assets/images/logobolder.png" alt="logo" class="mt-0">
+                                    </h4>
+                                </div>
+                                <!-- ***** Logo End ***** -->
+                                <!-- ***** Menu Start ***** -->
+                                <ul class="nav">
+                                    <li class="scroll-to-section"><a href="index.html" class="active text-center"> Home
+                                        </a>
+                                    </li>
+                                    <li class="scroll-to-section"><a class="text-center" href="#about">About Us</a>
+                                    </li>
+                                    <li class="scroll-to-section"><a href="events.html" class="text-center"
+                                            href="#separate">Events</a>
+                                    </li>
+                                    <li class="scroll-to-section"><a href="#team">Our Team</a></li>
+                                    <li class="scroll-to-section"><a href="#contact-us-too">Contact Us</a></li>
+
+                                </ul>
+                                <a class="menu-trigger">
+                                    <span>Menu</span>
+                                </a>
+                                <!-- ***** Menu End ***** -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- ***** Header Area End ***** -->
+
+            <canvas style=" position: fixed;width: 100%; height: 100%;" id="Matrix">
+            </canvas>
+            <!-- Begin Jumbotron -->
+            <div style="margin-top: 2em;" class="jumbotron jumbotron-main" id="top">
+                <!-- <div id="particles-js"></div> -->
+
+                <!-- <span><img style=" position: absolute; bottom: 0px; right: 0px;" src="assets/images/1st.png" alt=""></span> -->
+
+                <div style="z-index: 1000;" class="container center-vertically-holder">
+                    <div class="center-vertically">
+                        <div id="scaleReveal" class="col-sm-offset-2 col-lg-offset-3 text-center">
+                            <div class="particle-content col-sm-8">
+                                <span class="big-logo"><img src="assets/images/logobold.png" /></span>
+                                <center>
+                                    <h3>K.C. Garg Memorial, Inter School Tech Symposium</h3>
+                                    <br>
+                                    <b>
+                                        <h1 style="font-size: 68px;" class="digi-title">The Digilogous 10.0</h1>
+                                    </b> <br>
+                                    <hr>
+                                    <h3 id="blink" class="digi-small-title"> Saturday, August 5, 2023</h3>
+                                </center>
+
+                                <br>
+                                <br>
+                                <a href="#about" data-id="about"
+                                    class="scroll-link btn btn-default btn-white btn-lg mt15"><i
+                                        class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <!-- /.column -->
+                    </div>
+                    <!-- /.vertical center -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- </canvas> -->
+
+            <!-- End Jumbotron -->
+            <script>
+                     const canvas = document.getElementById('Matrix');
+        const context = canvas.getContext('2d');
+        
+        const katakana = '10.0  ';
+        const nums = 'DIGILOGOUS ';
+        
+        const alphabet = katakana + nums;
+        
+        const fontSize = 16;
+        
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        const rows = Math.floor(canvas.height / fontSize);
+        const rainDrops = [];
+        
+        for (let y = 0; y < rows; y++) {
+            rainDrops[y] = Math.floor(Math.random() * canvas.width / fontSize);
+        }
+        
+        const draw = () => {
+            context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+            
+            context.fillStyle = '#4DA699';
+            context.font = fontSize + 'px monospace';
+            
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = alphabet.charAt((rainDrops[i]) % alphabet.length);
+                context.fillText(text, rainDrops[i] * fontSize, i * fontSize);
+                
+                if (rainDrops[i] * fontSize > canvas.width && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                
+                rainDrops[i]++;
+            }
+        }
+        
+        setInterval(draw, 100);
+
+            </script>
+            <!-- <div style="background-image: url('assets/images/back1.png');background-size: contain;background-repeat: repeat; ">   -->
+
+            <!-- In the memory of -->
+            <div class="memory" style=" position: relative;  padding-bottom: 50px;  padding-top: 5em;">
+                <center>
+                    <section class="about">
+                        <div class="section-heading">
+                            <h6>In the memory of</h6>
+                        </div>
+                        <hr class="solid2">
+                        <div class="container pb-5 backgrounfama">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="author-img">
+                                        <img src="assets/images/sir.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 d-flex flex-column justify-content-center">
+                                    <center>
+                                        <div class="section-title mt-4">
+                                            <h2 class="title">Late Shri K.C. Garg</h2>
+                                            <h5 class="title">Founder Trustee and President Seth Pokhar Mal Educational Society</h5>
+                                            <br>
+                                            <p class="a" style="padding-top:10px ;">He was the founder of the Seth Pokhar Mal Educational Society, a distinguished educator, a doyen of school education and the mind behind the creation and establishment of several institutes of repute under the brand name "Rukmini Devi."</p>
+                                        </div>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </center>
+            </div>
+            <!-- In the memory of -->
+            <section>
+                <!--    Glimpses Video start -->
+                <section style="position: relative;" class="gal">
+                    <center>
+                        <div class="section-heading">
+                            <h6>TECH CHAMPIONS</h6>
+                        </div>
+                        <hr class="solid2">
+                    </center>
+                    <center>
+                        <div class="gallery">
+                            <div class="item justify-content-center align-items-center align-content-center flex-wrap">
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box active" style="margin:15px;">
+                                        <img src="assets/images/glimpses/1.png" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/glimpses/2.png" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/glimpses/3.png" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/glimpses/4.png" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/glimpses/5.png" alt="Random Image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </section>
+                <!--    Glimpses Video end -->
+
+                <!--    Distinguished start -->
+                <section style=" position: relative; margin-top:40px;" class="gal">
+                    <center>
+                        <div class="section-heading">
+                            <h6>DISTINGUISHED GUESTS</h6>
+                        </div>
+                        <hr class="solid2">
+                    </center>
+
+                    <center>
+                        <div class="gallery">
+                            <div class="item justify-content-center align-items-center align-content-center flex-wrap">
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box active" style="margin:15px;">
+                                        <img src="assets/images/q5.jpg" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/q1.JPG" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/q2.jpg" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/q3.jpg" alt="Random Image" />
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="image-box" style="margin:15px;">
+                                        <img src="assets/images/q4.jpg" alt="Random Image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </section>
+                <!--    Distinguished Video end -->
+
+
+            </section>
+
+            <div style="position: relative;" id="about" class="about-us section ">
+                <div class=" wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <center>
+                        <div class="section-heading">
+                            <h6>About us</h6>
+                        </div>
+                        <hr class="solid2">
+                    </center>
+                    <p style="text-align: justify;">It is our firm conviction that technology possesses the power to
+                        revolutionize the world and enhance the quality of people's lives. Throughout the past few
+                        decades, it has brought about a profound transformation in the way individuals live, work,
+                        engage in leisure activities, and establish connections. The remarkable achievements of
+                        technology visionaries have played a pivotal role in the overall advancement of our nation. In
+                        order to commemorate the invaluable contributions made by these great technologists and to
+                        inspire the widespread utilization of information and communication technology in diverse fields
+                        such as Science, Agriculture, Defence, Entertainment, and more,we proudly present 'K. C Garg
+                        Memorial Inter School Tech Symposium : Digilogous 9.0' - the inter-school IT Competition, which
+                        was first launched in 2014. This extraordinary IT fest has triumphantly completed seven
+                        exceptional years thus far, and now we are thrilled to announce the upcoming ninth edition of
+                        Digilogous, scheduled to take place on Saturday, August 05, 2023.</p>
+                </div>
+            </div>
+
+            <!-- events start -->
+
+            <section id="team">
+                <div class="wow fadeIn">
+                    <div class="expert-team">
+                        <div class="container">
+                            <center>
+                                <div class="section-heading">
+                                    <h6> DIGILOGOUS 9.0 Team</h6>
+                                </div>
+                                <hr class="solid2">
+                            </center>
+                            <center>
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="assets/images/core team.png">
+                                    </div>
+                                </div>
+                                <div class="our-team">
+                                    <div class="pic">
+                                        <img src="assets/images/eventheads1.jpg">
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- events End -->
+
+            <!-- scroll to top button  -->
+            <a href="#" id="scroll" style="display: none;"><span></span></a>
+            <!-- scroll to top button  -->
+            <!-- features section -->
+            <div style="position: relative;" id="features" class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="features-content">
+                                <div class="row">
+                                    <div id="first" class="col-lg-12">
+                                        <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s"
+                                            data-wow-delay="0s">
+                                            <div class="first-number number">
+                                                <h6>01</h6>
+                                            </div>
+                                            <div class="icon"></div>
+                                            <h4>General Instructions</h4>
+                                            <div class="line-dec"></div>
+                                            <div class="btn">
+                                                <p class="bts"><a style="color: #fff; text-decoration: none;" href=" https://drive.google.com/file/d/1eBlXtuKZ5NLVT0KYURqUSaAw2nikhI6h/view?usp=drive_link
+                                                        ">Details</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div id="second" class="col-lg-6">
+                                        <div class="features-item second-feature last-features-item wow fadeInUp"
+                                            data-wow-duration="1s" data-wow-delay="0.6s">
+                                            <div class="features-item second-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                                            <div class="second-number number">
+                                                <h6>02</h6>
+                                            </div>
+                                            <div class="icon"></div>
+                                            <h4>Results</h4>
+                                            <div class="line-dec"></div>
+                                            <div class="btn">
+                                                <p> <a class="bts" style="color: #fff;" href="" target="_blank">Link</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="myModal" class="modal">
+                                            Modal content
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <p> <img src="assets/images/digin.png" alt=""> </p>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- features section  -->
+
+            <!-- progress bar -->
+            <!-- <center> -->
+            <div style="position: relative; padding: 50px;">
+                <div class="progressextra" style="padding-top: 40px;">
+                    <center>
+                        <div class="section-heading">
+                            <h6>Previous Year Statistics</h6>
+                        </div>
+                        <hr class="solid2">
+                    </center>
+                    <div id="canvas"
+                        class="containbar justify-content-center align-content-center align-items-center flex-wrap gap-4">
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-1" style="float: center;"></div>
+                                <div>
+                                    <h2>Schools</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-2"></div>
+                                <div>
+                                    <h2>Participants</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-3"></div>
+                                <div>
+                                    <h2>Volunteers</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-4"></div>
+                                <div class="progresstext">
+                                    <h2>Events</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </center> -->
+            <!-- progress bar -->
+
+            <!-- Previous year comments -->
+            <div class="slideshow-container" style="background: #21253A;">
+                <div class="slide-topic">
+                    <span class="fa fa-comments heading-3-icon"></span>
+                    <h2>Testimonials</h2>
+                </div>
+                <!-- Full-width slides/quotes -->
+                <div class="mySlides">
+                    <img src="assets/images/Bala.png" alt="">
+                </div>
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/KKAggarwal.png" alt="">
+                </div>
+
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/tareque.png" alt="">
+
+                </div>
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/Palak.png" alt="">
+
+                </div>
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/Ramjass.png" alt="">
+
+                </div>
+
+                <!-- Next/prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- Previous year comments -->
+
+
+            <div id="contact-us-too" class="contact-us section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12" data-wow-duration="0.5s" data-wow-delay="0.25s">
+                            <form id="contact" action="" method="post">
+                                <div class="row">
+                                    <div class="col-lg-6 offset-lg-3">
+                                        <div class="section-heading">
+                                            <h6>Contact Us</h6>
+                                        </div>
+                                        <hr class="solid">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="map">
+                                            <iframe class="googlemap"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.5108057076536!2d77.1361252150379!3d28.704276782389602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03d8090d54f3%3A0xa598ce7d1ac48b94!2sRukmini%20Devi%20Public%20School!5e0!3m2!1sen!2sin!4v1626359454875!5m2!1sen!2sin"
+                                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="contactusarea">
+                                        <div class="contact-info">
+                                            <ul>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/Website.png" alt="">
+                                                    </div>
+                                                    <p style="padding-left: -50px;">School Website<br><a
+                                                            href="http://rdpschool.edu.in/"
+                                                            target="_blank">www.rdpschool.edu.in</a></p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/contact-icon-01.png" alt="email icon">
+                                                    </div>
+                                                    <p style="padding-left: -50px;">digilogous@rdpschool.edu.in</p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/contact-icon-02.png" alt="phone">
+                                                    </div>
+                                                    <p>+91-9667433774 <br>
+                                                        +91-9899900032
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/contact-icon-03.png" alt="location">
+                                                    </div>
+                                                    <p>RUKMINI DEVI PUBLIC SCHOOL <br>CD BLOCK PITAMPURA, DELHI -
+                                                        110034
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>Follow us on</strong>
+                                                </li>
+                                                <a href="https://www.facebook.com/The-Digilogous-1657617881133981"
+                                                    target="_blank"><span class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-facebook fa-stack-1x"></i>
+                                                    </span></a>
+                                              <!--  <a href="https://twitter.com/rdpspp" target="_blank"><span
+                                                        class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-twitter fa-stack-1x"></i>
+                                                    </span></a>-->
+                                                <a href="https://www.instagram.com/digilogous/" target="_blank"><span
+                                                        class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-instagram fa-stack-1x"></i>
+                                                    </span></a>
+                                                <a href="https://www.youtube.com/channel/UCVKoWAa-pAVnsUK6BagGnTA"
+                                                    target="_blank"><span class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-youtube fa-stack-1x"></i>
+                                                    </span></a>
+                                                <!-- <li>
+                                                    <a class="discord-button" href="https://discord.gg/DHCBtXqD"
+                                                        target="_blank">Discord</a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Wavy Footer Starts -->
+            <footer>
+                <div class="wave wave1">
+                    <div class="footer-content">
+                        <p>Copyright &#169; Rukmini Devi Public School, Pitampura
+                            <br>Developed By : Arjan Singh Jassal | Harman Singh Jassal
+                        </p>
+                    </div>
+                </div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </footer>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("header-area");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("headersticky")
+            } else {
+                navbar.classList.remove("headersticky");
+            }
+        }
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('body').addClass('loaded');
+                $('h1').css('color', '#222222');
+            }, 300);
+
+        });
+    </script>
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/particlesRun.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            // When the user clicks anywhere outside of the modal, close it
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var datamap = new Map([
+            [document.getElementById("myBtn1"), document.getElementById("myeModal1")],
+            [document.getElementById("myBtn2"), document.getElementById("myeModal2")],
+            [document.getElementById("myBtn3"), document.getElementById("myeModal3")],
+            [document.getElementById("myBtn4"), document.getElementById("myeModal4")],
+            [document.getElementById("myBtn5"), document.getElementById("myeModal5")],
+            [document.getElementById("myBtn6"), document.getElementById("myeModal6")],
+            [document.getElementById("myBtn7"), document.getElementById("myeModal7")],
+            [document.getElementById("myBtn8"), document.getElementById("myeModal8")],
+            [document.getElementById("myBtn9"), document.getElementById("myeModal9")],
+            [document.getElementById("myBtn10"), document.getElementById("myeModal10")],
+            [document.getElementById("myBtn11"), document.getElementById("myeModal11")],
+            [document.getElementById("myBtn12"), document.getElementById("myeModal12")]
+
+        ]);
+
+        datamap.forEach((value, key) => {
+            doModal(key, value);
+        });
+
+        function doModal(anchor, popupbox) {
+
+            // Get the <span> element that closes the modal
+            var span = popupbox.getElementsByClassName("eclose")[0];
+
+            anchor.addEventListener("click", function (event) {
+                popupbox.style.display = "block";
+            });
+
+            span.addEventListener("click", function (event) {
+                popupbox.style.display = "none";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target == popupbox) {
+                    popupbox.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" activated", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " activated";
+        }
+    </script>
+    <!-- scroll to top button -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+        });
+    </script>
+    <!-- scroll to top button -->
+    <!-- Progress Bar Start -->
+    <script>
+        (function () {
+            var canvas = document.getElementById('canvas'),
+                circlesCreated = false;
+
+            function onScroll() {
+                if (elementInViewport(canvas)) {
+                    if (!circlesCreated) {
+                        circlesCreated = true;
+                        createCircles();
+                        elementInViewport(canvas) = false;
+                    }
+                } else {
+                    circlesCreated = false;
+                }
+            }
+
+            function elementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+            function createCircles() {
+
+                var colors = [
+                    ['#000', '#45AEEA'],
+                    ['#000', '#EFB917'],
+                    ['#000', '#f83754'],
+                    ['#000', '#38FF88']
+                ],
+                    circles = [];
+                var percentage = [
+                    ['100'],
+                    ['2000'],
+                    ['1000'],
+                    ['12']
+                ],
+                    circles = [];
+                var maxval = [
+                    ['130'],
+                    ['2500'],
+                    ['1500'],
+                    ['12']
+                ],
+                    circles = [];
+                //31.42 + (i * 9.84),
+
+                for (var i = 1; i <= 5; i++) {
+                    var child = document.getElementById('circles-' + i),
+                        // percentage = 31.42 + (i * 9.84),
+
+                        circle = Circles.create({
+                            id: child.id,
+                            value: percentage[i - 1],
+                            maxValue: maxval[i - 1],
+                            radius: getWidth(),
+                            width: 9,
+                            colors: colors[i - 1]
+
+                        });
+
+                    circles.push(circle);
+                }
+
+                window.onresize = function (e) {
+                    for (var i = 0; i < circles.length; i++) {
+                        circles[i].updateRadius(getWidth());
+                    }
+                };
+
+                function getWidth() {
+                    return window.innerWidth / 15;
+                }
+            }
+            window.onscroll = onScroll;
+
+        })();
+    </script>
+    <!-- Progress Bar End -->
+    <!-- PopupVideo starts-->
+    <!-- <script>
+        $(document).ready(function () {
+            $("#myModal").modal('show');
+            $(".close").click(function () {
+                $("#myModal").modal('hide');
+            });
+        });
+    </script> -->
+    <!-- Popup video ends -->
+
+    <!-- preloader -->
+    <script>
+
+        // Page loading animation
+        $(window).on('load', function () {
+
+            $('#js-preloader').addClass('loaded');
+
+        });
+
+
+    </script>
+
+    <!-- Coming Soon -->
+    <script type="text/javascript">
+        var blink =
+            document.getElementById('blink');
+
+        setInterval(function () {
+            blink.style.opacity =
+                (blink.style.opacity == 0 ? 1 : 0);
+        }, 200); 
+    </script>
+</body>
+
+</html>

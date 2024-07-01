@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The Digilogous - Rukmini Devi Public School">
+<meta name="author" content="Rukmini Devi Public School">
+
+<link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+rel="stylesheet">
+
+<title>The Digilogous</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="assets/css/fontawesome.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animated.css">
+<link rel="stylesheet" href="assets/css/owl.css">
+
+<!--MY LINK-->
+<link rel="stylesheet" href="assets/css/master.css">
+<!-- <link rel="stylesheet" href="assets/css/progress.css"> -->
+<style>
+#canvas .circle {
+display: inline-flex;
+text-align: center;
+margin: 1em;
+}
+
+.circles-decimals {
+font-size: .4em;
+}
+
+.containbar {
+position: relative;
+width: auto;
+display: flex;
+justify-content: space-around;
+}
+
+.containbar .cardbar {
+position: relative;
+width: 259px;
+background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 300px;
+border-radius: 4px;
+text-align: center;
+overflow: hidden;
+transition: 0.5s;
+}
+
+.containbar .cardbar:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.containbar .cardbar:before {
+content: "";
+position: absolute;
+top: 0;
+left: -50%;
+width: 100%;
+height: 100%;
+background: rgba(255, 255, 255, 0.03);
+pointer-events: none;
+z-index: 1;
+}
+
+.cardbar:hover .percent .number h2 span {
+color: #fff;
+}
+
+.cardbar:hover .text {
+color: #fff;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Poppins|Source+Sans+Pro&display=swap");
+* {
+  font-family: "Source Sans Pro", "Poppins", sans-serif;
+}
+
+
+</style>
+
+<script src="assets/js/circles.js"></script>
+
+<body>
+
+    <div id="demo-content">
+        <!-- preloader start  -->
+        <!--<div id="loader-wrapper">
+<div id="loader"></div>
+
+<div class="loader-section section-left"></div>
+<div class="loader-section section-right"></div>
+
+</div> 
+-->
+        <!-- preloader end -->
+        <div id="content">
+            <!-- ***** Header Area Start ***** -->
+          <!-- ***** Header Area End ***** -->
+
+            <!-- Begin Jumbotron -->
+            <div class="jumbotron jumbotron-main" id="top">
+                <div id="particles-js"></div>
+                <span><img style=" position: absolute; bottom: 0px; right: 0px;" src="assets/images/1st.png" alt=""></span>
+
+                <div class="container center-vertically-holder">
+                    <div class="center-vertically">
+                        <div id="scaleReveal" class="col-sm-offset-2 col-lg-offset-3 text-center">
+                            <div class="particle-content col-sm-8">
+                                <span class="big-logo"><img src="assets/images/logobold.png" /></span>
+                                <center>
+                                    <hr> <h2>K.C. Garg Memorial, Inter School Tech Symposium</h2>
+                                </center>
+                                <h1 style="font-size: 66px;">Digilogous 8.0</h1>
+                                
+                                <h2 style="font-size: 46px;" id="blink" >Coming Soon</h2>
+                                <br>
+                                <br>
+                                <a href="#about" data-id="about"
+                                    class="scroll-link btn btn-default btn-white btn-lg mt15"><i
+                                        class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <!-- /.column -->
+                    </div>
+                    <!-- /.vertical center -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- End Jumbotron -->
+            <!-- Wavy Footer Starts -->
+            <!-- <section id="about" class="gal">
+                <h1>Previous Digilogous Glimpses</h1>
+                <div class="gallery">
+                  <div class="image-box active">
+                    <img
+                      src="assets/images/glimpses/10.JPG"
+                      alt="Random Image"
+                    />
+                  </div>
+                  <div class="image-box">
+                    <img
+                      src="assets/images/glimpses/11.JPG"
+                      alt="Random Image"
+                    />
+                  </div>
+                  <div class="image-box">
+                    <img
+                      src="assets/images/glimpses/4.JPG"
+                      alt="Random Image"
+                    />
+                  </div>
+                  <div class="image-box">
+                    <img
+                      src="assets/images/glimpses/5.JPG"
+                      alt="Random Image"
+                    />
+                  </div>
+                  <div class="image-box">
+                    <img
+                      src="assets/images/glimpses/7.JPG"
+                      alt="Random Image"
+                    />
+                  </div>
+                  
+                  
+                  
+                  
+                </div>
+            </section> -->
+        </div>
+    </div>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("header-area");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("headersticky")
+            } else {
+                navbar.classList.remove("headersticky");
+            }
+        }
+    </script>
+    <!-- Scripts -->
+    <script>
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('body').addClass('loaded');
+                $('h1').css('color', '#222222');
+            }, 300);
+
+        });
+    </script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/particlesRun.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script>
+
+    <script>
+        // topscroll
+        //$(window).on('beforeunload', function () {
+        //  $('body').hide();
+        //  $(window).scrollTop(0);
+        //});
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            // When the user clicks anywhere outside of the modal, close it
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var datamap = new Map([
+            [document.getElementById("myBtn1"), document.getElementById("myeModal1")],
+            [document.getElementById("myBtn2"), document.getElementById("myeModal2")],
+            [document.getElementById("myBtn3"), document.getElementById("myeModal3")],
+            [document.getElementById("myBtn4"), document.getElementById("myeModal4")],
+            [document.getElementById("myBtn5"), document.getElementById("myeModal5")],
+            [document.getElementById("myBtn6"), document.getElementById("myeModal6")],
+            [document.getElementById("myBtn7"), document.getElementById("myeModal7")],
+            [document.getElementById("myBtn8"), document.getElementById("myeModal8")],
+            [document.getElementById("myBtn9"), document.getElementById("myeModal9")],
+            [document.getElementById("myBtn10"), document.getElementById("myeModal10")],
+            [document.getElementById("myBtn11"), document.getElementById("myeModal11")],
+            [document.getElementById("myBtn12"), document.getElementById("myeModal12")]
+
+        ]);
+
+        datamap.forEach((value, key) => {
+            doModal(key, value);
+        });
+
+        function doModal(anchor, popupbox) {
+
+            // Get the <span> element that closes the modal
+            var span = popupbox.getElementsByClassName("eclose")[0];
+
+            anchor.addEventListener("click", function (event) {
+                popupbox.style.display = "block";
+            });
+
+            span.addEventListener("click", function (event) {
+                popupbox.style.display = "none";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target == popupbox) {
+                    popupbox.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" activated", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " activated";
+        }
+    </script>
+    <!-- scroll to top button -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+        });
+    </script>
+    <!-- scroll to top button -->
+    <!-- Progress Bar Start -->
+    <script>
+        (function () {
+            var canvas = document.getElementById('canvas'),
+                circlesCreated = false;
+
+            function onScroll() {
+                if (elementInViewport(canvas)) {
+                    if (!circlesCreated) {
+                        circlesCreated = true;
+                        createCircles();
+                        elementInViewport(canvas) = false;
+                    }
+                } else {
+                    circlesCreated = false;
+                }
+            }
+
+            function elementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+            function createCircles() {
+
+                var colors = [
+                    ['#000', '#45AEEA'],
+                    ['#000', '#EFB917'],
+                    ['#000', '#f83754'],
+                    ['#000', '#38FF88']
+                ],
+                    circles = [];
+                var percentage = [
+                    ['110'],
+                    ['1600'],
+                    ['1800'],
+                    ['20']
+                ],
+                    circles = [];
+                var maxval = [
+                    ['120'],
+                    ['2000'],
+                    ['2000'],
+                    ['20']
+                ],
+                    circles = [];
+                //31.42 + (i * 9.84),
+
+                for (var i = 1; i <= 5; i++) {
+                    var child = document.getElementById('circles-' + i),
+                        // percentage = 31.42 + (i * 9.84),
+
+                        circle = Circles.create({
+                            id: child.id,
+                            value: percentage[i - 1],
+                            maxValue: maxval[i - 1],
+                            radius: getWidth(),
+                            width: 12,
+                            colors: colors[i - 1]
+
+                        });
+
+                    circles.push(circle);
+                }
+
+                window.onresize = function (e) {
+                    for (var i = 0; i < circles.length; i++) {
+                        circles[i].updateRadius(getWidth());
+                    }
+                };
+
+                function getWidth() {
+                    return window.innerWidth / 15;
+                }
+            }
+            window.onscroll = onScroll;
+
+        })();
+    </script>
+    <!-- Progress Bar End -->
+
+    <!-- Coming Soon -->
+    <script type="text/javascript">
+        var blink = 
+            document.getElementById('blink');
+  
+        setInterval(function () {
+            blink.style.opacity = 
+            (blink.style.opacity == 0 ? 1 : 0);
+        }, 700); 
+    </script>
+</body>
+</html>

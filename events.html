@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Digilogous - Rukmini Devi Public School">
+    <meta name="author" content="Rukmini Devi Public School">
+
+    <link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+
+    <title>The Digilogous</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!--MY LINK-->
+    <link rel="stylesheet" href="assets/css/master.css">
+    <!-- <link rel="stylesheet" href="assets/css/progress.css"> -->
+    <style>
+        #canvas .circle {
+            display: inline-flex;
+            text-align: center;
+            margin: 1em;
+        }
+
+        .circles-decimals {
+            font-size: .4em;
+        }
+
+        .containbar {
+            position: relative;
+            width: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .containbar .cardbar {
+            position: relative;
+            background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            border-radius: 4px;
+            text-align: center;
+            overflow: hidden;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .containbar .cardbar:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .containbar .cardbar:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .cardbar:hover .percent .number h2 span {
+            color: #fff;
+        }
+
+        .cardbar:hover .text {
+            color: #fff;
+        }
+
+        /* .coulditbeaclue{
+		clue : "fxxk vghmdtfw : eka_smr_u9";
+	}*/
+    </style>
+
+    <script src="assets/js/circles.js"></script>
+
+<body>
+    <!-- ***** Preloader Start ***** -->
+    <!-- <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div> -->
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Popup Video Starts -->
+    <!-- <div class="modal fade popup" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content" style="float:right;">
+                <div class="modal-header ">
+                    <p class="close">&times;</p>
+                    <div class="emodal-header-border">
+                        <div class="">
+                            <center>
+                                <div class="title">
+                                    <h2 class="modal__title">We are Back!</h2>
+                                    <h4 style="color: #fff;">On Saturday, November 5, 2022</h4>
+                                </div>
+                                <div class="video1"><iframe class="digi-popup"
+                                        src="https://www.youtube.com/embed/GnA4j9RnEAU"
+                                        title="K.C. Garg Memorial, Inter School Tech Symposium Digilogous 8.0 is back !!"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                    <a style="color: #fff;" href="">
+                                        <h4>Results</h4>
+                                    </a>
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Popup Video Ends -->
+
+    <div id="demo-content">
+        <div id="content">
+            <!-- ***** Header Area Start ***** -->
+            <header class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12">
+                            <nav class="main-nav h-100">
+                                <a style="margin-left: -100px;" href="#top" class="logo d-flex align-items-center">
+                                    <h4 class="mt-0"> <img style="width: 100px;" src="assets/images/schlogo.png"
+                                            alt="logo" class="mt-0">
+                                    </h4>
+                                </a>
+
+                                <!-- ***** Logo Start ***** -->
+                                <div class="logo align-items-center">
+                                    <h4 class="mt-0"> <img src="assets/images/logobolder.png" alt="logo" class="mt-0">
+                                    </h4>
+                                </div>
+                                <!-- ***** Logo End ***** -->
+                                <!-- ***** Menu Start ***** -->
+                                <ul class="nav">
+                                    <li class="scroll-to-section"><a href="index.html" class=" active text-center"> Home
+                                        </a>
+                                    </li>
+                                    <li class="scroll-to-section"><a class="text-center" href="#about">About Us</a>
+                                    </li>
+                                    <li class="scroll-to-section"><a href="events.html" class="text-center"
+                                            href="#separate">Events</a>
+                                    </li>
+                                    <li class="scroll-to-section"><a href="#team">Our Team</a></li>
+                                    <li class="scroll-to-section"><a href="#contact-us-too">Contact Us</a></li>
+                                    <!--<li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Get Your Quote</a></div></li> -->
+                                </ul>
+                                <a class="menu-trigger">
+                                    <span>Menu</span>
+                                </a>
+                                <!-- ***** Menu End ***** -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- ***** Header Area End ***** -->
+
+
+            <canvas style=" position: fixed;top: 0;left: 0; height: 1000px;" id="Matrix">
+            </canvas>
+            <script>
+                const canvas = document.getElementById('Matrix');
+                const context = canvas.getContext('2d');
+
+                const katakana = '9.0  ';
+                const latin = '';
+                const nums = 'DIGILOGOUS ';
+
+                const alphabet = katakana + nums;
+
+                const fontSize = 16;
+                const columns = canvas.width;
+
+
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                const rainDrops = [];
+
+                for (let x = 0; x < columns; x++) {
+                    rainDrops[x] = 1;
+                }
+
+                const draw = () => {
+                    context.fillStyle = 'rgba(0,0,0,0.05)'
+                    context.fillRect(0, 0, canvas.width, canvas.height);
+
+                    context.fillStyle = '#4DA699';
+                    context.font = fontSize + 'px monospace';
+
+                    //    for(let i = 0; i < rainDrops.length; i++)
+                    for (let i = rainDrops.length; i > 0; i--) {
+                        // change the below line as
+                        //       const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                        //new line
+                        // const text = alphabet.charAt((rainDrops[i] - 1) % alphabet.length);
+                        const text = alphabet.charAt((rainDrops[i] - 1) % alphabet.length);
+                        context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                            rainDrops[i] = 1;
+                        }
+                        rainDrops[i]++;
+                    }
+                }
+
+                setInterval(draw, 100);
+            </script>
+
+
+
+
+
+
+
+
+            <!-- events start -->
+            <div>
+                <section id="separate">
+                    <div class="sub-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                            <center>
+                                <div class="section-heading">
+                                    <h6>Events</h6>
+                                </div>
+                                <hr class="solid2">
+                            </center>
+                        </div>
+                        <div class="events">
+                            <div class="item justify-content-center align-items-center align-content-center flex-wrap">
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Junior All">
+                                        <img src="assets/images/events/dm.png" alt="Markethon" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Markethon</h3>
+                                                <button class="btn menu-button-class" id="myBtn1">Event
+                                                    Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/blank.png" alt="Blank Coding" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h4 style="font: size 16px;">Blank Coding</h4>
+                                                <button class="btn" id="myBtn2">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 All Senior">
+                                        <img src="assets/images/events/surp.png" alt="SURPRISE" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Decrypt</h3>
+                                                <button class="btn" id="myBtn3">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Open All Senior Junior">
+                                        <img src="assets/images/events/warofwords.png" alt="War of Words" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:20px;">War Of Words</h3>
+                                                <button class="btn" id="myBtn4">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 All Junior">
+                                        <img src="assets/images/events/robowar.png" alt="Robo War" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:20px;">Robo War</h3>
+                                                <button class="btn" id="myBtn5">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block;">
+                                    <div class="container-3 All Senior">
+                                        <img src="assets/images/events/logodesign.png" alt="Logo Designing"
+                                            class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:20px;">Logo Designing</h3>
+                                                <button class="btn" id="myBtn6">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block;">
+                                    <div class="container-3 All Open Senior Junior">
+                                        <img src="assets/images/events/programingevent.png" alt="PROGRAMMING"
+                                            class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Encipher</h3>
+                                                <button class="btn" id="myBtn7">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 All Open Senior Junior">
+                                        <img src="assets/images/events/gamingevent.png" alt="GAMING" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Gaming</h3>
+                                                <button class="btn" id="myBtn8">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/vodcast.png" alt="PODCAST" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Vodcast</h3>
+                                                <button class="btn" id="myBtn9">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 All Senior">
+                                        <img src="assets/images/events/chat.png" alt="Chat.AI" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:26px;">Chat.AI</h3>
+                                                <button class="btn" id="myBtn10">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 All Junior">
+                                        <img src="assets/images/events/quiz.png" alt="SENIOR QUIZ" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:20px;">In-quis-itive</h3>
+                                                <button class="btn" id="myBtn11">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/photoevent.png" alt="PHOTOGRAPHY" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:20px;">Click-o-Mania</h3>
+                                                <button class="btn" id="myBtn12">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/cryptic.png" alt="Cryptic Hunt" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:16px;">Unravel the Unkown</h3>
+                                                <button class="btn" id="myBtn13">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/cubing.png" alt="Cubing" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Cubing</h3>
+                                                <button class="btn" id="myBtn14">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/admad.png" alt="Ad Mad" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:30px;">Ad-Mad</h3>
+                                                <button class="btn" id="myBtn15">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 col-sm-4 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/elcetro.png" alt="PHOTOGRAPHY" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:20px;">Electro-Fusion</h3>
+                                                <button class="btn" id="myBtn16">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- The Modal -->
+
+                <!-- The Modal -->
+                <div id="myeModal1" class="modal">
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/fancy dress logo.png" alt=""
+                                        style="height: 11%; width: 11%;">
+                                    <div class="title">
+                                        <h2 class="modal__title">Markethon</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Digital marketing</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>The harder the battle, the sweater
+                                            the victory.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5 style="text-align:justify; color: rgba(255, 255, 255, 0.747);">In this competition, you
+                                will work as an individual to help a company enhance their marketing strategy. The idea
+                                is to create digital marketing content for them in the form of presentation.</h5><br>
+<h5 style="text-align:justify; color: rgba(255, 255, 255, 0.747);">Competition Day :
+You'll give a 2-3 minute presentation on your work mentioning how the company will
+benefit from your design ideas/Marketing Strategies</h5><br>
+
+                            <ul>
+                                <li>
+                                    <h5>&bull; Choose a company that could benefit from assistance with marketing
+                                        strategy.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Research about the company.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Create marketing content for the company using any platform.</h5>
+                                </li>
+ <li>
+                                    <h5>&bull; The presentation can be in the form of a video clip/PPT/audio/
+Hard copy Posters/Images/Graphics. </h5>
+                                </li>
+<li>
+                                    <h5>&bull; Presentation of the marketing content should be presented
+within 3 minutes.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : III-V</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 1-2 teams</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Theme</b>: Digital Marketing</h5>
+                            </p>
+                            <br>
+                            <p>
+                            
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- The Modal -->
+
+                <div id="myeModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/programing-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Blank Coding</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">HTML Coding</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>The best way to predict the future
+                                            is to create it.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5 style="color: rgba(255, 255, 255, 0.747);">The dark coding battle is a programming
+                                competition that challenges the participants to write code without being able to see it.
+                                Participants are given a programming problem and have a set amount of time to write a
+                                code with their computer screen turned off.</h5><br>
+ <h5 style="color: rgba(255, 255, 255, 0.747);">The purpose of this competition is to test a programmer's ability to write clean, efficient, and
+error-free code while relying solely on your knowledge of programming language and logic.
+Competition Day :
+The theme will be allocated at the venue and total time to code will be 1 Hour.</h5><br>
+
+                            <ul>
+                                <li>
+                                    <h5>&bull; Screen can be turned on maximum 3 times in case Image or CSS code
+                                        inclusions that too for 30 seconds only.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any screen turn on will be allowed with deduction of 5 points out of the
+                                        total score.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Internet/Mobile Phone usage is restricted.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; In Case of Image inclusion, media will be provided by the host
+                                        School on the day of competition</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : V-VIII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Individual</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team allowed per School</b>: 1-2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Theme </b>: The theme will be allocated at the venue and total time to code will be 1
+                                Hour</h5>
+                            </p>
+                            <br>
+                            <p>
+                            
+                            </ul>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/surprise-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">DECRYPT</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Surprise Event</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Challenges are what make life
+                                            interesting, and overcoming them is what makes life meaningful.</i></q>
+                                </h5>
+                            </blockquote>
+                            <p>
+                                <br>
+                                <center>
+                                    <h5 style="font-family: Roboto;"><strong>===============Data
+                                            Encrypted===============</strong></h5>
+                                </center>
+                            </p>
+                            <br>
+                            <p style="align-items: center; justify-content: center;">
+                            <h5 class="surprise-data">01000111 01100101 01110100 00100000 01110010 01100101 01100001
+                                01100100 01111001 00100000 01110100 01101111 00100000 01100010 01100101 00100000
+                                01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101
+                                01100100 00100001</h5>
+                            </p>
+                            <br>
+                            <h5>These protocols are mandatory :-</h5>
+                            <ul>
+                                <li>
+                                    <h5>&bull; Teams must adhere to the principles of fair play and
+                                        sportsmanship.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any form of cheating, including the use of GPS trackers or
+                                        unauthorized assistance, is strictly prohibited and will result in
+                                        disqualification.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The decisions made by the event organizers will be final and
+                                        binding.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any disputes or issues arising during the event will be resolved by
+                                        the organizers.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for All</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participant</b>: 1</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Number of Rounds</b>: Not Defined</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of teams per school</b>: 1-2</h5><br>
+
+                            </p>
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/cross.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">WAR OF WORDS</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Digital Crossword</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>The great events of the world take
+                                            place in the brain. </i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">War of words is an open battle where each team would
+                                        be competing to solve a Digital
+                                        Crossword puzzle in order to reach the next stage, As the team progresses to the
+                                        next
+                                        stage the new challenge opens for them. Total number of stages will be 3 and the
+                                        first
+                                        three teams will be awarded in order of their Rank.</h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; The Cues of the crossword would be based on Technology/Computers/I.T.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Team members can discuss but any kind of disturbance would not be
+                                        appreciated.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Internet/Mobile Phone usage is restricted.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Each Team will be given next stage Challenge only after successfully
+                                        completing the Previous
+                                        Stage.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Minimum Pass Percentage Stage wise is 80%.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; In case of use of unfair means, Team would be disqualified.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: V-VIII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Team Of 2</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Team Allowed Per School</b>: 1 Team</h5>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                            
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha </h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/comic-logo.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">ROBO WAR</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">DIY Robotics</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>If you can't have a seat at the
+                                            table, build your own table.
+                                        </i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">ROBO War is a catalyst for ambitious minds ready to
+                                        explore the ocean of opportunities.
+                                        Student teams will compete in creating a Robot with DIY objects/Best out of
+                                        Waste
+                                        objects (rather than Purchased Kits). The Robots skills will be put to test in a
+                                        static
+                                        judging event/ a drag race or a circuit race event.</h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; Robot Specifications : the height should not Exceed 12 inches
+                                        and weight should not be more than 3 kg.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Arena Design: There will be a designated arena or battleground where the
+                                        robot battles take
+                                        place. The dimensions, obstacles, and any specific features of the arena will be
+                                        outlined
+                                        later.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Battle Rules: The Robot has to cross the arena in shortest possible time.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Technical Inspections: There will be a technical inspection process to
+                                        ensure that the robots
+                                        meet the specifications and safety requirements.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : V-VIII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Team of 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teams Allowed Per School</b>: 1-2 Teams</h5>
+                            </p>
+                            <br>
+                            <p>
+                           
+                            </p>
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha Makhija</h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/3d-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">LOGO DESIGNING</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Adobe/ CorelDraw/ Illustrator
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Design is not just what it looks
+                                            like and feels like. Design is how it works.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">The participants are invited to design a logo for
+                                        Based on a theme - Excellence Education. That expresses the theme of the event,
+                                        Participants will be encouraged to include the
+                                        context of Theme in the design of the logo. Calligraphic or digitally created
+                                        letter-forms or existing fonts, or a combination of these
+                                        can be used for the logo.
+                                    </h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; Theme and Purpose: The logo design should be contextual to
+                                        theme and should convey a strong message.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Submission Requirements: Technical specifications for the
+                                        logo submissions. This may include the file format (e.g., JPEG,
+                                        PNG, vector format), size(Max 5 MB), dimensions(12X12 or 16X16 inches).</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Participants should be required to submit their own work, ensuring that
+                                        the logo designs are
+                                        not plagiarized or infringing on copyright.</h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; Deadline: The Designed Logos should reach the host school latest by
+                                        August 01, 2023.</h5>
+                                </li>
+                            </ul><br>
+                            <p>
+                            <h5><b>Eligibility</b> : V-X</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teams allowed per School</b>: 1-3 Teams</h5>
+                            </p>
+                            <br>
+                            <p>
+                           
+                            </p>
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha </h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal7" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/programing-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Encipher</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Python Programming</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+
+                            <h5 style="color: rgba(255, 255, 255, 0.747);"><i>"The best way to predict the future is to
+                                    create it." </i>
+                            </h5>
+
+                            <pre>
+                                <h5 class="surprise-data">#include &lt;digi.h&gt;
+    if (CanCode==true){ 
+            if ("♥puzzles==true){ 
+                execute ("Participate") } 
+            else { execute ("Still Participate")}
+                        } 
+    else{ printf("Learn coding and\n") execute("Participate") } }</h5>
+                            </pre>
+                            <h5 style="color: rgba(255, 255, 255, 0.747);">Explore your programming skills with critical
+                                thinking, logical reasoning and Team work. A problem solving real - life situation will
+                                be given on the spot to code and find the solution in Python Programming. This real-life
+                                problem can be of an ATM Machine, AI Domain, Billing, Data updation or finding a logic
+                                to get the desired results. </h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5>&bull; Language Requirement: The competition will exclusively focus on programming in the
+Python language. Participants must utilize Python for all coding tasks.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Two Competition Rounds: The event will consist of two rounds to test participants'
+programming skills and problem-solving abilities. 	
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Round 1 - Pen and Paper: In the first round, participants will engage in a pen-and-paper
+assessment. Successful completion of this round will qualify participants for the next stage.
+                                    </h5>
+                                </li>
+<li>
+                                    <h5>&bull; Round 2 - Real-Life Problem: The second round will present participants with a real-life
+problem scenario, such as simulating an ATM system. Participants will be required to
+develop a solution using Python within the shortest time possible.
+                                    </h5>
+                                </li> 	
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : IX-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 1</h5>
+                            </p>
+                            <br>
+			    <p>
+                            <h5><b>Number of teams per school</b>: 1-2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Language</b>: Python</h5>
+                            </p>
+                            <br>
+                            <p>
+                           
+                            </p>
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha Makhija</h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal8" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/gaming-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Run Time Terror</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Gaming</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Gaming is not just a hobby, it's a
+                                            passion that fuels creativity, innovation, and endless
+
+                                            possibilities.</i></q>
+                                </h5>
+                            </blockquote>
+
+                            <br>
+                            <h5>Gaming is really a workout for our young minds disguised as fun. Playing games
+                                strengthen a range of cognitive skills such as spatial navigation, reasoning, memory and
+                                perception.</h5>
+                            <br>
+                            <h5>Competition Day :
+                                Registered participants will be divided into brackets.
+                                As the participants move further, there will be only 1 winner of each game.
+                                2 Games will be played during the event. (Console PS4)</h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">&bull; Participants must exhibit good sportsmanship
+                                        throughout the
+                                        competition.
+
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Respectful behavior towards opponents, referees, organizers,
+                                        and equipment is expected.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any disruptive or disrespectful behavior may result in penalties
+                                        or disqualification. </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Console : PS4
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Brackets will be revealed on the day of the event.
+                                    </h5>
+                                </li>
+
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : Open for all</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participant</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: To Be Announced</h5>
+                            </p>
+                            <br>
+                             <p>
+                            <h5><b>Teams allowed per School </b>:
+1 to 2 Teams</h5>
+                            </p> 
+
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha Makhija</h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                          </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal9" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/vodcast.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Vodcast</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Video Blogging</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Vodcasting is a way to express your
+                                            creativity, share your knowledge, and build a
+                                            community around your passions.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">Video blogs—often housed on the YouTube
+                                        platform—serve as video-based diaries.
+                                        They're a natural extension of the text-based blogs of the early 2000s, with the
+                                        exception
+                                        that because they're housed online, discoverability increases and
+                                        content-sharing
+                                        friction decreases.
+                                        The participants are supposed to create a VLOG based on the theme Super Power
+                                        "AI"
+                                        and promote on Social Media platforms
+                                        Competition Day :
+                                        Participants will present their Video Logs and showcase the popularity gained
+                                    </h5>
+                                </li>
+                                <br>
+                                <h5>Rules and Regulations</h5>
+                                <li>
+                                    <h5>&bull; Theme and Purpose: The VLOG should have a moral
+                                        lesson/information in it.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Submission Requirements: Technical specifications for the
+                                        logo submissions. This may include the file format (e.g., JPEG,
+                                        PNG, vector format), size(Max 5 MB), dimensions(12X12 or
+                                        16X16 inches)
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull;Deadline: The vlog should be submitted to the host school by August 3rd
+                                        2023 Midnight in
+                                        video format through a google form link : : https://forms.gle/R1io3vyNFXgqe3TU6</h5>
+                                </li>
+                            </ul><br>
+                            <p>
+                            <h5><b>Eligibility</b>: VI-X</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participant</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of teams</b>: 1-2</h5>
+                            </p>
+                            <br>
+                            <p>
+                                <!-- <h5><b>Software allowed</b>: Any Software</h5> -->
+                            </p>
+                            <br>
+                            <p>
+                                <!-- <h5><b>Theme</b>: Azadi ka Amrit Mahotsav</h5> -->
+                            </p>
+                            <br>
+                            <p>
+                            
+                            </p>
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra</h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <br>
+                             <center>
+                                <a href="https://forms.gle/R1io3vyNFXgqe3TU6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> 
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myeModal10" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/chat.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Chat.ai</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">AI Event, Creation of Chatbots
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>"AI is not just a technology; it is
+                                            a mindset and a new way of solving problems.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5> A chatbot is a computer program that uses artificial intelligence (AI) and natural
+                                language processing (NLP) to understand customer questions and automate responses
+                                to them, simulating human conversation.
+                                Participants will create an offline Chat Bot to simulate School Queries.
+                            </h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">&bull; School Chatbot : Participants are expected to
+                                        create Chatbots to handle School related
+                                        queries.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Participants are required to utilize only free platforms for the creation
+                                        of their chatbots.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Submission Guidelines: Chatbot Links will be brought in by the
+                                        participants on the day of
+                                        event to be submitted and tested by the host school.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Code of Conduct: Chatbots are expected to maintain a professional tone
+                                        and should not
+                                        respond using informal language at any point.
+                                    </h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; Disqualification: If the content of a chatbot is determined to be
+                                        plagiarized, it will result in
+                                        immediate disqualification of the entry.
+
+                                    </h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : IX-X</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2 participant per team</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Teams per school</b>: 1-2</h5>
+                            </p>
+                            <br>
+                            <p>
+                           
+                            </p>
+
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shruti</h5>
+                            <h5><b>Contact Number</b> : 9654058136</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/DJeWuw7Sy2foJe396" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myeModal11" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/quiz-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">In-quiz-itive</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Quiz</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Innovation is the ability to see
+                                            change as an opportunity, not a threat.</i></q>
+                                </h5>
+                            </blockquote><br>
+                            <h5 style="text-align:justify;">IT quiz is a form of game or mind sport in which players
+                                attempt to answer IT questions
+                                correctly. Quizzes can be used as a brief assessment in education and similar fields to
+                                measure growth in knowledge, abilities, skills or simply as a hobby. </h5>
+                            <br>
+                            <h5>Competition Day :
+                                Pen-Paper Round followed by Stage Round</h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5>&bull; Format: The format of the quiz will include preliminary test, oral
+                                        rounds, or a combination of
+                                        both. Total rounds will be two and it will include both multiple-choice and
+                                        short answer
+                                        question.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Both quiz rounds will be conducted by the host school exclusively on the
+                                        day of the event.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Topics: This may include programming languages, hardware, software,
+                                        networking,
+                                        cybersecurity, or emerging technologies.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Organizers' Decision: The organizers' decisions regarding any aspect of
+                                        the event, including
+                                        rules interpretation or scoring, are final and binding.
+                                    </h5>
+                                </li>
+                            </ul><br>
+                            <p>
+                            <h5><b>Eligibility</b>: IX-XII</h5>
+                            </p>
+                            <br>
+          		    <p>
+                            <h5><b>Number of Participants</b>: 2 </h5>
+                            </p>
+                            <br>
+		            <p>
+                            <h5><b>Number of teams per school</b>: 1-2 </h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Topic</b>: Technology</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shruti</h5>
+                            <h5><b>Contact Number</b> : 9654058136</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/kynaeabUjCZs3qmLA" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal12" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/image-logo.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Click-o-Mania</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Photography</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>A good photograph is one that
+                                            communicates a fact, touches the heart, and leaves the viewer a changed
+                                            person for having seen it.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">Adding that wow factor to your photography is
+                                        something, many of us aspire to do. Photographic effects are a great way to
+                                        reach this goal.
+                                        Discover what the coolest photography effects are and how they can be easily
+                                        applied to ones work. We shall provide the participants with general objects in
+                                        a room like vases, flowers, bed sheets, mugs, toy cars etc. They shall set up
+                                        and click pictures and edit the pictures according to the theme.</h5>
+                                </li>
+                                <br>
+                                <h5>Competition Day :
+                                    For the first round, the participants are required to capture and submit a single
+                                    original
+                                    image relevant to the given theme.
+                                    For the second round, the participants need to edit their image according to the
+                                    theme.
+                                    Bringing your own prop is not permitted.</h5>
+                                <br>
+                                <li>
+                                    <h5>&bull; Participants are encouraged to utilize DSLR cameras for photography.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; This is a Bring Your Own Device (BYOD) event, where participants are
+                                        required to bring their
+                                        own camera and laptop.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The competition consists of two rounds: Round 1 involves capturing raw
+                                        images, and
+                                        Round 2 focuses on editing the images according to a given theme.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Both rounds will be conducted at the host school on the day of the event.
+                                        Please ensure
+                                        your presence at the host school for the competition.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Participants may request permission for mobile photography from the host
+                                        school.
+                                        However, please note that the final decision regarding the use of mobile phones
+                                        will be
+                                        made by the host school.
+                                    </h5>
+                                </li>
+                                <!-- </li>
+                                <li>
+                                    <h5>&bull; The files should be named as: schoolname_eventname.
+                                    </h5>
+                                </li> -->
+                                <li>
+                                    <h5>&bull; DISCLAIMER: Participants must carry their own devices for editing the
+                                        image.
+                                    </h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: IX-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: Individual</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teams allowed per school</b>: 1 to 2 teams</h5>
+                            </p>
+                            <br>
+                            <p>
+                            
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra </h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <!-- The Modal -->
+                <div id="myeModal13" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/search.svg" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Unravel the Unknown:</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Epicrypt</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>A cryptic hunt is a thrilling
+                                            adventure that pushes the boundaries of your imagination,
+                                            tests your wit, and rewards your perseverance.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">The Cryptic Hunt competition is a team-based event
+                                        where participants solve a series of
+                                        cryptic clues and puzzles. Teams work together to decipher the clues, uncover
+                                        hidden
+                                        messages, and navigate to different locations. The competition tests
+                                        problem-solving
+                                        skills, critical thinking, and collaboration.</h5>
+                                </li><br>
+                                <h5>Competition Day :<br>
+                                    The Participant that solves all the clues within the given time limit or with the
+                                    fastest
+                                    time is declared the winner.
+                                </h5>
+                                <br>
+                                <h5><b>These protocols are mandatory :-</b></h5><br>
+                                <li>
+                                    <h5>&bull; The objective of the competition is to solve a series of cryptic clues
+                                        and puzzles within a given
+                                        time frame.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Knowledge of cryptography is required.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Participants must use their problem-solving, analytical, and deductive
+                                        skills to progress
+                                        through the hunt.</h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; Round 1 of 'The Cryptic Hunt' will take place as an online event on
+                                        August 3, 2023. Participants
+                                        will have the opportunity to solve the hunt and submit their answers on the
+                                        designated
+                                        Discord server.</h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; After the completion of Round 1, shortlisted participants will advance to
+                                        the next stage of the
+                                        competition. The subsequent rounds will be held in person at the host school on
+                                        the day of
+                                        the event. Shortlisted teams will continue the hunt, facing new challenges and
+                                        clues in their
+                                        quest to emerge as the ultimate winners.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for all</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Individual</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Teams allowed per school</b>: 1-2 Teams</h5>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                            
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra </h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <!-- The Modal -->
+                <div id="myeModal14" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/cube.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Cubing</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">(3 By 3 & 5 By 5)</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Cubing is a journey of
+                                            self-discovery, unlocking your potential, and realizing that with
+                                            practice and determination, you can achieve great things.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">Cubing is a Competition to solve mechanical puzzles
+                                        that are operated by twisting
+                                        groups of pieces, commonly known as 'twisty puzzles'.</h5>
+                                </li><br>
+                                <h5>Competition Day :<br>
+                                    12 Participants will be shortlisted based on “First to Solve” in the first round to
+                                    Compete
+                                    one on one in the Second Round.</h5>
+                                <br>
+                                <h5><b>These protocols are mandatory :-</b></h5><br>
+                                <li>
+                                    <h5>&bull; The competition will feature different event categories based
+                                        on the different types of Rubik's Cubes, such as 5x5 and 3X3.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Students can carry their own cube.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Prior to each round, an official scrambler will scramble the
+                                        cubes following a specific scrambling algorithm.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Scrambled cubes will be provided to participants, and they will
+                                        have a limited inspection time to observe the scrambled cube
+                                        before solving.</h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; Timing for each solve will be done using an official timing
+                                        device, such as a stackmat timer.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The timer will start when the participant touches the cube and
+                                        stop when the solved state is achieved.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for all</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Individual</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Teams allowed per school</b>: 1-2 Teams</h5>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                            
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra </h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <!-- The Modal -->
+                <div id="myeModal15" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/ad.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Ad-Mad</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Product Designing</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Design is not just what it looks
+                                            like and feels like. Design is how it works.</i></q>
+
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">The time has come to showcase your creativity and
+                                        Thinking ability. The participants are
+                                        required to set strategy, form new ideas, and convert them into tangible
+                                        inventions and
+                                        products. Err on the side of caution because the design should be aesthetic to
+                                        look at,
+                                        convenient to use, and satisfying to customers. Beat your rivals by conquering
+                                        the
+                                        problem statement.</h5>
+                                </li><br>
+                                <h5>Competition Day :<br>
+                                    The Participants will bring their own device to Solve the problem statement
+                                    Creativity in the name of the solution, feature list, interactions, etc. Attention
+                                    to detail in
+                                    the design of the solution ranging from the choice of colors, and fonts to user
+                                    research,
+                                    expected app interactions, etc. and Reasoning in your choice of testing methods,
+                                    tools,
+                                    and goals.</h5>
+                                <br>
+                                <h5><b>These protocols are mandatory :-</b></h5><br>
+                                <li>
+                                    <h5>&bull; Problem Statement: The competition will have a specific problem statement
+                                        or challenge
+                                        for the teams to address and The problem statement will be provided to the teams
+                                        at
+                                        the beginning of the competition.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Time Limit: Teams must submit their final solution within the given time
+                                        frame.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Each team must prepare a presentation to showcase their solution.</h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; Presentations should include the problem statement, the design thinking
+                                        process
+                                        followed, the solution developed, and its potential impact.</h5>
+                                </li>
+
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for all</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Team of 2</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Teams allowed per school</b>: 1 - 3 Teams</h5>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                           
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shruti </h5>
+                            <h5><b>Contact Number</b> : 9654058136</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <!-- The Modal -->
+                <div id="myeModal16" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/waveform-path.svg" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">ELECTRO-FUSION</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Mixing of Songs</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Mixing is about achieving balance
+                                            and clarity while maintaining the integrity of the
+                                            artist's vision.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">Audio mixing is the process of taking recorded
+                                        tracks and blending them together.
+                                        Tracks are blended using various processes such as EQ, Compression and Reverb.
+                                        The
+                                        goal of mixing is to bring out the best in your multi-track recording by
+                                        adjusting levels,
+                                        panning, and time-based audio effects (chorus, reverb, delay).</h5>
+                                </li><br>
+                                <h5>Competition Day :
+                                    Participants will Present their Created songs.
+                                    Please Note : Songs to be Mixed will be given by Host School.</h5>
+                                <br>
+                                <h5><b>These protocols are mandatory :-</b></h5><br>
+                                <li>
+                                    <h5>&bull; Please Note : Three days prior to the event, the host school will share
+                                        raw tracks with the participants.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Participants are required to mix the songs to create a medley.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Participants must submit their songs via email to the dedicated
+                                        address provided by the host school no later than midnight on August 3, 2023.
+                                    </h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; . Participants are allowed to incorporate beats and other music elements
+                                        into their compositions.</h5>
+                                </li>
+
+                                <li>
+                                    <h5>&bull; On the day of the event, participants will perform their songs at the
+                                        host school and also
+                                        provide a presentation on the software and various elements used in their
+                                        compositions.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for all</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Individual</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Teams allowed per school</b>: 1-2 Teams</h5>
+                            </p>
+                            <br>
+                            <br>
+                            <p>
+                           
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika </h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+            </div>
+            <!-- events End -->
+
+
+            <!-- Wavy Footer Starts -->
+            <footer>
+                <div class="wave wave1">
+                    <div class="footer-content">
+                        <p>Copyright &#169; Rukmini Devi Public School, Pitampura
+                            <br>Developed By : Arjan Singh Jassal | Harman Singh Jassal
+                        </p>
+                    </div>
+                </div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </footer>
+        </div>
+    </div>
+
+    </div>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("header-area");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("headersticky")
+            } else {
+                navbar.classList.remove("headersticky");
+            }
+        }
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('body').addClass('loaded');
+                $('h1').css('color', '#222222');
+            }, 300);
+
+        });
+    </script>
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/particlesRun.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script> -->
+
+    <script>
+        // topscroll
+        //$(window).on('beforeunload', function () {
+        //  $('body').hide();
+        //  $(window).scrollTop(0);
+        //});
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            // When the user clicks anywhere outside of the modal, close it
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var datamap = new Map([
+            [document.getElementById("myBtn1"), document.getElementById("myeModal1")],
+            [document.getElementById("myBtn2"), document.getElementById("myeModal2")],
+            [document.getElementById("myBtn3"), document.getElementById("myeModal3")],
+            [document.getElementById("myBtn4"), document.getElementById("myeModal4")],
+            [document.getElementById("myBtn5"), document.getElementById("myeModal5")],
+            [document.getElementById("myBtn6"), document.getElementById("myeModal6")],
+            [document.getElementById("myBtn7"), document.getElementById("myeModal7")],
+            [document.getElementById("myBtn8"), document.getElementById("myeModal8")],
+            [document.getElementById("myBtn9"), document.getElementById("myeModal9")],
+            [document.getElementById("myBtn10"), document.getElementById("myeModal10")],
+            [document.getElementById("myBtn11"), document.getElementById("myeModal11")],
+            [document.getElementById("myBtn12"), document.getElementById("myeModal12")],
+            [document.getElementById("myBtn13"), document.getElementById("myeModal13")],
+            [document.getElementById("myBtn14"), document.getElementById("myeModal14")],
+            [document.getElementById("myBtn15"), document.getElementById("myeModal15")],
+            [document.getElementById("myBtn16"), document.getElementById("myeModal16")]
+
+        ]);
+
+        datamap.forEach((value, key) => {
+            doModal(key, value);
+        });
+
+        function doModal(anchor, popupbox) {
+
+            // Get the <span> element that closes the modal
+            var span = popupbox.getElementsByClassName("eclose")[0];
+
+            anchor.addEventListener("click", function (event) {
+                popupbox.style.display = "block";
+            });
+
+            span.addEventListener("click", function (event) {
+                popupbox.style.display = "none";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target == popupbox) {
+                    popupbox.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" activated", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " activated";
+        }
+    </script>
+    <!-- scroll to top button -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+        });
+    </script>
+    <!-- scroll to top button -->
+    <!-- Progress Bar Start -->
+    <script>
+        (function () {
+            var canvas = document.getElementById('canvas'),
+                circlesCreated = false;
+
+            function onScroll() {
+                if (elementInViewport(canvas)) {
+                    if (!circlesCreated) {
+                        circlesCreated = true;
+                        createCircles();
+                        elementInViewport(canvas) = false;
+                    }
+                } else {
+                    circlesCreated = false;
+                }
+            }
+
+            function elementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+                );
+            }
+
+            function createCircles() {
+
+                var colors = [
+                    ['#000', '#45AEEA'],
+                    ['#000', '#EFB917'],
+                    ['#000', '#f83754'],
+                    ['#000', '#38FF88']
+                ],
+                    circles = [];
+                var percentage = [
+                    ['110'],
+                    ['1600'],
+                    ['1800'],
+                    ['12']
+                ],
+                    circles = [];
+                var maxval = [
+                    ['120'],
+                    ['2000'],
+                    ['2000'],
+                    ['12']
+                ],
+                    circles = [];
+                //31.42 + (i * 9.84),
+
+                for (var i = 1; i <= 5; i++) {
+                    var child = document.getElementById('circles-' + i),
+                        // percentage = 31.42 + (i * 9.84),
+
+                        circle = Circles.create({
+                            id: child.id,
+                            value: percentage[i - 1],
+                            maxValue: maxval[i - 1],
+                            radius: getWidth(),
+                            width: 9,
+                            colors: colors[i - 1]
+
+                        });
+
+                    circles.push(circle);
+                }
+
+                window.onresize = function (e) {
+                    for (var i = 0; i < circles.length; i++) {
+                        circles[i].updateRadius(getWidth());
+                    }
+                };
+
+                function getWidth() {
+                    return window.innerWidth / 15;
+                }
+            }
+            window.onscroll = onScroll;
+
+        })();
+    </script>
+    <!-- Progress Bar End -->
+    <!-- PopupVideo starts-->
+    <script>
+        $(document).ready(function () {
+            $("#myModal").modal('show');
+            $(".close").click(function () {
+                $("#myModal").modal('hide');
+            });
+        });
+    </script>
+    <!-- Popup video ends -->
+
+    <!-- preloader -->
+    <script>
+
+        // Page loading animation
+        $(window).on('load', function () {
+
+            $('#js-preloader').addClass('loaded');
+
+        });
+
+
+    </script>
+
+    <!-- Coming Soon -->
+    <script type="text/javascript">
+        var blink =
+            document.getElementById('blink');
+
+        setInterval(function () {
+            blink.style.opacity =
+                (blink.style.opacity == 0 ? 1 : 0);
+        }, 700); 
+    </script>
+</body>
+
+</html>

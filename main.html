@@ -1,0 +1,2388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Digilogous - Rukmini Devi Public School">
+    <meta name="author" content="Rukmini Devi Public School">
+
+    <link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+
+    <title>The Digilogous</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <!--MY LINK-->
+    <link rel="stylesheet" href="assets/css/master.css">
+    <!-- <link rel="stylesheet" href="assets/css/progress.css"> -->
+    <style>
+        #canvas .circle {
+            display: inline-flex;
+            text-align: center;
+            margin: 1em;
+        }
+
+        .circles-decimals {
+            font-size: .4em;
+        }
+
+        .containbar {
+            position: relative;
+            width: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .containbar .cardbar {
+            position: relative;
+            background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            border-radius: 4px;
+            text-align: center;
+            overflow: hidden;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .containbar .cardbar:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .containbar .cardbar:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .cardbar:hover .percent .number h2 span {
+            color: #fff;
+        }
+
+        .cardbar:hover .text {
+            color: #fff;
+        }
+    </style>
+
+    <script src="assets/js/circles.js"></script>
+
+<body>
+  <!-- ***** Preloader Start ***** -->
+  <!-- <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div> -->
+  <!-- ***** Preloader End ***** -->
+
+    <!-- Popup Video Starts -->
+    <div class="modal fade popup" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content" style="float:right;">
+                <div class="modal-header ">
+                <p class="close" >&times;</p>
+                    <div class="emodal-header-border">
+                        <div class="">
+                            <center>
+                            <div class="title">
+                                <h2 class="modal__title">We are Back!</h2>
+                                <h4 style="color: rgba(255, 255, 255, 0.747);">On Saturday, November 5, 2022</h4>
+                            </div>
+                            <div class="video1"><iframe class="digi-popup" src="https://www.youtube.com/embed/GnA4j9RnEAU" title="K.C. Garg Memorial, Inter School Tech Symposium Digilogous 8.0 is back !!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                 <a style="color: #fff;" href=""><h4>Results</h4></a>
+                            </div>
+                        </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Video Ends -->
+
+    <div id="demo-content">
+        <div id="content">
+            <!-- ***** Header Area Start ***** -->
+            <header class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
+                <div class="container h-100">
+                    <div class="row h-100">
+                        <div class="col-12">
+                            <nav class="main-nav h-100">
+                                <a style="margin-left: -100px;" href="#top" class="logo d-flex align-items-center">
+                                    <h4 class="mt-0"> <img style="width: 100px;" src="assets/images/schlogo.png" alt="logo" class="mt-0">
+                                    </h4>
+                                </a>
+                                
+                                <!-- ***** Logo Start ***** -->
+                                <div class="logo align-items-center">
+                                    <h4 class="mt-0"> <img src="assets/images/logobolder.png" alt="logo" class="mt-0">
+                                    </h4>
+                                </div>
+                                <!-- ***** Logo End ***** -->
+                                <!-- ***** Menu Start ***** -->
+                                <ul class="nav">
+                                    <li class="scroll-to-section"><a href="#top style="font-size:44px;" " class="active text-center" > Home </a>
+                                    </li>
+                                    <li class="scroll-to-section"><a class="text-center" href="#about">About Us</a>
+                                    </li>
+                                    <li class="scroll-to-section"><a class="text-center" href="#separate">Events</a>
+                                    </li>
+                                    <li class="scroll-to-section"><a href="#team">Our Team</a></li>
+                                    <li class="scroll-to-section"><a href="#contact-us-too">Contact Us</a></li>
+                                    <!--<li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Get Your Quote</a></div></li> -->
+                                </ul>
+                                <a class="menu-trigger">
+                                    <span>Menu</span>
+                                </a>
+                                <!-- ***** Menu End ***** -->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- ***** Header Area End ***** -->
+            <canvas style=" position: fixed;top: 0;left: 0; height: 1000px;" id="Matrix">
+            </canvas>
+                         <!-- Begin Jumbotron -->
+            <div  class="jumbotron jumbotron-main" id="top">
+                <!-- <div id="particles-js"></div> -->
+               
+                <!-- <span><img style=" position: absolute; bottom: 0px; right: 0px;" src="assets/images/1st.png" alt=""></span> -->
+
+                <div style="z-index: 1000;" class="container center-vertically-holder">
+                    <div class="center-vertically">
+                        <div id="scaleReveal" class="col-sm-offset-2 col-lg-offset-3 text-center">
+                            <div class="particle-content col-sm-8">
+                                <span class="big-logo"><img src="assets/images/logobold.png" /></span>
+                                <center>
+                                  <h3>K.C. Garg Memorial, Inter School Tech Symposium</h3>
+                                    <br>
+                                <h1 class="digi-title">The Digilogous 9.0</h1>   <br>
+                                <hr>                              
+                                <h3 id="blink" class="digi-small-title"> Saturday, August 5, 2023</h3>
+                            </center>
+
+                                <br>
+                                <br>
+                                <a href="#about" data-id="about"
+                                    class="scroll-link btn btn-default btn-white btn-lg mt15"><i
+                                        class="fa fa-arrow-down" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <!-- /.column -->
+                    </div>
+                    <!-- /.vertical center -->
+                </div>
+                <!-- /.container -->
+            </div>
+        <!-- </canvas> -->
+
+            <!-- End Jumbotron -->
+            <script>
+                const canvas = document.getElementById('Matrix');
+                const context = canvas.getContext('2d');
+                
+                const katakana = '9.0  ';
+                const latin = '';
+                const nums = 'DIGILOGOUS ';
+                
+                const alphabet = katakana + nums;
+                
+                const fontSize = 16;
+                const columns = canvas.width;
+                
+                
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                
+                const rainDrops = [];
+                
+                for( let x = 0; x < columns; x++ ) {
+                    rainDrops[x] = 1;
+                }
+                
+                const draw = () => {
+                  context.fillStyle = 'rgba(0,0,0,0.05)'
+                  context.fillRect(0,0, canvas.width, canvas.height);
+                  
+                    context.fillStyle = '#4DA699';
+                    context.font = fontSize + 'px monospace';
+                
+                //    for(let i = 0; i < rainDrops.length; i++)
+                    for(let i = rainDrops.length; i > 0; i--)
+                    {
+                // change the below line as
+                //       const text = alphabet.charAt(Math.floor(Math.random() * alphabet.length));
+                //new line
+                        const text = alphabet.charAt((rainDrops[i] - 1) % alphabet.length);
+                        context.fillText(text, i*fontSize, rainDrops[i]*fontSize);
+                
+                        if(rainDrops[i]*fontSize > canvas.height && Math.random() > 0.975) {
+                            rainDrops[i] = 1;
+                        }
+                        rainDrops[i]++;
+                    }
+                }
+                
+                setInterval(draw, 100);
+                    </script>
+            <div style="background-image: url('assets/images/back1.png');background-size: contain;background-repeat: repeat; " id="content">  
+
+            <!-- In the memory of -->
+            <div class="memory" style=" position: relative;  padding-bottom: 50px;  padding-top: 35px;">
+                <center>
+                    <section  class="about">
+                        <div class="section-heading">
+                            <h6>In the memory of</h6>
+                        </div>
+                        <hr class="solid2">
+                        <div class="container pb-5 backgrounfama">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="author-img">
+                                        <img src="assets/images/sir.png" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <div  class="col-lg-7 d-flex flex-column justify-content-center">
+                                    <center>
+                                    <div class="section-title mt-4" >
+                                        <h2 class="title">Shri K.C. Garg</h2>
+                                        <h5 class="title">Founder Trustee and President Seth Pokhar Mal Educational Society</h5>
+                                        <br> 
+                                        <p class="a" style="padding-top:10px ;">We, the members of the RDPS fraternity, express our profound sorrow and grief over the sad passing of our beloved chairman, Shri K C Garg Ji. He was the founder of the Seth Pokhar Mal Educational Society, a distinguished educator, a doyen of school education and the mind behind the creation and establishment of several institutes of repute under the brand name "Rukmini Devi."</p>
+                                    </div>
+                                </center>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </center>
+            </div>
+            <!-- In the memory of -->
+            <section >
+            <!--    Glimpses Video start -->
+            <section     class="gal">
+                <center>
+                <div class="section-heading">
+                    <h6>TECH CHAMPIONS</h6>
+                </div>
+                <hr class="solid2">
+            </center>
+                <center>
+                    <div class="gallery">
+                        <div class="item justify-content-center align-items-center align-content-center flex-wrap">
+                            <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                <div class="image-box active" style="margin:15px;">
+                                    <img src="assets/images/glimpses/1.jpg" alt="Random Image" />
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                <div class="image-box" style="margin:15px;">
+                                    <img src="assets/images/glimpses/2.png" alt="Random Image" />
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                <div class="image-box" style="margin:15px;">
+                                    <img src="assets/images/glimpses/3.png" alt="Random Image" />
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                <div class="image-box" style="margin:15px;">
+                                    <img src="assets/images/glimpses/4.png" alt="Random Image" />
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                <div class="image-box" style="margin:15px;">
+                                    <img src="assets/images/glimpses/5.png" alt="Random Image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+            </section> 
+            <!--    Glimpses Video end -->
+
+          <!--    Distinguished start -->
+         <section     style="margin-top:40px;" class="gal">
+            <center>
+            <div class="section-heading">
+                <h6>DISTINGUISHED GUESTS</h6>
+            </div>
+            <hr class="solid2">
+        </center>
+
+            <center>
+                <div class="gallery">
+                    <div class="item justify-content-center align-items-center align-content-center flex-wrap">
+                        <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                        <div class="image-box active" style="margin:15px;">
+                            <img src="assets/images/q5.jpg" alt="Random Image" />
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block" >
+                        <div class="image-box" style="margin:15px;">
+                            <img src="assets/images/q1.JPG" alt="Random Image" />
+                        </div>   
+                    </div>
+                    <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block" >
+
+                        <div class="image-box" style="margin:15px;">
+                            <img src="assets/images/q2.jpg" alt="Random Image" />
+                        </div>     
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block" >
+
+                        <div class="image-box" style="margin:15px;">
+                            <img src="assets/images/q3.jpg" alt="Random Image" />
+                        </div>
+                        </div>
+                        <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block" >
+                        <div class="image-box" style="margin:15px;">
+                            <img src="assets/images/q4.jpg" alt="Random Image" />
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </section> 
+        <!--    Distinguished Video end -->
+        
+        
+    </section>
+
+            <!-- Supported by -->
+            <!-- <div class="supported-by" style="background: #10131C;">
+                <center class="w-100">
+                    <div class="section-heading">
+                        <h6>Previous Partners</h6>
+                    </div>
+                    <hr class="solid2">
+                </center>
+                <div
+                    class="portfolio flex-wrap gap-5 justify-content-center align-content-center align-items-center w-100">
+                    <div style="margin: 20px;"
+                        class="containerport d-flex justify-content-center align-content-center align-items-center">
+                        <img src="assets/images/sponsors/AVARTAN.jpg" class="imageport">
+                        <a href="https://www.artgare.com/">
+                            <div class="overlayport">
+                                <div class="textport">Website</div>
+                            </div>
+                        </a>
+                    </div> 
+                    <div
+                        class="portfolio flex-wrap gap-5 justify-content-center align-content-center align-items-center w-100">
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img src="assets/images/artgare.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Artgare</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/gfgs.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">GeeksforGeeks</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/CB.png" class="imageport">
+                            
+                                <div class="overlayport">
+                                    <div class="textport">Coding Blocks</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/Designmate.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Designmate</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/EBM.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">EBM</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/Educo.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">EducoSoft</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/EM.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Extramarks</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/Greycaps.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Greycaps</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/jamboree.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Jamboree</div>
+                                </div>
+                        </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/MW.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Mindwars</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/Scavin.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Scavin Eyewears</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/Silverzone.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">SilverZone Foundation</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/sponsors/skiron.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Skiron Gaming</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img style="width: 150px;" src="assets/images/SCA.webp" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">STEM</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img src="assets/images/Younity.in Official Logo.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Younity</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img src="assets/images/avishkar.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Avishkaar</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img src="assets/images/sponsors/AVARTAN.jpg" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Avartan</div>
+                                </div>
+                           </div>
+                        <div style="margin: 20px;"
+                            class="containerport d-flex justify-content-center align-content-center align-items-center">
+                            <img src="assets/images/collins.png" class="imageport">
+                                <div class="overlayport">
+                                    <div class="textport">Collins</div>
+                                </div>
+                           </div>
+
+                    </div>
+                </div>
+            </div> -->
+            <!-- Supporeted by -->
+
+            <div     id="about" class="about-us section ">
+                <div class=" wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                    <center>
+                        <div class="section-heading">
+                            <h6>About us</h6>
+                        </div>
+                        <hr class="solid2">
+                    </center>
+                    <p style="text-align: justify;" >It is our firm conviction that technology possesses the power to revolutionize the world and enhance the quality of people's lives. Throughout the past few decades, it has brought about a profound transformation in the way individuals live, work, engage in leisure activities, and establish connections. The remarkable achievements of technology visionaries have played a pivotal role in the overall advancement of our nation. In order to commemorate the invaluable contributions made by these great technologists and to inspire the widespread utilization of information and communication technology in diverse fields such as Science, Agriculture, Defence, Entertainment, and more,we proudly present 'K. C Garg Memorial Inter School Tech Symposium : Digilogous 9.0' - the inter-school IT Competition, which was first launched in 2014. This extraordinary IT fest has triumphantly completed seven exceptional years thus far, and now we are thrilled to announce the upcoming eighth edition of Digilogous, scheduled to take place on Saturday, August 05, 2023.</p>
+                </div>
+            </div>
+
+            <!-- events start -->
+            <div >
+                <section id="separate">
+                    <div class="sub-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                            <center>
+                                <div class="section-heading">
+                                    <h6>Events</h6>
+                                </div>
+                                <hr class="solid2">
+                            </center>
+                        </div>
+                        <div class="events">
+                            <div class="item justify-content-center align-items-center align-content-center flex-wrap">
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 Junior All">
+                                        <img src="assets/images/events/fancyevent.png" alt="Robotronics" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Markethon</h3>
+                                                <button class="btn menu-button-class" id="myBtn1">Event
+                                                    Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/codingevent.png" alt="SCRATCH" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Blank Coding</h3>
+                                                <button class="btn" id="myBtn2">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Senior">
+                                        <img src="assets/images/events/surp.png" alt="SURPRISE" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >War of Words</h3>
+                                                <button class="btn" id="myBtn3">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 Open All Senior Junior">
+                                        <img src="assets/images/events/aievent (2).png" alt="AI EVENT" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Robo War</h3>
+                                                <button class="btn" id="myBtn4">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Junior">
+                                        <img src="assets/images/events/newsletterevent.png" alt="NEWSLETTER"
+                                            class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Logo Designing</h3>
+                                                <button class="btn" id="myBtn5">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Senior">
+                                        <img src="assets/images/events/aveditevent.png" alt="A/V EDIT" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Vodcast</h3>
+                                                <button class="btn" id="myBtn6">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Open Senior Junior">
+                                        <img src="assets/images/events/programingevent.png" alt="PROGRAMMING" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Chat.ai</h3>
+                                                <button class="btn" id="myBtn7">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Open Senior Junior">
+                                        <img src="assets/images/events/gamingevent.png" alt="GAMING"
+                                            class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >In-Quiz-itive</h3>
+                                                <button class="btn" id="myBtn8">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/podcastevent.png" alt="PODCAST"
+                                            class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Encipher</h3>
+                                                <button class="btn" id="myBtn9">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Senior">
+                                        <img src="assets/images/events/blogitevent.png" alt="BLOGGING" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;">Click-O-Maniac</h3>
+                                                <button class="btn" id="myBtn10">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 All Junior">
+                                        <img src="assets/images/events/jnrquiz.png" alt="SENIOR QUIZ" class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;" >Decrypt</h3>
+                                                <button class="btn" id="myBtn11">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4 col-sm-6 " style="display: inline-block">
+                                    <div class="container-3 Senior All">
+                                        <img src="assets/images/events/photoevent.png" alt="PHOTOGRAPHY"
+                                            class="image">
+                                        <div class="overlay">
+                                            <div class="text">
+                                                <h3 style="font-size:40px;">Ad-Mad</h3>
+                                                <button class="btn" id="myBtn12">Event Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- The Modal -->
+
+                <!-- The Modal -->
+                <div id="myeModal1" class="modal">
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/fancy dress logo.png" alt=""
+                                        style="height: 11%; width: 11%;">
+                                    <div class="title">
+                                        <h2 class="modal__title">Markethon</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Digital marketing</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>The harder the battle, the sweater the victory.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5 style="text-align:justify; color: rgba(255, 255, 255, 0.747);">In this competition, you will work as an indivisual to help a company enhance their marketing strategy. The idea is to create digital marketing content for them in the form of presentation.</h5><br>
+                            <ul>
+                                <li>
+                                    <h5>&bull; Choose a company that could benefit from assistance with marketing strategy.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Research about the company.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Create marketing content for the company using any platform.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : III-V</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 1-2 teams</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Theme</b>: Digital Marketing</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Presentation : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Creativity : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Expression : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Content : 20 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- The Modal -->
+
+                <div id="myeModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/programing-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Blank Coding</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">HTML Coding</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>The best way to predict the future is to create it.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5 style="color: rgba(255, 255, 255, 0.747);">The dark coding battle is a programming competition that challenges the participants to write code without being able to see it. Participants are given a programming problem and have a set amount of time to write a code with their computer screen turned off.</h5><br>
+                                <ul>
+                                <li>
+                                    <h5>&bull; Screen can be turned on maximum 3 times in case Image or CSS code inclusions that too for 30 seconds only.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any screen turn on will be allowed with deduction of 5 points out of the total score.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Internet/Mobile Phone usage is restricted.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull;  In Case of Image inclusion, media will be provided by the host
+                                        School on the day of competition</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : V-VIII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team Size</b>: Indivisual</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Team allowed per School</b>: 1-2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Theme </b>: The theme will be allocated at the venue and total time to code will be 1 Hour</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Blind Screen : 50 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Design : 15 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Use of tags : 15 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Structure : 20 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/surprise-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">DECRYPT</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Surprise Event</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Challenges are what make life interesting, and overcoming them is what makes life meaningful.</i></q>
+                                </h5>
+                            </blockquote>
+                            <p>
+                                <br>
+                                <center>
+                                    <h5 style="font-family: Roboto;"><strong>===============Data
+                                            Encrypted===============</strong></h5>
+                                </center>
+                            </p>
+                            <br>
+                            <p style="align-items: center; justify-content: center;">
+                            <h5 class="surprise-data">01000111 01100101 01110100 00100000 01110010 01100101 01100001
+                                01100100 01111001 00100000 01110100 01101111 00100000 01100010 01100101 00100000
+                                01110011 01110101 01110010 01110000 01110010 01101001 01110011 01100101
+                                01100100 00100001</h5>
+                            </p>
+                            <br>
+                            <h5>These protocols are mandatory :-</h5>
+                            <ul>
+                                <li>
+                                    <h5>&bull; Teams must adhere to the principles of fair play and
+                                        sportsmanship.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any form of cheating, including the use of GPS trackers or
+                                        unauthorized assistance, is strictly prohibited and will result in
+                                        disqualification.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The decisions made by the event organizers will be final and
+                                        binding.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Any disputes or issues arising during the event will be resolved by
+                                        the organizers.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for All</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participant</b>: 1</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Number of Rounds</b>: Not Defined</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; NA/Clearance of Each Stage</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanik</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/ai-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">WAR OF WORDS</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Digital Crossword</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>The great events of the world take place in the brain.                                    </i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">War of words is an open battle where each team would be competing to solve a Digital
+                                        Crossword puzzle in order to reach the next stage, As the team progresses to the next
+                                        stage the new challenge opens for them. Total number of stages will be 3 and the first
+                                        three teams will be awarded in order of their Rank.</h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; The Cues of the crossword would be based on Technology/Computers/I.T.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Team members can discuss but any kind of disturbance would not be appreciated.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Internet/Mobile Phone usage is restricted.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Each Team will be given next stage Challenge only after successfully completing the Previous
+                                        Stage.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Minimum Pass Percentage Stage wise is 80%.</h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; In case of use of unfair means, Team would be disqualified.</h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: V-VIII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                                <h5><b>Software</b>: Any Software(Like ARLOOPA, SURREAL)</h5>
+                                </p>
+                                <br> 
+                                <p>
+                                    <h5><b>Theme</b>: "IN THE MEMORY OF" - Remembering our Elders</h5>
+                                    </p>
+                                    <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Usage of elements : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Visual effect : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Story Line : 20 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Creativity : 20 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra Khurana</h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal5" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/comic-logo.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">News-a-World</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Canva Newsletter</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Finding your Purpose isn't enough the challengefor our generation is creating a world where everyone has a sense of purpose
+                                    </i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;"> The participants are required to design a professional newsletter/brochure on the spot using the above mentioned software. They will be provided hardware and software resources. The aim of this event is to explore the creativity and design thinking ability of our young learners. The freedom to create the content will be given along with the mandate to use the content that will be provided by the host school.</h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; All the participants are required to submit their files in pdf format. 
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Plagiarism will lead to disqualification.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The final file should contain minimum 6 pages and maximum 10 pages.
+                                    </h5>
+                                </li><li>
+                                    <h5>&bull; The files should be named as: schoolname_eventname.
+                                    </h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : IX-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Software allowed</b>: CANVA</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Originality : 20 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Creativity: : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Visual Clarity : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Overall presentation : 20 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha Makhija</h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal6" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/video-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Cine-Cut</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">A/V Editing</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>No matter what you do, your job is to tell a story</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">A design thinking tutorial video is one that provides the opportunity to contribute to an issue of societal concern. It should demonstrate a process, transfer of knowledge, explaining a concept or show the process of completing a task, for example: a tutorial video for sign-up process. The participants will use graphics animation, characters and text in their tutorial. The aim of this event is to explore the creativity and design thinking ability of our young learners. The submission will be in the form of a video that will be showcased on the day of event. 
+                                    </h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; The participants need to create a learning/tutorial video on the above mentioned platform.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The storyline of the video should have a proper structure, content and conclusion.
+
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The duration of the video should be 3-5 mins.
+
+                                    </h5>
+                                </li>
+                                
+                                <li>
+                                    <h5>&bull; Participants are required to bring their own devices for creation of their own tutorial video. </h5>
+                                </li>
+                            </ul><br>
+                            <p>
+                            <h5><b>Eligibility</b> : IX-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Software allowed</b>: Biteable</h5>
+                            </p>
+                            <br>
+                            <p>
+                                <h5><b>Topic</b>: SDG (Any one)</h5>
+                                </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Originality : 20 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Creativity : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Visual Effects : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Overall presentation : 20 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra Khurana</h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal7" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/programing-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Encipher</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Programming</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                         
+                                <h5 style="color: rgba(255, 255, 255, 0.747);"><i>Do your fingers twitch on seeing a problem, itching to write code? Do you dream of programming when you sleep? Most of all, do you love problem solving?</i>
+                                </h5>
+                            
+                            <pre>
+                                <h5 class="surprise-data">#include &lt;digi.h&gt;
+    if (CanCode==true){ 
+            if ("♥puzzles==true){ 
+                execute ("Participate") } 
+            else { execute ("Still Participate")}
+                        } 
+    else{ printf("Learn coding and\n") execute("Participate") } }</h5>
+                            </pre>
+                            <h5 style="color: rgba(255, 255, 255, 0.747);">Explore your programming skills with critical thinking, logical reasoning and Team work. A problem solving real - life situation will be given on the spot to code and find the solution in Python Programming. This real-life problem can be of an ATM Machine, AI Domain, Billing, Data updation or finding a logic to get the desired results.  </h5>
+<br>
+                          <ul>
+                                <li>
+                                    <h5>&bull; The team needs to use Python modules and libraries (Turtle, math,  
+                                        random, pygame or any of your choice) to do the problem solving.
+                                </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; There will be two rounds : Both the rounds will be for 1 hour each. In case the team finishes round 1 before the allocated time, then they can carry forward the remaining time to utilise in round 2.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The competing teams will be given freedom of expression to explain their code after  round 2.
+                                    </h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : XI-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Language</b>: Python</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Completion of Programs : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Correct Execution: 40 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Format of Display: 30 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha Makhija</h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal8" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/gaming-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Run Time Terror</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Gaming</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Gamers don’t die. They respawn.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5>Gaming is really a workout for our young minds disguised as fun. Playing games strengthen a range of cognitive skills such as spatial navigation, reasoning, memory and perception.</h5>
+                            <br><ul>
+                                <li>
+                                    <h5 style="text-align:justify;">&bull; Registered participants will be divided into brackets.  
+   
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; As the participants move further, there will be only 1 winner of each game.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; 2 Games will be played during the event.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Console : PS4
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Brackets will be revealed on the day of the event.
+                                    </h5>
+                                </li>
+                                
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : IX-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participant</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: To Be Announced</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>GAME</b>: FIFA/C.O.D</h5>
+                            </p>
+
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Neha Makhija</h5>
+                            <h5><b>Contact Number</b> : 9899900032</h5>
+                            </p>
+                            <br>
+                            <!-- <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                 <li style="padding-left:15px;">
+                                    <h5>&bull;Correct Execution</h5>
+                                </li> -->
+                                <!-- <li style="padding-left:15px;">
+                                    <h5>&bull;Time Taken</h5>
+                                </li> -->
+                            <!-- </ul>
+                            </p> -->
+                            <br>
+
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal9" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/debate-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Mystical Rhyme</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Podcast</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>It is better to debate a question without settling it than to settle a question without debating it.</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">Podcast is an audio file that presents a story, event, views etc of the speaker. The participants need to present content on the given topic. The purpose is to present in a manner that sounds natural when we talk on a podcast. </h5>
+                                </li>
+                                <br>
+                                <li>
+                                    <h5>&bull; Participants are required to make a creative audio story on the given topic.
+                                        </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The participants will only recite the audio story in the school .
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Plagiarism will lead to disqualification.
+                                    </h5>
+                                </li>
+                            </ul><br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for All</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participant</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Software allowed</b>: Any Software</h5>
+                            </p>
+                            <br>
+                            <p>
+                                <h5><b>Theme</b>: Azadi ka Amrit Mahotsav</h5>
+                                </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Originality : 20 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Innovativeness : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Use of rhyming words : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Relevance to the topic : 20 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
+                            <h5><b>Contact Number</b> : 9811661581</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/VAyZuKi8ieyHEdkk6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Modal -->
+                <div id="myeModal10" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/business-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Blog-It</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Blogging</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Writing is thinking. To write well is to think clearly. That's why it's so hard!</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <h5> People use blogs as a medium to express their views and opinions to bring a social reform in the society. Digital marketing is used to promote their ideas through different platforms ( blogspot, wordpress, etc) and means to gather organic traffic .</h5>
+                            <br>
+                            <ul>
+                                <li>
+                                    <h5 style="text-align:justify;">&bull; Participants are required to create a blog on the given topic and publish the same using any platform (10 days prior to the event i.e Tuesday, October 25, 2022).
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The participants will host the blog online and will do the marketing of the post through any source of media/social media.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The link of the blog will be shared with the host school through a form <a href="https://forms.gle/6PZPeK5b3wsShXb39">https://forms.gle/6PZPeK5b3wsShXb39</a> by Saturday, October 29, 2022.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; On the day of the event, the participants will present their own blogs in the host school.
+                                    </h5>
+                                </li>
+                                
+                                <li>
+                                    <h5>&bull; Plagiarism will lead to disqualification.
+
+                                    </h5>
+                                </li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b> : Open for All</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 1</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Theme</b>: India after 10 Years</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Originality : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Number of views : 20 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Innovativeness : 20 pts</h5>
+                                </li><li style="padding-left:15px;">
+                                    <h5>&bull; Content : 30 pts</h5>
+                                </li>
+                            </ul>
+                            </p>
+                            
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra Khurana</h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <br>
+                            <!-- <center>
+                                <a href="https://forms.gle/DJeWuw7Sy2foJe396" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal11" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/quiz-icon.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Quiz Essential</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);"> Offline Quiz</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>Unlocking knowledge at the speed of
+                                            thought.</i></q>
+                                </h5>
+                            </blockquote><br>
+                            <h5 style="text-align:justify;">What makes quizzing so compelling? The quest to dig deeper in the questions or to scratch the answers from the surface. </h5>
+                           <br>
+                           <ul>
+                                <li>
+                                    <h5>&bull; The event will consist of two rounds. The preliminary round would include a time-bound pen-paper test.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The top 6 schools with the highest scores would qualify and battle with each other in the finals .
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; The final round will consist of questions based on new advancements, trivia and history of tech.
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; Decision of judges would be final and binding. 
+                                    </h5>
+                                </li>
+                            </ul><br>
+                            <p>
+                            <h5><b>Eligibility</b>: IX-XII</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: 2 </h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                                <h5><b>Topic</b>: Technology</h5>
+                                </p>
+                                <br>
+                                <p>
+                                <h5><b>Teacher In-charge</b> : Ms. Tripta Khandelwal</h5>
+                                <h5><b>Contact Number</b> : 9871553973</h5>
+                                </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/kynaeabUjCZs3qmLA" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+                <div id="myeModal12" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="emodal-content">
+                        <p class="eclose">&times;</p>
+                        <div class="emodal-header">
+                            <div class="emodal-header-border">
+                                <div class="emodal-headings">
+                                    <img src="assets/images/image-logo.png" alt="">
+                                    <div class="title">
+                                        <h2 class="modal__title">Pix-O-Lusion</h2>
+                                        <h4 style="color: rgba(255, 255, 255, 0.747);">Photography</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="emodal-body">
+                            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+                                <h5>
+                                    <q style="color: rgba(255, 255, 255, 0.747);"><i>You don't take good photographs, you make it!</i></q>
+                                </h5>
+                            </blockquote>
+                            <br>
+                            <ul >
+                                <li>
+                                    <h5 style="text-align:justify;">Adding that wow factor to your photography is something, many of us aspire to do. Photographic effects are a great way to reach this goal.
+                                        Discover what the coolest photography effects are and how they can be easily applied to ones work. We shall provide the participants with general objects in a room like vases, flowers, bed sheets, mugs, toy cars etc. They shall set up and click pictures and edit the pictures according to the theme.</h5></li>
+          <br>                      <li>
+                                    <h5>&bull; For the first round, the participants are required to capture and submit a single original image relevant to the given theme. 
+                                    </h5>
+                                </li>
+                                <li>
+                                    <h5>&bull; For the second round, the participants need to edit their image according to the theme.
+                                    </h5>
+                                </li>
+                                <li><h5>&bull; Bringing your own prop is not permitted.
+                                </h5></li>
+                            </li>
+                            <li><h5>&bull; Plagiarism will lead to disqualification.</h5></li>
+                        </li>
+                        <li><h5>&bull; The format of the file to be submitted should be in .jpg/.jpeg/.png.
+                        </h5></li>
+                    </li>
+                    <li><h5>&bull; The files should be named as: schoolname_eventname.
+                    </h5></li>
+                    <li><h5>&bull; DISCLAIMER: Participants must carry their own devices for editing the image.
+                    </h5></li>
+                            </ul>
+                            <br>
+                            <p>
+                            <h5><b>Eligibility</b>: Open for all</h5>
+                            </p>
+                            <br>
+                            <p>
+                            <h5><b>Number of Participants</b>: Team of 2</h5><br>
+                            </p>
+                            <p>
+                            <h5><b>Number of Rounds</b>: 2</h5>
+                            </p>
+                            <br>
+                            <p>
+                                <h5><b>Theme</b>: Vintage</h5>
+                                </p>
+                                <br>
+                            <p>
+                            <h5> <b><u>Judgement Criteria:</u> </b></h5>
+                            <ul>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Visual impact : 40 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Originality : 30 pts</h5>
+                                </li>
+                                <li style="padding-left:15px;">
+                                    <h5>&bull; Creativity : 30 pts</h5>
+                                </li>
+                            </ul>
+                            </p>   
+                            <br>
+                            <p>
+                            <h5><b>Teacher In-charge</b> : Ms. Shipra Khurana</h5>
+                            <h5><b>Contact Number</b> : 8700972522</h5>
+                            </p>
+                            <!-- <center>
+                                <a href="https://forms.gle/U1bQjiYNtFuRJjxy6" target="_blank"
+                                    class="modal__btn">Register
+                                    &rarr;</a>
+                            </center> -->
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <!-- The Modal -->
+            </div>
+            <!-- events End -->
+ <section id="team">
+    <div class="wow fadeIn">
+        <div class="expert-team">
+            <div class="container">
+                <center>
+                    <div class="section-heading">
+                        <h6> DIGILOGOUS 8.0 Core Team</h6>
+                    </div>
+                    <hr class="solid2">
+                </center>
+                <center>
+                            <div class="our-team">
+                                <div class="pic">
+                                    <img src="assets/images/team.jpg">
+                                </div>
+                            </div>
+                </center>
+            </div>
+        </div>
+    </div>
+ </section>
+            <!-- scroll to top button  -->
+            <a href="#" id="scroll" style="display: none;"><span></span></a>
+            <!-- scroll to top button  -->
+            <!-- features section -->
+            <div     id="features" class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="features-content">
+                                <div class="row">
+                                    <div id="first" class="col-lg-6">
+                                        <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s"
+                                            data-wow-delay="0s">
+                                            <div class="first-number number">
+                                                <h6>01</h6>
+                                            </div>
+                                            <div class="icon"></div>
+                                            <h4>General Instructions</h4>
+                                            <div class="line-dec"></div>
+                                            <div class="btn">
+                                                <p class="bts"><a style="color: #fff; text-decoration: none;"
+                                                        href="https://drive.google.com/file/d/1rPMpLwHtl7PQYn_CTHFytA8t1ZX5tIbI/view?usp=sharing">Details</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="second" class="col-lg-6">
+                                        <div class="features-item second-feature last-features-item wow fadeInUp"
+                                            data-wow-duration="1s" data-wow-delay="0.6s">
+                                            <!-- <div class="features-item second-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"> -->
+                                            <div class="second-number number">
+                                                <h6>02</h6>
+                                            </div>
+                                            <div class="icon"></div>
+                                            <h4>Results</h4>
+                                            <div class="line-dec"></div>
+                                            <div class="btn">
+                                                <p> <a class="bts" style="color: #fff;"
+                                                        href=""
+                                                        target="_blank">Link</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div id="myModal" class="modal">
+                                            <!-- Modal content -->
+                                            <div class="modal-content">
+                                                <span class="close">&times;</span>
+                                                <p> <img src="assets/images/digin.png" alt=""> </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div id="third" class="col-lg-4">
+                            <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                                <div class="third-number number">
+                                    <h6>03</h6>
+                                </div>
+                                <div class="icon"></div>
+                                <h4>Results</h4>
+                                <div class="line-dec"></div>
+                                <div class="btn">
+                                    <p> <a class="bts" style="color: #fff;" href="http://digilogous.rdpschool.edu.in/Digilogous%20Result%207%20final.pdf" target="_blank">Details</a></p>
+                                </div>
+                            </div>
+                        </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- features section  -->
+
+            <!-- progress bar -->
+            <!-- <center> -->
+            <div style="padding: 50px;">
+                <div class="progressextra" style="padding-top: 40px;">
+                    <center>
+                        <div class="section-heading">
+                            <h6>Previous Year Statistics</h6>
+                        </div>
+                        <hr class="solid2">
+                    </center>
+                    <div id="canvas"
+                        class="containbar justify-content-center align-content-center align-items-center flex-wrap gap-4">
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-1" style="float: center;"></div>
+                                <div>
+                                    <h2>Schools</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-2"></div>
+                                <div>
+                                    <h2>Participants</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-3"></div>
+                                <div>
+                                    <h2>Students</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardbar" style="margin-bottom: 15px;">
+                            <div class="boxbar" style="padding:10px;">
+                                <div class="circle" id="circles-4"></div>
+                                <div class="progresstext">
+                                    <h2>Events</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- </center> -->
+            <!-- progress bar -->
+
+            <!-- Previous year comments -->
+            <div class="slideshow-container" style="background: #21253A;">
+                <div class="slide-topic">
+                    <span class="fa fa-comments heading-3-icon"></span>
+                    <h2>Testimonials</h2>
+                </div>
+                <!-- Full-width slides/quotes -->
+                <div class="mySlides">
+                    <img src="assets/images/Bala.png" alt="">
+                </div>
+                <div class="mySlides">
+                   <img style="width: 450px;" src="assets/images/KKAggarwal.png" alt="">
+                </div>
+
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/tareque.png" alt="">
+
+                </div>
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/Palak.png" alt="">
+
+                </div>
+                <div class="mySlides">
+                    <img style="width: 450px;" src="assets/images/Ramjass.png" alt="">
+
+                </div>
+                 
+                <!-- Next/prev buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <!-- Previous year comments -->
+
+
+            <div id="contact-us-too" class="contact-us section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12" data-wow-duration="0.5s" data-wow-delay="0.25s">
+                            <form id="contact" action="" method="post">
+                                <div class="row">
+                                    <div class="col-lg-6 offset-lg-3">
+                                        <div class="section-heading">
+                                            <h6>Contact Us</h6>
+                                        </div>
+                                        <hr class="solid">
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="map">
+                                            <iframe class="googlemap"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.5108057076536!2d77.1361252150379!3d28.704276782389602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03d8090d54f3%3A0xa598ce7d1ac48b94!2sRukmini%20Devi%20Public%20School!5e0!3m2!1sen!2sin!4v1626359454875!5m2!1sen!2sin"
+                                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="contactusarea">
+                                        <div class="contact-info">
+                                            <ul>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/Website.png" alt="">
+                                                    </div>
+                                                    <p style="padding-left: -50px;">School Website<br><a
+                                                            href="http://rdpschool.edu.in/"
+                                                            target="_blank">www.rdpschool.edu.in</a></p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/contact-icon-01.png" alt="email icon">
+                                                    </div>
+                                                    <p style="padding-left: -50px;">digilogous@rdpschool.edu.in</p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/contact-icon-02.png" alt="phone">
+                                                    </div>
+                                                    <p>+91-9667433774 <br>
+                                                       +91-9899900032
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <img src="assets/images/contact-icon-03.png" alt="location">
+                                                    </div>
+                                                    <p>RUKMINI DEVI PUBLIC SCHOOL <br>CD BLOCK PITAMPURA, DELHI -
+                                                        110034
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <strong>Follow us on</strong>
+                                                </li>
+                                                <a href="https://www.facebook.com/The-Digilogous-1657617881133981"
+                                                    target="_blank"><span class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-facebook fa-stack-1x"></i>
+                                                    </span></a>
+                                                <a href="https://twitter.com/rdpspp" target="_blank"><span
+                                                        class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-twitter fa-stack-1x"></i>
+                                                    </span></a>
+                                                <a href="https://www.instagram.com/digilogous/" target="_blank"><span
+                                                        class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-instagram fa-stack-1x"></i>
+                                                    </span></a>
+                                                <a href="https://www.youtube.com/channel/UCVKoWAa-pAVnsUK6BagGnTA"
+                                                    target="_blank"><span class="fa-stack fa-lg">
+                                                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                                                        <i class="fa fa-youtube fa-stack-1x"></i>
+                                                    </span></a>
+                                                <!-- <li>
+                                                    <a class="discord-button" href="https://discord.gg/DHCBtXqD"
+                                                        target="_blank">Discord</a>
+                                                </li> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Wavy Footer Starts -->
+            <footer>
+                <div class="wave wave1">
+                    <div class="footer-content">
+                        <p>Copyright &#169; Rukmini Devi Public School, Pitampura
+                            <br>Developed By : Arjan Singh Jassal | Trivedi Prasad
+                        </p>
+                    </div>
+                </div>
+                <div class="wave wave2"></div>
+                <div class="wave wave3"></div>
+                <div class="wave wave4"></div>
+            </footer>
+        </div>
+    </div>
+
+</div>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("header-area");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("headersticky")
+            } else {
+                navbar.classList.remove("headersticky");
+            }
+        }
+        $(document).ready(function () {
+
+            setTimeout(function () {
+                $('body').addClass('loaded');
+                $('h1').css('color', '#222222');
+            }, 300);
+
+        });
+    </script>
+    <script src="vendor/jquery/jquery.slim.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/particles.min.js"></script>
+    <script src="assets/js/particlesRun.js"></script>
+    <script src="assets/js/parallax.min.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+    </script> -->
+
+    <script>
+        // topscroll
+        //$(window).on('beforeunload', function () {
+        //  $('body').hide();
+        //  $(window).scrollTop(0);
+        //});
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            // When the user clicks anywhere outside of the modal, close it
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        var datamap = new Map([
+            [document.getElementById("myBtn1"), document.getElementById("myeModal1")],
+            [document.getElementById("myBtn2"), document.getElementById("myeModal2")],
+            [document.getElementById("myBtn3"), document.getElementById("myeModal3")],
+            [document.getElementById("myBtn4"), document.getElementById("myeModal4")],
+            [document.getElementById("myBtn5"), document.getElementById("myeModal5")],
+            [document.getElementById("myBtn6"), document.getElementById("myeModal6")],
+            [document.getElementById("myBtn7"), document.getElementById("myeModal7")],
+            [document.getElementById("myBtn8"), document.getElementById("myeModal8")],
+            [document.getElementById("myBtn9"), document.getElementById("myeModal9")],
+            [document.getElementById("myBtn10"), document.getElementById("myeModal10")],
+            [document.getElementById("myBtn11"), document.getElementById("myeModal11")],
+            [document.getElementById("myBtn12"), document.getElementById("myeModal12")]
+
+        ]);
+
+        datamap.forEach((value, key) => {
+            doModal(key, value);
+        });
+
+        function doModal(anchor, popupbox) {
+
+            // Get the <span> element that closes the modal
+            var span = popupbox.getElementsByClassName("eclose")[0];
+
+            anchor.addEventListener("click", function (event) {
+                popupbox.style.display = "block";
+            });
+
+            span.addEventListener("click", function (event) {
+                popupbox.style.display = "none";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target == popupbox) {
+                    popupbox.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" activated", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " activated";
+        }
+    </script>
+    <!-- scroll to top button -->
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+            $('#scroll').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+        });
+    </script>
+    <!-- scroll to top button -->
+  <!-- Progress Bar Start -->
+  <script>
+    (function () {
+        var canvas = document.getElementById('canvas'),
+            circlesCreated = false;
+
+        function onScroll() {
+            if (elementInViewport(canvas)) {
+                if (!circlesCreated) {
+                    circlesCreated = true;
+                    createCircles();
+                    elementInViewport(canvas) = false;
+                }
+            } else {
+                circlesCreated = false;
+            }
+        }
+
+        function elementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function createCircles() {
+
+            var colors = [
+                ['#000', '#45AEEA'],
+                ['#000', '#EFB917'],
+                ['#000', '#f83754'],
+                ['#000', '#38FF88']
+            ],
+                circles = [];
+            var percentage = [
+                ['110'],
+                ['1600'],
+                ['1800'],
+                ['12']
+            ],
+                circles = [];
+            var maxval = [
+                ['120'],
+                ['2000'],
+                ['2000'],
+                ['12']
+            ],
+                circles = [];
+            //31.42 + (i * 9.84),
+
+            for (var i = 1; i <= 5; i++) {
+                var child = document.getElementById('circles-' + i),
+                    // percentage = 31.42 + (i * 9.84),
+
+                    circle = Circles.create({
+                        id: child.id,
+                        value: percentage[i - 1],
+                        maxValue: maxval[i - 1],
+                        radius: getWidth(),
+                        width: 9,
+                        colors: colors[i - 1]
+
+                    });
+
+                circles.push(circle);
+            }
+
+            window.onresize = function (e) {
+                for (var i = 0; i < circles.length; i++) {
+                    circles[i].updateRadius(getWidth());
+                }
+            };
+
+            function getWidth() {
+                return window.innerWidth / 15;
+            }
+        }
+        window.onscroll = onScroll;
+
+    })();
+</script>
+<!-- Progress Bar End -->
+<!-- PopupVideo starts-->
+<script>
+    $(document).ready(function () {
+        $("#myModal").modal('show');
+        $(".close").click(function () {
+            $("#myModal").modal('hide');
+        });
+    });
+</script>
+<!-- Popup video ends -->
+ 
+<!-- preloader -->
+<script>
+    
+	// Page loading animation
+	 $(window).on('load', function() {
+
+        $('#js-preloader').addClass('loaded');
+
+    });
+
+
+</script>
+
+    <!-- Coming Soon -->
+    <script type="text/javascript">
+        var blink = 
+            document.getElementById('blink');
+  
+        setInterval(function () {
+            blink.style.opacity = 
+            (blink.style.opacity == 0 ? 1 : 0);
+        }, 700); 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.41.0/tsparticles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-light@1.41.0/tsparticles.interaction.light.min.js"></script>
+<script src="particlelight.js"></script>
+<link src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<title>The Digilogous</title>
+
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="assets/css/fontawesome.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animated.css">
+<link rel="stylesheet" href="assets/css/owl.css">
+
+<!--MY LINK-->
+<link rel="stylesheet" href="assets/css/master.css">
+<!-- <link rel="stylesheet" href="assets/css/progress.css"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js"> </script>
+<script src="particles.json"></script>
+<!-- My Js -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.41.0/tsparticles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles-interaction-light@1.41.0/tsparticles.interaction.light.min.js"></script>
+<script src="particlelight.js"></script>
+<link src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
+<style>
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  /* vertical-align: bottom; */
+}
+/* ---- tsparticles container ---- */
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.instructions {
+  text-align:center;
+  font-size:20px;
+  margin: 15vh;
+}  
+
+</style>
+</head>
+<body>
+  
+    <!-- ***** Preloader Start ***** -->
+     <!-- <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+          <span class="dot"></span>
+              <div class="dots">
+          <img style="width:500px;" src="assets/images/preloader.gif">
+          <span></span>
+          <span></span>
+      </div>
+  </div> -->
+  <!-- ***** Preloader End ***** -->
+
+<!-- Popup Modal Box -->
+
+  <!-- ***** Preloader Start ***** -->
+  <!-- <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div> -->
+  <!-- ***** Preloader End ***** -->
+
+    <!-- Popup Video Starts -->
+    <div class="modal fade popup" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content" style="float:right;">
+                <div class="modal-header ">
+                <p class="close" >&times;</p>
+                    <div class="emodal-header-border">
+                        <div class="">
+                            <center>
+                            <div class="title">
+                                <h2 class="modal__title">We are Back!</h2>
+                                <h4 style="color: rgba(255, 255, 255, 0.747);">On Saturday, November 5, 2022</h4>
+                            </div>
+                            <div class="video1"><iframe class="digi-popup" src="https://www.youtube.com/embed/Av5INr4iDlo" title="K.C. Garg Memorial, Inter School Tech Symposium Digilogous 8.0 is back !!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                 <!-- <a style="color: #fff;" href=""><h4>Results</h4></a> -->
+                            </div>
+                        </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Video Ends -->
+
+  <!--  Popup Modal Box-->
+
+<!-- tsParticles container -->
+<!-- <div id="tsparticles"> -->
+   <!-- Begin Jumbotron -->
+   <canvas id="Matrix">
+   <!-- <div class="jumbotron jumbotron-main" id="top"> -->
+    <!-- <div id="tsparticles"></div> -->
+    <!-- <span><img style=" position: absolute; bottom: 0px; right: 0px;" src="assets/images/1st.png" alt=""></span> -->
+
+    <div class="container center-vertically-holder">
+        <div class="center-vertically">
+            <div id="scaleReveal" class="col-sm-offset-2 col-lg-offset-3 text-center">
+                <div class="particle-content col-sm-8">
+                    <span class="big-logo"><img src="assets/images/logobold.png" /></span>
+                    <center>
+                        <hr> <h2>K.C. Garg Memorial, Inter School Tech Symposium</h2>
+                    </center>
+                    <h1 style="font-size: 66px;">Digilogous 9.0</h1>
+                    
+                    <h2 style="font-size: 46px;" id="blink" >Coming Soon </h2>
+                    <h2> 5th August 2023</h2>
+                    <br>
+                    <br>
+                    <!-- <a href="#about" data-id="about"
+                        class="scroll-link btn btn-default btn-white btn-lg mt15"><i
+                            class="fa fa-arrow-down" aria-hidden="true"></i></a> -->
+                </div>
+            </div>
+            <!-- /.column -->
+        </div>
+        <!-- /.vertical center -->
+    </div>
+    <!-- /.container -->
+<!-- </div> -->
+</canvas>
+<!-- End Jumbotron -->
+
+<!-- </div> -->
+<!-- </div> -->
+
+<script>
+  window.onscroll = function () {
+      myFunction()
+  };
+
+  var navbar = document.getElementById("header-area");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+      if (window.pageYOffset >= sticky) {
+          navbar.classList.add("headersticky")
+      } else {
+          navbar.classList.remove("headersticky");
+      }
+  }
+  $(document).ready(function () {
+
+      setTimeout(function () {
+          $('body').addClass('loaded');
+          $('h1').css('color', '#222222');
+      }, 300);
+
+  });
+</script>
+<script src="vendor/jquery/jquery.slim.min.js"></script>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/imagesloaded.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/particles.min.js"></script>
+<script src="assets/js/particlesRun.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/modernizr-2.6.2.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!-- <script>
+  window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
+</script> -->
+
+<script>
+  // topscroll
+  //$(window).on('beforeunload', function () {
+  //  $('body').hide();
+  //  $(window).scrollTop(0);
+  //});
+
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function () {
+      modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+      modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+      // When the user clicks anywhere outside of the modal, close it
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+</script>
+<script>
+  var datamap = new Map([
+      [document.getElementById("myBtn1"), document.getElementById("myeModal1")],
+      [document.getElementById("myBtn2"), document.getElementById("myeModal2")],
+      [document.getElementById("myBtn3"), document.getElementById("myeModal3")],
+      [document.getElementById("myBtn4"), document.getElementById("myeModal4")],
+      [document.getElementById("myBtn5"), document.getElementById("myeModal5")],
+      [document.getElementById("myBtn6"), document.getElementById("myeModal6")],
+      [document.getElementById("myBtn7"), document.getElementById("myeModal7")],
+      [document.getElementById("myBtn8"), document.getElementById("myeModal8")],
+      [document.getElementById("myBtn9"), document.getElementById("myeModal9")],
+      [document.getElementById("myBtn10"), document.getElementById("myeModal10")],
+      [document.getElementById("myBtn11"), document.getElementById("myeModal11")],
+      [document.getElementById("myBtn12"), document.getElementById("myeModal12")]
+
+  ]);
+
+  datamap.forEach((value, key) => {
+      doModal(key, value);
+  });
+
+  function doModal(anchor, popupbox) {
+
+      // Get the <span> element that closes the modal
+      var span = popupbox.getElementsByClassName("eclose")[0];
+
+      anchor.addEventListener("click", function (event) {
+          popupbox.style.display = "block";
+      });
+
+      span.addEventListener("click", function (event) {
+          popupbox.style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+          if (event.target == popupbox) {
+              popupbox.style.display = "none";
+          }
+      });
+  }
+</script>
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+          slideIndex = 1
+      }
+      if (n < 1) {
+          slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" activated", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " activated";
+  }
+</script>
+<!-- scroll to top button -->
+<script>
+  $(document).ready(function () {
+      $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+              $('#scroll').fadeIn();
+          } else {
+              $('#scroll').fadeOut();
+          }
+      });
+      $('#scroll').click(function () {
+          $("html, body").animate({
+              scrollTop: 0
+          }, 600);
+          return false;
+      });
+  });
+</script>
+<!-- scroll to top button -->
+<!-- Progress Bar Start -->
+<script>
+(function () {
+  var canvas = document.getElementById('canvas'),
+      circlesCreated = false;
+
+  function onScroll() {
+      if (elementInViewport(canvas)) {
+          if (!circlesCreated) {
+              circlesCreated = true;
+              createCircles();
+              elementInViewport(canvas) = false;
+          }
+      } else {
+          circlesCreated = false;
+      }
+  }
+
+  function elementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+
+      return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+  }
+
+  function createCircles() {
+
+      var colors = [
+          ['#000', '#45AEEA'],
+          ['#000', '#EFB917'],
+          ['#000', '#f83754'],
+          ['#000', '#38FF88']
+      ],
+          circles = [];
+      var percentage = [
+          ['110'],
+          ['1600'],
+          ['1800'],
+          ['20']
+      ],
+          circles = [];
+      var maxval = [
+          ['120'],
+          ['2000'],
+          ['2000'],
+          ['20']
+      ],
+          circles = [];
+      //31.42 + (i * 9.84),
+
+      for (var i = 1; i <= 5; i++) {
+          var child = document.getElementById('circles-' + i),
+              // percentage = 31.42 + (i * 9.84),
+
+              circle = Circles.create({
+                  id: child.id,
+                  value: percentage[i - 1],
+                  maxValue: maxval[i - 1],
+                  radius: getWidth(),
+                  width: 9,
+                  colors: colors[i - 1]
+
+              });
+
+          circles.push(circle);
+      }
+
+      window.onresize = function (e) {
+          for (var i = 0; i < circles.length; i++) {
+              circles[i].updateRadius(getWidth());
+          }
+      };
+
+      function getWidth() {
+          return window.innerWidth / 15;
+      }
+  }
+  window.onscroll = onScroll;
+
+})();
+</script>
+<!-- Progress Bar End -->
+<!-- PopupVideo starts-->
+<script>
+$(document).ready(function () {
+  $("#myModal").modal('show');
+  $(".close").click(function () {
+      $("#myModal").modal('hide');
+  });
+});
+</script>
+<!-- Popup video ends -->
+
+<!-- preloader -->
+<script>
+
+// Page loading animation
+$(window).on('load', function() {
+
+  $('#js-preloader').addClass('loaded');
+
+});
+
+
+</script>
+
+<!-- Coming Soon -->
+<script type="text/javascript">
+  var blink = 
+      document.getElementById('blink');
+
+  setInterval(function () {
+      blink.style.opacity = 
+      (blink.style.opacity == 0 ? 1 : 0);
+  }, 700); 
+</script>
+  <!-- Ts-Particles.js -->
+<script>
+  tsParticles.load("tsparticles", {
+  particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        area: 800
+      }
+    },
+    color: {
+      value: ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363"]
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#b6b2b2"
+      }
+    },
+    opacity: {
+      value: 0.5211089197812949,
+      random: false,
+      animation: {
+        enable: true,
+        speed: 1,
+        minimumValue: 0.1,
+        sync: false
+      }
+    },
+    size: {
+      value: 8.017060304327615,
+      random: true,
+      animation: {
+        enable: true,
+        speed: 12.181158184520175,
+        minimumValue: 0.1,
+        sync: false
+      }
+    },
+    lineLinked: {
+      enable: false,
+      distance: 150,
+      color: "#c8c8c8",
+      opacity: 0.4,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1,
+      direction: "none",
+      random: false,
+      straight: false,
+      outMode: "bounce",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detectOn: "canvas",
+    events: {
+      onHover: {
+        enable: true,
+        mode: "connect"
+      },
+      onClick: {
+        enable: false,
+        mode: "push"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        lineLinked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 40,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      connect: {},
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  detectRetina: true
+});
+
+</script>
+
+</body>
+</html>
