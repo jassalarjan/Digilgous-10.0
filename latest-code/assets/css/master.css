@@ -1,0 +1,39 @@
+header{
+    background-color: #147476;
+    padding: 1rem;
+        position: relative;
+}
+.logo img{
+    width: 70px;
+}
+.navbar a{
+    font-size: 20px;
+}
+.jumbotron{
+    position: relative;
+    color: #fff;
+    padding: 5rem;
+}
+.jumbotron .big-logo img{
+    width: 300px;
+}
+.chairman{
+    background-color: #131720;
+    padding: 1rem;
+    margin: 2rem;
+    width: 700px;
+    height: auto;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.chairman p{
+    text-align: justify;
+}
+.about-us{
+    /* font-size: large; */
+    /* background-color: #147476; */
+    padding: 3rem;
+    margin: 5rem;
+    color: #fff;
+}
