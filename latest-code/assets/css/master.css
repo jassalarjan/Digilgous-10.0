@@ -1,5 +1,9 @@
+:root{
+    --primary: #147476;
+    --secondary: #131720;
+}
 header{
-    background-color: #147476;
+    background-color: var(--primary);
     padding: 1rem;
         position: relative;
 }
@@ -17,11 +21,15 @@ header{
 .jumbotron .big-logo img{
     width: 300px;
 }
+.ch-sec{
+    width: 100%;
+    height: 90vh;
+}
 .chairman{
-    background-color: #131720;
+    background-color: var(--secondary);
     padding: 1rem;
-    margin: 2rem;
-    width: 700px;
+    margin: 3rem;
+    width: 800px;
     height: auto;
     color: #fff;
     text-align: center;
@@ -30,10 +38,17 @@ header{
 .chairman p{
     text-align: justify;
 }
+#about{
+    /* width: 100%; */
+    height: 90vh;
+}
 .about-us{
     /* font-size: large; */
     /* background-color: #147476; */
     padding: 3rem;
     margin: 5rem;
     color: #fff;
+}
+h1,h2,h3,h4,h5,h6{
+    color: var(--primary);
 }
