@@ -355,20 +355,20 @@ header
 
 .header-area .logo,
 .header-area .main-nav .nav li a {
-  color: #fff;
+  color: rgb(47, 47, 47);
 }
 
 .header-area .main-nav .nav li:hover a {
-  color: #33ccc5;
+  color: rgb(47, 47, 47) !important;
 }
 
 .header-area .nav li a.active {
   position: relative;
-  color: #fff;
+  color: rgb(47, 47, 47)  ;
 }
 
 .header-area {
-  background-color: rgb(47, 47, 47);
+  background-color: #33ccc5;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -399,7 +399,7 @@ header
   font-size: 30px;
   font-weight: 800;
   text-transform: capitalize;
-  color: #fff;
+  color: rgb(47, 47, 47);
   line-height: 100px;
   float: left;
   -webkit-transition: all 0.3s ease 0s;
@@ -472,12 +472,12 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #7ff7ee !important;
+  color: rgb(47, 47, 47) !important;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fff !important;
+  color: rgb(47, 47, 47) !important;
   opacity: 1;
 }
 
