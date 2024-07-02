@@ -22,8 +22,11 @@ hr{
     position: relative;
     color: #fff;
     /* padding: 5rem; */
-    margin: 1rem;
+    margin: 4rem;
 /* width: 100%; */
+}
+.jumbotron .big-logo{
+    padding: 2rem;
 }
 .jumbotron .big-logo img{
     width: 250px;
@@ -57,5 +60,5 @@ hr{
     color: #fff;
 }
 h1,h2,h3,h4,h5,h6{
-    color: var(--primary);
+    color: #fff;
 }
