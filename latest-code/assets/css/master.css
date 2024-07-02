@@ -3,6 +3,11 @@ header{
     padding: 1rem;
         position: relative;
 }
+hr{
+    width: 100px;
+    /* color: #fff; */
+    border:  5px solid;
+}
 .logo img{
     width: 70px;
 }
@@ -12,10 +17,12 @@ header{
 .jumbotron{
     position: relative;
     color: #fff;
-    padding: 5rem;
+    /* padding: 5rem; */
+    margin: 1rem;
+/* width: 100%; */
 }
 .jumbotron .big-logo img{
-    width: 300px;
+    width: 250px;
 }
 .chairman{
     background-color: #131720;
