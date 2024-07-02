@@ -27,8 +27,15 @@ console.log(count)
 factors(12)
 
 
-const numbers = [175, 50, 25];
-document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
-function myFunc(total, num) {
-  return total - num;
-}
+// mapping
+var numb=[12,13,13,54]
+var dub=numb.map(item=> item%2!=0);
+console.log(dub)
+// filter
+var numb=[12,13,13,54]
+var dub1=numb.filter(item=> item%2!=0);
+console.log(dub1)
+// reudce
+var numb=[12,13,13,54]
+var dub2=numb.reduce((a,b)=>a+b);
+console.log(dub2)
