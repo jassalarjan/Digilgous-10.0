@@ -5,7 +5,7 @@
 header{
     background-color: var(--primary);
     padding: 1rem;
-        position: relative;
+    position: relative;
 }
 hr{
     width: 100px;
