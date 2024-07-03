@@ -1939,8 +1939,10 @@ left: -40px;
 }
 .gallery img:hover {
   z-index: 9;
-  transform: scale(1.25);
+  transform: scale(1.01);
   transition: transform ease 1.5s;
+  overflow: hidden;
+  width: contain;
 }
 .a{
   text-align: justify; padding: 10px; font-size: 18px; color: #fff;

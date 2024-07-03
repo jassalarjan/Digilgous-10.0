@@ -253,9 +253,7 @@
                 </div>
             </header>
             <!-- ***** Header Area End ***** -->
-            <canvas style=" position: fixed;width: 100%; height: 100%;" id="Matrix"></canvas>
-            <!-- Begin Jumbotron -->
-            <div style="margin-top: 2em;" class="jumbotron jumbotron-main" id="top">
+            <div style="margin-top: 2em; position: absolute;" class="jumbotron jumbotron-main" id="top">
                 <!-- <div id="particles-js"></div> -->
                 <!-- <span><img style=" position: absolute; bottom: 0px; right: 0px;" src="assets/images/1st.png" alt=""></span> -->
                 <div style="z-index: 1000;" class="container center-vertically-holder">
@@ -289,6 +287,11 @@
                 </div>
                 <!-- /.container -->
             </div>
+            <canvas style=" position: relative;width: 100%;" id="Matrix">
+
+            </canvas>
+            <!-- Begin Jumbotron -->
+
             <!-- </canvas> -->
             <!-- End Jumbotron -->
             <script>
@@ -387,14 +390,28 @@
                         </div>
                         <hr class="solid2">
                     </center>
-                    <center>
+                    
                         <div class="gallery-n">
-                            <img src="assets/images/glimpses/1.png" alt="Random Image">
-                            <img src="assets/images/glimpses/2.png" alt="Random Image">
-                            <img src="assets/images/glimpses/3.png" alt="Random Image">
-                            <img src="assets/images/glimpses/4.png" alt="Random Image">
-                            <img src="assets/images/glimpses/5.png" alt="Random Image">
-
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-3 col-md-3 col-sm-12 m-4">
+                                        <img class="img-n img-fluid" src="./assets/images/glimpses/1.png" alt="">
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 m-4">
+                                        <img class="img-n img-fluid" src="./assets/images/glimpses/2.png" alt="">
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 m-4">
+                                        <img class="img-n img-fluid" src="./assets/images/glimpses/3.png" alt="">
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 "></div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 m-4">
+                                        <img class="img-n img-fluid" src="./assets/images/glimpses/4.png" alt="">
+                                    </div>
+                                    <div class="col-lg-3 col-md-3 col-sm-12 m-4">
+                                        <img class="img-n img-fluid" src="./assets/images/glimpses/5.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- <div class="gallery">
                             <div class="item justify-content-center align-items-center align-content-center flex-wrap">
@@ -425,7 +442,7 @@
                                 </div>
                             </div>
                         </div> -->
-                    </center>
+                    
                 </section>
                 <!--    Glimpses Video end -->
                 <!--    Distinguished start -->
@@ -508,34 +525,34 @@
                             <div class="gallery">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <figure id="fig1" class="imageRoll">
                                                 <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
                                                                                                                                                                                                                                                                                             </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
                                                 <figcaption><strong>Ollie</strong></figcaption>
                                             </figure>
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <figure id="fig2" class="imageRoll">
                                                 <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
                                                                                                                                                                                                                                                                                             </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
-                                                <figcaption>Kitten: <strong>Ollie</strong> (12 Weeks)</figcaption>
+                                                <figcaption><strong>Ollie</strong></figcaption>
                                             </figure>
 
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <figure id="fig3" class="imageRoll">
                                                 <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
                                                                                                                                                                                                                                                                                             </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
-                                                <figcaption>Kitten: <strong>Ollie</strong> (12 Weeks)</figcaption>
+                                                <figcaption><strong>Ollie</strong></figcaption>
                                             </figure>
 
                                         </div>
-                                        <div class="col-3">
+                                        <div class="col-4">
                                             <figure id="fig4" class="imageRoll">
                                                 <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
                                                                                                                                                                                                                                                                                             </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
-                                                <figcaption>Kitten: <strong>Ollie</strong> (12 Weeks)</figcaption>
+                                                <figcaption><strong>Ollie</strong></figcaption>
                                             </figure>
 
                                         </div>
