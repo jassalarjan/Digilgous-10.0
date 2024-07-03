@@ -14,6 +14,9 @@
     .sheet {
       margin-bottom: 20px;
     }
+    body{
+      color: black;
+    }
   </style>
 </head>
 
@@ -24,7 +27,7 @@
     let content = document.querySelector(".content");
 
     (async () => {
-      let workbook = XLSX.read(await (await fetch("a.csv")).arrayBuffer());
+      let workbook = XLSX.read(await (await fetch("Book1.csv")).arrayBuffer());
       console.log(workbook);
 
       let sheetNames = workbook.SheetNames;
@@ -33,20 +36,19 @@
         let json = XLSX.utils.sheet_to_json(workbook.Sheets[name]);
         let cardContent = json.map((row) => {
           // select the values under column headers or put blank if no value exists.
-          let sn = row["S.NO."] || "";
-          let activity = row["ACTIVITYNAME"] || "";
-          let theme = row["THEME"] || "";
-          let date = row["DATE"] || "";
-          let linkname = row["linkname"] || "";
+          let sn = row["sno"] || "";
+          let activity = row["name"] || "";
+          // let theme = row["THEME"] || "";
+          // let date = row["DATE"] || "";
+          // let linkname = row["linkname"] || "";
 
           return `
             <div class="col-3">
               <div class="card">
                 <div class="card-body">
                   <h5 class="card-title">${activity}</h5>
-                  <p class="card-text">${theme}</p>
-                  <p class="card-date">${date}</p>
-                  <p class="card-date">${linkname}</p>
+                  <p class="card-text">${sn}</p>
+                  
                 </div>
               </div>
               </div>
