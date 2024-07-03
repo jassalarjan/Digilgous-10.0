@@ -305,6 +305,10 @@
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
 
+
+                context.fillStyle = 'black';
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
                 const rows = Math.floor(canvas.height / fontSize);
                 const rainDrops = [];
 
