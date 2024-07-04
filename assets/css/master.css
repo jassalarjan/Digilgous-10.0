@@ -7,7 +7,7 @@ body ::-webkit-scrollbar {
 }
 
 body {
-  background-color: #10131C;
+  background-color: #171d2d;
   --light: hsl(220, 50%, 90%);
   --primary: hsl(255, 30%, 55%);
   --focus: hsl(210, 90%, 50%);
@@ -15,11 +15,11 @@ body {
   --global-background: #008080;
   --background: linear-gradient(
     to right,
-    hsl(210, 30%, 20%),
-    hsl(255, 30%, 25%)
+    hsl(210, 34%, 18%),
+    hsl(254, 66%, 25%)
   );
   --shadow-1: hsla(236, 50%, 50%, 0.3);
-  --shadow-2: hsla(236, 50%, 50%, 0.4);
+  --shadow-2: hsla(236, 53%, 21%, 0.4);
   color: var(--light);
   background-repeat: repeat;
 }

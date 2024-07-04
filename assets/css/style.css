@@ -344,7 +344,7 @@ header
 }
 
 .background-header {
-  background-color: #076d68 !important;
+  background-color: rgb(47, 47, 47) !important;
   height: 80px !important;
   position: fixed !important;
   top: 0px;
@@ -355,20 +355,20 @@ header
 
 .header-area .logo,
 .header-area .main-nav .nav li a {
-  color: rgb(47, 47, 47);
+  color: #fff ;
 }
 
 .header-area .main-nav .nav li:hover a {
-  color: rgb(47, 47, 47) !important;
+  color: #fff !important;
 }
 
 .header-area .nav li a.active {
   position: relative;
-  color: rgb(47, 47, 47)  ;
+  color:   #fff;
 }
 
 .header-area {
-  background-color: #33ccc5;
+  background-color: rgb(47, 47, 47);
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -458,7 +458,7 @@ header
   display: block;
   font-weight: 500;
   font-size: 15px;
-  color: #fff;
+  /* color: #fff; */
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -472,7 +472,7 @@ header
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: rgb(47, 47, 47) !important;
+  color: #fff !important;
 }
 
 .background-header .main-nav .nav li:hover a,
@@ -523,7 +523,7 @@ header
 .header-area .main-nav .nav li.submenu ul li a {
   opacity: 1;
   display: block;
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
   color: #2a2a2a !important;
   padding-left: 20px;
   height: 40px;
