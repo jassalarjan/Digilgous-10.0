@@ -176,13 +176,17 @@
                                 <figcaption>
                                 <strong>${Event_Name}</strong>
                                 <p>${Eligibility}</p>
-                                <strong>${Team_Size}</strong>
-                                <strong>${No_of_Teams}</strong>
-                                <button id="container-${Event_No}" onclick="" class="btn-mod">Know More</button>
+                                <p>${Team_Size}</p>
+                                <p>${No_of_Teams}</p>
+                                <button id="fig-${Event_No}">Know More</button>
                                 </figcaption>
                             </figure>
                         </div>
-
+<div id="modal-${Event_No}" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+    </div>
+</div>
             `;
                         }).join('');
 
