@@ -1,158 +1,176 @@
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="The Digilogous - Rukmini Devi Public School">
-<meta name="author" content="Rukmini Devi Public School">
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="The Digilogous - Rukmini Devi Public School">
+    <meta name="author" content="Rukmini Devi Public School">
+    <link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
 
-<title>The Digilogous</title>
+    <title>The Digilogous</title>
 
-<!-- Bootstrap core CSS -->
-<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Additional CSS Files -->
-<link rel="stylesheet" href="assets/css/fontawesome.css">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/animated.css">
-<link rel="stylesheet" href="assets/css/owl.css">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
 
-<!--MY LINK-->
-<link rel="stylesheet" href="assets/css/master.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
-    integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-<style>
-    .sheet {
-        margin-bottom: 20px;
-    }
+    <!--MY LINK-->
+    <link rel="stylesheet" href="assets/css/master.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+        integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    body {
-        color: black;
-    }
-</style>
+    <style>
+        .sheet {
+            margin-bottom: 20px;
+        }
 
-<section class="property">
-    <div class="heading-property">
-        <h3>SERVICES WE OFFER</h3>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="card-group">
-                <script>
-                    let content = document.querySelector(".event-content");
+        body {
+            color: black;
+        }
+    </style>
+</head>
 
-                    (async () => {
-                        let workbook = XLSX.read(await (await fetch("Events.csv")).arrayBuffer());
-                        // console.log(workbook);
-
-                        let sheetNames = workbook.SheetNames;
-
-                        sheetNames.forEach((name) => {
-                            let json = XLSX.utils.sheet_to_json(workbook.Sheets[name]);
-                            let cardContent = json.map((row) => {
-                                // select the values under column headers or put blank if no value exists.
-                                let Event_No = row["Event_No."] || "";
-                                let Event_Name = row["Event_Name"] || "";
-                                let Event_Descript = row["Event_Descript"] || "";
-                                let Eligibility = row["Eligibility"] || "";
-                                let Team_Size = row["Team_Size"] || "";
-                                let No_of_Teams = row["No_of_Teams"] || "";
-                                let Event_About = row["Event_About"] || "";
-                                let Instructions = row["Instructions"] || "";
-                                let Judgment = row["Judgment"] || "";
-
-                                return `
-                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <figure id="fig1" class="imageRoll">
-                      <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
-                                                                                                                                                                                                                                                                    </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
-                      <figcaption>
-                        <div data-bs-target="#${Event_Name}" aria-expanded="true" aria-controls="${Event_Name}">${Event_Name}</div>
-                        <strong>${Event_Name}</strong>
-                        <p>${Eligibility}</p>
-                        <p>${Team_Size}</p>
-                        <p>${No_of_Teams}</p>
-                        <button id="${Event_No}" class="btn modalBtn rounded p-2 text-greendark">Know more</button>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div id="${Event_No}" class="modal">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content" style="border: 6px solid #03341c; border-radius: 60px 20px; box-shadow: 9px 6px #71b100; " id="${Event_No}" aria-labelledby="${Event_Name}" data-bs-parent="${Event_Name}">
-                        <button type="button" class="close ml-auto" data-dismiss="modal" aria-hidden="true">x</button>
-                        <div class="modal-header m-auto">
-                          <div class="text-green text-bold fs-2 fw-bold m-auto lh-sm">info</div>
-                        </div>
-                        <div class="modal-body">
-                          <div class="row">
-                            <div class="col text-center m-auto rounded">
-                              ${Event_Descript}
-                            </div>
-                            <div class="col modal-text border border-dark border-2 text-greendark">
-                              <ul>
-                                <li>${Instructions}</li>
-                                <li>${Judgment}</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                `;
-                            });
-                        });
-                    })();
-                </script>
-
-                <!-- Trigger/Open The Modal -->
-                <!-- The Modal -->
-
-                <script>
-                    // Function to open a modal
-                    function openModal(modal) {
-                        modal.style.display = "block";
-                    }
-
-                    // Function to close a modal
-                    function closeModal(modal) {
-                        modal.style.display = "none";
-                    }
-
-                    // When the user clicks the button, open the modal
-                    document.querySelectorAll('.modalBtn').forEach(function (button) {
-                        button.onclick = function () {
-                            var modalId = button.id.replace('btn_', 'odal_');
-                            var modal = document.getElementById(modalId);
-                            openModal(modal);
-                        };
-                    });
-
-                    // When the user clicks on <span> (x), close the modal
-                    document.querySelectorAll('.close').forEach(function (closeBtn) {
-                        closeBtn.onclick = function () {
-                            var modal = closeBtn.closest('.modal');
-                            closeModal(modal);
-                        };
-                    });
-
-                    // When the user clicks anywhere outside of the modal, close it
-                    window.onclick = function (event) {
-                        document.querySelectorAll('.modal').forEach(function (modal) {
-                            if (event.target == modal) {
-                                closeModal(modal);
-                            }
-                        });
-                    }
-                </script>
+<body>
+    <section class="property">
+        <div class="heading-property">
+            <h3>SERVICES WE OFFER</h3>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="card-group" id="card-group">
+                    <!-- Cards will be added here -->
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <!-- Modals will be added here -->
+    <div id="modals"></div>
+
+    <script>
+        // Load the CSV file
+        fetch('events.csv')
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.split('\n');
+                const headers = rows[0].split(',');
+                const services = [];
+
+                // Parse the CSV data
+                for (let i = 1; i < rows.length; i++) {
+                    const row = rows[i].split(',');
+                    const service = {};
+                    for (let j = 0; j < headers.length; j++) {
+                        service[headers[j]] = row[j];
+                    }
+                    services.push(service);
+                }
+                // Event_No., Image, Event_Name, Event_Descript, Eligibility, Team_Size, No_of_Teams, Event_About, Instructions, Judgment
+
+                // Add the cards and modals
+                services.forEach((service, index) => {
+                    const cardHTML = `
+                    <div class="col-lg-4 col-md-3 col-sm-2 p-2">
+                        <div class="card h-100 w-100">
+                            <div class="inner-card h-100 text-center d-flex flex-column">
+                                <img class="card-img-top text-center" src="i${service.Image}" alt="${service.Event_Name}">
+                                <div class="card-body m-auto">
+                                    <h5 class="card-title">${service.Event_Name}
+                                        <div data-bs-target="#modal_${index + 1}" aria-expanded="true" aria-controls="modal_${index + 1}">${service.servicename}</div>
+                                    </h5>
+                                </div>
+                                <div class="card-footer mt-auto border border-light border-2 w-100">
+                                    <button id="btn_${index + 1}" class="btn modalBtn rounded p-2 text-greendark">Know more</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                    const modalHTML = `
+                    <div id="modal_${index + 1}" class="modal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content" style="border: 6px solid #03341c; border-radius: 60px 20px; box-shadow: 9px 6px #71b100; " id="modalContent_${index + 1}" aria-labelledby="${service.sno}" data-bs-parent="#${service.sno}">
+                                <button type="button" class="close ml-auto" data-dismiss="modal" aria-hidden="true">x</button>
+                                <div class="modal-header m-auto">
+                                    <div class="text-green text-bold fs-2 fw-bold m-auto lh-sm">${service.Event_Name}</div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col text-center m-auto rounded">
+                                            <img class="card-img text-center p-2 border bg-dark m-2" src="images/services/${service.Image}" alt="${service.Image}">
+                                        </div>
+                                        <div class="col modal-text border border-dark border-2 text-greendark">
+                                            <ul><b>${service.Event_Name}</b></ul>
+                                            <ul>${service.Event_Descript}</ul>
+                                            <ul>${service.Eligibility}</ul>
+                                            <ul>${service.Team_Size}</ul>
+                                            <ul>${service.No_of_Teams}</ul>
+                                    <p class="card-text">${service.Event_About}</p>
+                                    <p class="card-text">${service.Instructions}</p>
+                                    <p class="card-text">${service.Judgment}</p>                                    
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                    document.getElementById('card-group').innerHTML += cardHTML;
+                    document.getElementById('modals').innerHTML += modalHTML;
+                });
+
+                // Add event listeners to the buttons and modals
+                document.querySelectorAll('.modalBtn').forEach(function (button) {
+                    button.onclick = function () {
+                        var modalId = button.id.replace('btn_', 'modal_');
+                        var modal = document.getElementById(modalId);
+                        openModal(modal);
+                    };
+                });
+
+                document.querySelectorAll('.close').forEach(function (closeBtn) {
+                    closeBtn.onclick = function () {
+                        var modal = closeBtn.closest('.modal');
+                        closeModal(modal);
+                    };
+                });
+
+                window.onclick = function (event) {
+                    document.querySelectorAll('.modal').forEach(function (modal) {
+                        if (event.target == modal) {
+                            closeModal(modal);
+                        }
+                    });
+                }
+            });
+
+        // Function to open a modal
+        function openModal(modal) {
+            modal.style.display = "block";
+        }
+
+        // Function to close a modal
+        function closeModal(modal) {
+            modal.style.display = "none";
+        }
+    </script>
+
+</html>
