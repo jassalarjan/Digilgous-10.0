@@ -150,7 +150,7 @@
 
                 (async () => {
                     let workbook = XLSX.read(await (await fetch("Events.csv")).arrayBuffer());
-                    console.log(workbook);
+                    // console.log(workbook);
 
                     let sheetNames = workbook.SheetNames;
 
@@ -170,7 +170,7 @@
 
 
                             return `
-            <div class="col-4">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <figure id="fig1" class="imageRoll">
                                 <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>                                                                                                                                                                                                                          </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
                                 <figcaption>
@@ -178,11 +178,11 @@
                                 <p>${Eligibility}</p>
                                 <p>${Team_Size}</p>
                                 <p>${No_of_Teams}</p>
-                                <button id="fig-${Event_No}">Know More</button>
+                                <button class="btn-sm modalBtn" id="${Event_No}">Know More</button>
                                 </figcaption>
                             </figure>
                         </div>
-<div id="modal-${Event_No}" class="modal">
+<div id="${Event_No}" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
     </div>
@@ -195,38 +195,49 @@
               ${cardContent}
             </div>
           `;
+
+
                     });
                 })();
-                
-                    // Select all containers with IDs
-                    const containers = document.querySelectorAll('[id^="fig-"]');
 
-                    // Add event listener to each container
-                    containers.forEach((container, index) => {
-                        container.addEventListener('click', () => {
-                            // Get the ID of the clicked container
-                            const containerId = container.id;
 
-                            // Display the corresponding modal box
-                            displayModal(containerId);
-                        });
+                // Select all containers with IDs
+                const containers = document.querySelectorAll('[id^="fig-"]');
+
+                // Add event listener to each container
+                containers.forEach((container, index) => {
+                    container.addEventListener('click', () => {
+                        // Get the ID of the clicked container
+                        const containerId = container.id;
+
+                        // Display the corresponding modal box
+                        displayModal(containerId);
                     });
+                });
+                // When the user clicks the button, open the modal
+                document.querySelectorAll('.modalBtn').forEach(function (button) {
+                    button.onclick = function () {
+                        var modalId = button.id.replace('fig_', 'modal_');
+                        var modal = document.getElementById(modalId);
+                        openModal(modal);
+                    };
+                });
+                // Function to display the modal box
+                function displayModal(containerId) {
+                    // Get the modal box corresponding to the container ID
+                    const modalId = `modal-${containerId.replace('fig-', '')}`;
+                    const modal = document.getElementById(modalId);
+                    console.log(modal);
 
-                    // Function to display the modal box
-                    function displayModal(containerId) {
-                        // Get the modal box corresponding to the container ID
-                        const modalId = `modal-${containerId.replace('fig-', '')}`;
-                        const modal = document.getElementById(modalId);
 
-                        // Display the modal box
-                        modal.style.display = 'block';
-                    }
-
+                    // Display the modal box
+                    modal.style.display = 'block';
+                }
             </script>
 
-         
+
             <!-- The Modal -->
-           
+
 
             <!-- Wavy Footer Starts -->
             <!-- <footer>
@@ -245,7 +256,7 @@
     </div>
 
     </div>
-    
+
 </body>
 
 </html>

@@ -1,114 +1,158 @@
-<!-- Modal Structure -->
-<div id="myModal-${Event_No}" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modal-content-${Event_No}"></div>
-    </div>
-</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The Digilogous - Rukmini Devi Public School">
+<meta name="author" content="Rukmini Devi Public School">
 
+<link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
 
-<script>
-    // Function to display the modal box
-    function displayModal(eventNo) {
-        // Construct modal IDs
-        const modalId = `myModal-${eventNo}`;
-        const modalContentId = `modal-content-${eventNo}`;
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
 
-        // Get the modal element
-        const modal = document.getElementById(modalId);
+<title>The Digilogous</title>
 
-        // Get the <span> element that closes the modal
-        const span = modal.querySelector(".close");
+<!-- Bootstrap core CSS -->
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
+<!-- Additional CSS Files -->
+<link rel="stylesheet" href="assets/css/fontawesome.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/animated.css">
+<link rel="stylesheet" href="assets/css/owl.css">
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // Get the content for the modal and display it
-        const modalContent = document.getElementById(modalContentId);
-        modalContent.innerHTML = document.getElementById(`fig-${eventNo}`).innerHTML;
-
-        // Display the modal
-        modal.style.display = "block";
+<!--MY LINK-->
+<link rel="stylesheet" href="assets/css/master.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+    integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<style>
+    .sheet {
+        margin-bottom: 20px;
     }
 
-    let content = document.querySelector(".event-content");
+    body {
+        color: black;
+    }
+</style>
 
-    (async () => {
-        let response = await fetch("Events.csv");
-        let data = await response.text();
-
-        let workbook = XLSX.read(data, { type: "binary" });
-
-        let sheetNames = workbook.SheetNames;
-
-        sheetNames.forEach((name) => {
-            let json = XLSX.utils.sheet_to_json(workbook.Sheets[name]);
-            let cardContent = json.map((row, index) => {
-                let Event_No = row["Event_No."] || "";
-                let Event_Name = row["Event_Name"] || "";
-                let Eligibility = row["Eligibility"] || "";
-                let Team_Size = row["Team_Size"] || "";
-                let No_of_Teams = row["No_of_Teams"] || "";
-
-                return `
-        <div class="col-4">
-            <figure id="fig-${Event_No}" class="imageRoll">
-                <figcaption>
-                    <strong>${Event_Name}</strong>
-                    <p>${Eligibility}</p>
-                    <strong>${Team_Size}</strong>
-                    <strong>${No_of_Teams}</strong>
-                    <button id="container-${Event_No}" onclick="displayModal('${Event_No}')" class="btn-mod">Know More</button>
-                </figcaption>
-            </figure>
-        </div>
-        `;
-            }).join('');
-
-            content.innerHTML += `
+<section class="property">
+    <div class="heading-property">
+        <h3>SERVICES WE OFFER</h3>
+    </div>
+    <div class="container">
         <div class="row">
-            ${cardContent}
-        </div>
-        `;
+            <div class="card-group">
+                <script>
+                    let content = document.querySelector(".event-content");
 
-            // Append modals for each event
-            json.forEach((row) => {
-                let Event_No = row["Event_No."] || "";
-                let Event_Descript = row["Event_Descript"] || "";
-                let Instructions = row["Instructions"] || "";
-                let Judgment = row["Judgment"] || "";
+                    (async () => {
+                        let workbook = XLSX.read(await (await fetch("Events.csv")).arrayBuffer());
+                        // console.log(workbook);
 
-                let modalContent = `
-            <h2>${Event_No}</h2>
-            <p>${Event_Descript}</p>
-            <p>${Instructions}</p>
-            <p>${Judgment}</p>
-            `;
+                        let sheetNames = workbook.SheetNames;
 
-                // Create modal HTML dynamically
-                let modalHTML = `
-            <div id="myModal-${Event_No}" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <div id="modal-content-${Event_No}">
-                        ${modalContent}
+                        sheetNames.forEach((name) => {
+                            let json = XLSX.utils.sheet_to_json(workbook.Sheets[name]);
+                            let cardContent = json.map((row) => {
+                                // select the values under column headers or put blank if no value exists.
+                                let Event_No = row["Event_No."] || "";
+                                let Event_Name = row["Event_Name"] || "";
+                                let Event_Descript = row["Event_Descript"] || "";
+                                let Eligibility = row["Eligibility"] || "";
+                                let Team_Size = row["Team_Size"] || "";
+                                let No_of_Teams = row["No_of_Teams"] || "";
+                                let Event_About = row["Event_About"] || "";
+                                let Instructions = row["Instructions"] || "";
+                                let Judgment = row["Judgment"] || "";
+
+                                return `
+                  <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <figure id="fig1" class="imageRoll">
+                      <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                                    </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                      <figcaption>
+                        <div data-bs-target="#${Event_Name}" aria-expanded="true" aria-controls="${Event_Name}">${Event_Name}</div>
+                        <strong>${Event_Name}</strong>
+                        <p>${Eligibility}</p>
+                        <p>${Team_Size}</p>
+                        <p>${No_of_Teams}</p>
+                        <button id="${Event_No}" class="btn modalBtn rounded p-2 text-greendark">Know more</button>
+                      </figcaption>
+                    </figure>
+                  </div>
+                  <div id="${Event_No}" class="modal">
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content" style="border: 6px solid #03341c; border-radius: 60px 20px; box-shadow: 9px 6px #71b100; " id="${Event_No}" aria-labelledby="${Event_Name}" data-bs-parent="${Event_Name}">
+                        <button type="button" class="close ml-auto" data-dismiss="modal" aria-hidden="true">x</button>
+                        <div class="modal-header m-auto">
+                          <div class="text-green text-bold fs-2 fw-bold m-auto lh-sm">info</div>
+                        </div>
+                        <div class="modal-body">
+                          <div class="row">
+                            <div class="col text-center m-auto rounded">
+                              ${Event_Descript}
+                            </div>
+                            <div class="col modal-text border border-dark border-2 text-greendark">
+                              <ul>
+                                <li>${Instructions}</li>
+                                <li>${Judgment}</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </div>
-            `;
+                  </div>
+                `;
+                            });
+                        });
+                    })();
+                </script>
 
-                // Append modal HTML to body
-                document.body.insertAdjacentHTML('beforeend', modalHTML);
-            });
-        });
-    })();
-</script>
+                <!-- Trigger/Open The Modal -->
+                <!-- The Modal -->
+
+                <script>
+                    // Function to open a modal
+                    function openModal(modal) {
+                        modal.style.display = "block";
+                    }
+
+                    // Function to close a modal
+                    function closeModal(modal) {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks the button, open the modal
+                    document.querySelectorAll('.modalBtn').forEach(function (button) {
+                        button.onclick = function () {
+                            var modalId = button.id.replace('btn_', 'odal_');
+                            var modal = document.getElementById(modalId);
+                            openModal(modal);
+                        };
+                    });
+
+                    // When the user clicks on <span> (x), close the modal
+                    document.querySelectorAll('.close').forEach(function (closeBtn) {
+                        closeBtn.onclick = function () {
+                            var modal = closeBtn.closest('.modal');
+                            closeModal(modal);
+                        };
+                    });
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function (event) {
+                        document.querySelectorAll('.modal').forEach(function (modal) {
+                            if (event.target == modal) {
+                                closeModal(modal);
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
