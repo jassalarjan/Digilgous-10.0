@@ -154,14 +154,14 @@
               events.forEach((event, index) => {
                 const cardHTML = `
                 <div class='col-lg-4 col-md-4 col-sm-6 p-2'>
-                    <figure id='fig${index}' class='imageRoll' style='--imageUrl: url("../images/events/${event.Image}");'>
+                    <figure id='fig${index}' class='imageRoll bg-info' style='--imageUrl: url("../images/events/${event.Image}");'>
                     <i><i><i><i><i><i><i><i><i><i>
                         <i><i><i><i><i><i><i><i><i><i>
                             <i><i><i><i><i><i><i><i><i><i>
                                 <i><i><i><i><i><i><i><i><i><i>
                                     <i><i><i><i><i><i><i><i><i><i>
                                         <i><i><i><i><i><i><i><i><i>
-                                        
+
                                         </i></i></i></i></i></i></i></i></i>
                                     </i></i></i></i></i></i></i></i></i></i>
                                 </i></i></i></i></i></i></i></i></i></i>
@@ -169,11 +169,11 @@
                         </i></i></i></i></i></i></i></i></i></i>
                     </i></i></i></i></i></i></i></i></i></i>
                     <figcaption class=''>
-        <strong>
+        <div class='fs-1 text-white'>
           ${event.Event_Name}
-        </strong>
-        <div class='card-footer border '>
-          <button id='btn_${index}' class='btn modalBtn menu-button-class'>Event Details</button>
+        </div>
+        <div >
+          <button id='btn_${index}' class='btn modalBtn btn-outline-light '>Event Details</button>
         </div>
       </figcaption>
     </figure>
@@ -222,8 +222,7 @@
             <br>
             <p>
             <h5> <b><u>Judgement Criteria:</u> </b></h5>
-            <ul>
-${event.Judgment}
+            <ul>${event.Judgment}
             </ul>
             </p>
             <br>
