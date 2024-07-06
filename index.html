@@ -85,6 +85,7 @@
         } */
     </style>
     <script src="assets/js/circles.js"></script>
+    <link rel="stylesheet" href="./assets/css/efects.css">
 </head>
 
 <body>
@@ -335,7 +336,8 @@
                                     <center>
                                         <div class="section-title ps-5 mt-4">
                                             <div class="section-heading">
-                                                <h6 style="text-transform: none;" class=" title ">Late Shri K.C. Garg</h6>
+                                                <h6 style="text-transform: none;" class=" title ">Late Shri K.C. Garg
+                                                </h6>
                                             </div>
                                             <h5 class="title">Founder Trustee and President Seth Pokhar Mal Educational
                                                 Society</h5>
@@ -436,30 +438,39 @@
                 </section>
                 <!--    Distinguished Video end -->
             </section>
-            <div style="position: relative;" id="about" class="about-us section ">
-                <div class=" wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                    <center>
-                        <div class="section-heading">
-                            <h6>About us</h6>
-                        </div>
-                        <hr class="solid2">
-                    </center>
-                    <p style="text-align: justify;">
-                        It is our firm conviction that technology possesses the power to
-                        revolutionize the world and enhance the quality of people's lives. Throughout the past few
-                        decades, it has brought about a profound transformation in the way individuals live, work,
-                        engage in leisure activities, and establish connections. The remarkable achievements of
-                        technology visionaries have played a pivotal role in the overall advancement of our nation. In
-                        order to commemorate the invaluable contributions made by these great technologists and to
-                        inspire the widespread utilization of information and communication technology in diverse fields
-                        such as Science, Agriculture, Defence, Entertainment, and more,we proudly present 'K. C Garg
-                        Memorial Inter School Tech Symposium : Digilogous 9.0' - the inter-school IT Competition, which
-                        was first launched in 2014. This extraordinary IT fest has triumphantly completed seven
-                        exceptional years thus far, and now we are thrilled to announce the upcoming ninth edition of
-                        Digilogous, scheduled to take place on Saturday, August 05, 2023.
-                    </p>
+
+
+            <section class="parallax-container para-2">
+                <div id="about" class="about-us section ">
+                    <div class=" wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <center>
+                            <div class="section-heading">
+                                <h6>About us</h6>
+                            </div>
+                            <hr class="solid2">
+                        </center>
+                        <p style="text-align: justify;">
+                            It is our firm conviction that technology possesses the power to
+                            revolutionize the world and enhance the quality of people's lives. Throughout the past few
+                            decades, it has brought about a profound transformation in the way individuals live, work,
+                            engage in leisure activities, and establish connections. The remarkable achievements of
+                            technology visionaries have played a pivotal role in the overall advancement of our nation.
+                            In
+                            order to commemorate the invaluable contributions made by these great technologists and to
+                            inspire the widespread utilization of information and communication technology in diverse
+                            fields
+                            such as Science, Agriculture, Defence, Entertainment, and more,we proudly present 'K. C Garg
+                            Memorial Inter School Tech Symposium : Digilogous 9.0' - the inter-school IT Competition,
+                            which
+                            was first launched in 2014. This extraordinary IT fest has triumphantly completed seven
+                            exceptional years thus far, and now we are thrilled to announce the upcoming ninth edition
+                            of
+                            Digilogous, scheduled to take place on Saturday, August 05, 2023.
+                        </p>
+                    </div>
                 </div>
-            </div>
+            </section>
+
             <!-- events start -->
             <section id="team">
                 <div class="wow fadeIn">
@@ -515,9 +526,23 @@
             </section>
             <!-- events End -->
             <!-- scroll to top button  -->
-            <a href="#" id="scroll" style="display: none;">
-                <span></span>
-            </a>
+            <div id="scroll-top" class="btn-scroll-top">
+                <div class="text">
+                    <span>Back</span>
+                    <span>to</span>
+                    <span>top</span>
+                </div>
+                <div class="clone">
+                    <span>Back</span>
+                    <span>to</span>
+                    <span>top</span>
+                </div>
+                
+                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg" width="50px">
+                    <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+            </div>
             <!-- scroll to top button  -->
             <!-- features section -->
             <div style="position: relative;" id="features" class="features">
@@ -526,7 +551,7 @@
                         <div class="col-lg-8">
                             <div class="features-content">
                                 <div class="row">
-                                    <div id="first" class="col-lg-12">
+                                    <div id="first" class="col-lg-6 col-md-6 col-sm-12">
                                         <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s"
                                             data-wow-delay="0s">
                                             <div class="first-number number">
@@ -671,8 +696,6 @@
                                                     </div>
                                                     <p>
                                                         +91-9667433774
-                                                        <br>
-                                                        +91-9899900032
                                                     </p>
                                                 </li>
                                                 <li>
@@ -781,74 +804,7 @@
     <script src="assets/js/parallax.min.js"></script>
     <script src="assets/js/modernizr-2.6.2.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
 
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function (event) {
-            // When the user clicks anywhere outside of the modal, close it
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-    <script>
-        var datamap = new Map([
-            [document.getElementById("myBtn1"), document.getElementById("myeModal1")],
-            [document.getElementById("myBtn2"), document.getElementById("myeModal2")],
-            [document.getElementById("myBtn3"), document.getElementById("myeModal3")],
-            [document.getElementById("myBtn4"), document.getElementById("myeModal4")],
-            [document.getElementById("myBtn5"), document.getElementById("myeModal5")],
-            [document.getElementById("myBtn6"), document.getElementById("myeModal6")],
-            [document.getElementById("myBtn7"), document.getElementById("myeModal7")],
-            [document.getElementById("myBtn8"), document.getElementById("myeModal8")],
-            [document.getElementById("myBtn9"), document.getElementById("myeModal9")],
-            [document.getElementById("myBtn10"), document.getElementById("myeModal10")],
-            [document.getElementById("myBtn11"), document.getElementById("myeModal11")],
-            [document.getElementById("myBtn12"), document.getElementById("myeModal12")]
-
-        ]);
-
-        datamap.forEach((value, key) => {
-            doModal(key, value);
-        });
-
-        function doModal(anchor, popupbox) {
-
-            // Get the <span> element that closes the modal
-            var span = popupbox.getElementsByClassName("eclose")[0];
-
-            anchor.addEventListener("click", function (event) {
-                popupbox.style.display = "block";
-            });
-
-            span.addEventListener("click", function (event) {
-                popupbox.style.display = "none";
-            });
-
-            window.addEventListener("click", function (event) {
-                if (event.target == popupbox) {
-                    popupbox.style.display = "none";
-                }
-            });
-        }
-    </script>
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
@@ -886,12 +842,12 @@
         $(document).ready(function () {
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 100) {
-                    $('#scroll').fadeIn();
+                    $('#scroll-top').fadeIn();
                 } else {
-                    $('#scroll').fadeOut();
+                    $('#scroll-top').fadeOut();
                 }
             });
-            $('#scroll').click(function () {
+            $('#scroll-top').click(function () {
                 $("html, body").animate({
                     scrollTop: 0
                 }, 600);
@@ -938,17 +894,17 @@
                 ],
                     circles = [];
                 var percentage = [
-                    ['100'],
-                    ['2000'],
-                    ['1000'],
-                    ['12']
+                    ['150'],
+                    ['2700'],
+                    ['1100'],
+                    ['16']
                 ],
                     circles = [];
                 var maxval = [
-                    ['130'],
-                    ['2500'],
+                    ['200'],
+                    ['3000'],
                     ['1500'],
-                    ['12']
+                    ['16']
                 ],
                     circles = [];
                 //31.42 + (i * 9.84),
