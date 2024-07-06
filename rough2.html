@@ -1,41 +1,38 @@
-<div id="myeModal2" class="modal">
-
+<div id='modal_${index}' class='modal'>
     <!-- Modal content -->
-    <div class="emodal-content">
-        <p class="eclose">&times;</p>
-        <div class="emodal-header">
-            <div class="emodal-header-border">
-                <div class="emodal-headings">
-                    <img src="assets/images/" alt="">
-                    <div class="title">
-                        <h2 class="modal__title"> </h2>
-                        <h4 style="color: rgba(255, 255, 255, 0.747);"></h4>
+    <div class='emodal-content' id='modalContent_${index}' aria-labelledby='${event.Event_No}'
+        data-bs-parent='#${event.Event_No}'>
+        <p class='eclose'>&times;</p>
+        <div class='emodal-header'>
+            <div class='emodal-header-border'>
+                <div class='emodal-headings'>
+                    <img src='assets/images/events/${event.Image}' alt='${event.Image}'>
+                    <div class='title'>
+                        <h2 class='modal__title'>${event.Event_Name} </h2>
+                        <h4 style='color: rgba(255, 255, 255, 0.747);'>${event.Event_Descript}</h4>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="emodal-body">
-            <blockquote style="color: rgba(255, 255, 255, 0.747);">
+        <div class='emodal-body'>
+            <blockquote style='color: rgba(255, 255, 255, 0.747);'>
                 <h5>
-                    <q style="color: rgba(255, 255, 255, 0.747);"><i>T</i></q>
+                    <i>${event.Event_About}</i>
                 </h5>
             </blockquote>
             <br>
-            <h5 style="color: rgba(255, 255, 255, 0.747);"></h5><br>
+            <h5 style='color: rgba(255, 255, 255, 0.747);'>General Instructions: <br> ${event.Instructions}</h5><br>
+            <br>
             <p>
-                General Instructions
+            <h5><b>Eligibility</b> : ${event.Eligibility}</h5>
             </p>
             <br>
             <p>
-            <h5><b>Eligibility</b> : </h5>
+            <h5><b>Team Size</b>: ${event.Team_Size}</h5>
             </p>
             <br>
             <p>
-            <h5><b>Team Size</b>: </h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Team allowed per School</b>: </h5>
+            <h5><b>Team allowed per School</b>: ${event.No_of_Teams}</h5>
             </p>
             <br>
             <p>
@@ -45,7 +42,7 @@
             <p>
             <h5> <b><u>Judgement Criteria:</u> </b></h5>
             <ul>
-                
+                ${event.Judgment}
             </ul>
             </p>
             <br>
@@ -57,5 +54,4 @@
             <br>
         </div>
     </div>
-
 </div>

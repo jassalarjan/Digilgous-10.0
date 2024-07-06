@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <!-- Additional CSS Files -->
+        <style>
+    figure {
+  width: 300px;
+  perspective: 900px;
+    box-shadow: 5px 5px #686868 !important;
+    margin: 1rem;
+    z-index: 1;
+}
+figure img {
+  width: 100%;
+}
+
+ .imageRoll {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  box-shadow: 1em 0.5em 2em #1234, 0 0 5em #1234 inset;
+}
+
+.imageRoll i {
+  position: absolute;
+  left: calc(100% - 1px);
+  width: 6px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: transform 0.6s var(--delay, 0s) ease-in-out;
+  background-image: linear-gradient(#0003, #0000 5% 95%, #0003), var(--imageUrl, "");
+  background-position-x: calc(var(--bpx, 0) + 1px);
+  background-size: 300px 300px;
+}
+
+.imageRoll>i {
+  left: 0;
+  width: 5px;
+}
+
+.imageRoll:hover i {
+  transform: rotateY(var(--angle, 0deg)) skewY(var(--skew, 0deg));
+  transition-delay: var(--delay2, 0s);
+}
+
+.imageRoll>i { 
+  --bpx: 0px;
+  --delay: 0s;
+  --delay2: 0.6s;
+  --angle: -10deg;
+  --skew: 0deg;
+}
+
+.imageRoll>i>i {
+  --bpx: -5px;
+  --delay: 0.01s;
+  --delay2: 0.59s;
+  --angle: -10.1deg;
+  --skew: -0.1deg;
+}
+
+.imageRoll>i>i>i {
+  --bpx: -10px;
+  --delay: 0.02s;
+  --delay2: 0.58s;
+  --angle: -10.2deg;
+  --skew: -0.2deg;
+}
+
+.imageRoll>i>i>i>i {
+  --bpx: -15px;
+  --delay: 0.03s;
+  --delay2: 0.57s;
+  --angle: -10.3deg;
+  --skew: -0.3deg;
+}
+
+.imageRoll>i>i>i>i>i {
+  --bpx: -20px;
+  --delay: 0.04s;
+  --delay2: 0.56s;
+  --angle: -10.4deg;
+  --skew: -0.4deg;
+}
+
+.imageRoll>i>i>i>i>i>i {
+  --bpx: -25px;
+  --delay: 0.05s;
+  --delay2: 0.55s;
+  --angle: -10.5deg;
+  --skew: -0.5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i {
+  --bpx: -30px;
+  --delay: 0.06s;
+  --delay2: 0.54s;
+  --angle: -10.6deg;
+  --skew: -0.6deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i {
+  --bpx: -35px;
+  --delay: 0.07s;
+  --delay2: 0.53s;
+  --angle: -10.7deg;
+  --skew: -0.7deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i {
+  --bpx: -40px;
+  --delay: 0.08s;
+  --delay2: 0.52s;
+  --angle: -10.8deg;
+  --skew: -0.8deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -45px;
+  --delay: 0.09s;
+  --delay2: 0.51s;
+  --angle: -10.9deg;
+  --skew: -0.9deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -50px;
+  --delay: 0.1s;
+  --delay2: 0.5s;
+  --angle: -11deg;
+  --skew: -1deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -55px;
+  --delay: 0.11s;
+  --delay2: 0.49s;
+  --angle: -11.1deg;
+  --skew: -1.1deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -60px;
+  --delay: 0.12s;
+  --delay2: 0.48s;
+  --angle: -11.2deg;
+  --skew: -1.2deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -65px;
+  --delay: 0.13s;
+  --delay2: 0.47s;
+  --angle: -11.3deg;
+  --skew: -1.3deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -70px;
+  --delay: 0.14s;
+  --delay2: 0.46s;
+  --angle: -11.4deg;
+  --skew: -1.4deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -75px;
+  --delay: 0.15s;
+  --delay2: 0.45s;
+  --angle: -11.5deg;
+  --skew: -1.5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -80px;
+  --delay: 0.16s;
+  --delay2: 0.44s;
+  --angle: -11.6deg;
+  --skew: -1.6deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -85px;
+  --delay: 0.17s;
+  --delay2: 0.43s;
+  --angle: -11.7deg;
+  --skew: -1.7deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -90px;
+  --delay: 0.18s;
+  --delay2: 0.42s;
+  --angle: -11.8deg;
+  --skew: -1.8deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -95px;
+  --delay: 0.19s;
+  --delay2: 0.41s;
+  --angle: -11.9deg;
+  --skew: -1.9deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -100px;
+  --delay: 0.2s;
+  --delay2: 0.4s;
+  --angle: -12deg;
+  --skew: -2deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -105px;
+  --delay: 0.21s;
+  --delay2: 0.39s;
+  --angle: -12.1deg;
+  --skew: -2.1deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -110px;
+  --delay: 0.22s;
+  --delay2: 0.38s;
+  --angle: -12.2deg;
+  --skew: -2.2deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -115px;
+  --delay: 0.23s;
+  --delay2: 0.37s;
+  --angle: -12.3deg;
+  --skew: -2.3deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -120px;
+  --delay: 0.24s;
+  --delay2: 0.36s;
+  --angle: -12.4deg;
+  --skew: -2.4deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -125px;
+  --delay: 0.25s;
+  --delay2: 0.35s;
+  --angle: -12.5deg;
+  --skew: -2.5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -130px;
+  --delay: 0.26s;
+  --delay2: 0.34s;
+  --angle: -12.6deg;
+  --skew: -2.6deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -135px;
+  --delay: 0.27s;
+  --delay2: 0.33s;
+  --angle: -12.7deg;
+  --skew: -2.7deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -140px;
+  --delay: 0.28s;
+  --delay2: 0.32s;
+  --angle: -12.8deg;
+  --skew: -2.8deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -145px;
+  --delay: 0.29s;
+  --delay2: 0.31s;
+  --angle: -12.9deg;
+  --skew: -2.9deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -150px;
+  --delay: 0.3s;
+  --delay2: 0.3s;
+  --angle: -13deg;
+  --skew: -3deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -155px;
+  --delay: 0.31s;
+  --delay2: 0.29s;
+  --angle: -13.1deg;
+  --skew: -3.1deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -160px;
+  --delay: 0.32s;
+  --delay2: 0.28s;
+  --angle: -13.2deg;
+  --skew: -3.2deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -165px;
+  --delay: 0.33s;
+  --delay2: 0.27s;
+  --angle: -13.3deg;
+  --skew: -3.3deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -170px;
+  --delay: 0.34s;
+  --delay2: 0.26s;
+  --angle: -13.4deg;
+  --skew: -3.4deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -175px;
+  --delay: 0.35s;
+  --delay2: 0.25s;
+  --angle: -13.5deg;
+  --skew: -3.5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -180px;
+  --delay: 0.36s;
+  --delay2: 0.24s;
+  --angle: -13.6deg;
+  --skew: -3.6deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -185px;
+  --delay: 0.37s;
+  --delay2: 0.23s;
+  --angle: -13.7deg;
+  --skew: -3.7deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -190px;
+  --delay: 0.38s;
+  --delay2: 0.22s;
+  --angle: -13.8deg;
+  --skew: -3.8deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -195px;
+  --delay: 0.39s;
+  --delay2: 0.21s;
+  --angle: -13.9deg;
+  --skew: -3.9deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -200px;
+  --delay: 0.4s;
+  --delay2: 0.2s;
+  --angle: -14deg;
+  --skew: -4deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -205px;
+  --delay: 0.41s;
+  --delay2: 0.19s;
+  --angle: -14.1deg;
+  --skew: -4.1deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -210px;
+  --delay: 0.42s;
+  --delay2: 0.18s;
+  --angle: -14.2deg;
+  --skew: -4.2deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -215px;
+  --delay: 0.43s;
+  --delay2: 0.17s;
+  --angle: -14.3deg;
+  --skew: -4.3deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -220px;
+  --delay: 0.44s;
+  --delay2: 0.16s;
+  --angle: -14.4deg;
+  --skew: -4.4deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -225px;
+  --delay: 0.45s;
+  --delay2: 0.15s;
+  --angle: -14.5deg;
+  --skew: -4.5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -230px;
+  --delay: 0.46s;
+  --delay2: 0.14s;
+  --angle: -14.6deg;
+  --skew: -4.6deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -235px;
+  --delay: 0.47s;
+  --delay2: 0.13s;
+  --angle: -14.7deg;
+  --skew: -4.7deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -240px;
+  --delay: 0.48s;
+  --delay2: 0.12s;
+  --angle: -14.8deg;
+  --skew: -4.8deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -245px;
+  --delay: 0.49s;
+  --delay2: 0.11s;
+  --angle: -14.9deg;
+  --skew: -4.9deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -250px;
+  --delay: 0.5s;
+  --delay2: 0.1s;
+  --angle: -15deg;
+  --skew: -5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -255px;
+  --delay: 0.51s;
+  --delay2: 0.09s;
+  --angle: -15.1deg;
+  --skew: -5.1deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -260px;
+  --delay: 0.52s;
+  --delay2: 0.08s;
+  --angle: -15.2deg;
+  --skew: -5.2deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -265px;
+  --delay: 0.53s;
+  --delay2: 0.07s;
+  --angle: -15.3deg;
+  --skew: -5.3deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -270px;
+  --delay: 0.54s;
+  --delay2: 0.06s;
+  --angle: -15.4deg;
+  --skew: -5.4deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -275px;
+  --delay: 0.55s;
+  --delay2: 0.05s;
+  --angle: -15.5deg;
+  --skew: -5.5deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -280px;
+  --delay: 0.56s;
+  --delay2: 0.04s;
+  --angle: -15.6deg;
+  --skew: -5.6deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -285px;
+  --delay: 0.57s;
+  --delay2: 0.03s;
+  --angle: -15.7deg;
+  --skew: -5.7deg;
+}
+
+.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+  --bpx: -290px;
+  --delay: 0.58s;
+  --delay2: 0.02s;
+  --angle: -15.8deg;
+  --skew: -5.8deg;
+}
+
+.imageRoll>figcaption {
+  position: absolute;
+  text-align: center;
+  padding-top: 2em;
+  padding-inline: 100px 25px;
+  z-index: -1;
+  font-size: 32px;
+  width: 100%;
+  height: 100%;
+}
+.imageRoll>figcaption strong {
+  display: block;color: #000000;
+}  
+.img-n {
+  --s: 10px;
+  /* size of the frame */
+  --b: 2px;
+  /* border thickness */
+  --w: 400px;
+  /* width of the image */
+  --c: #ffffff;
+
+  width: var(--w);
+  /* aspect-ratio: 1; */
+  object-fit: contain;
+  padding: calc(2*var(--s));
+  --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
+  background:
+    linear-gradient(var(--_g)) 50%/100% var(--_i, 100%) no-repeat,
+    linear-gradient(90deg, var(--_g)) 50%/var(--_i, 100%) 100% no-repeat;
+  /* outline: calc(var(--w)/2) solid #0009; */
+  outline-offset: calc(var(--w)/-2 - 2*var(--s));
+  transition: .4s;
+  cursor: pointer;
+}
+
+.img-n:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--s)/-2);
+  --_i: calc(100% - 2*var(--s));
+  transform: scale(1.25);
+}
+    </style>
+    <body>
+    <div class="event-content">
+        <div class="container">
+            <div class="row">
+                <div class="card-group" id="card-group">
+                <!-- Cards will be added here -->
+                </div>
+            </div>
+        </div>
+        <!-- Modals will be added here -->
+        <div id="modals"></div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        // Load the CSV file
+        fetch('events.csv')
+          .then(response => response.text())
+          .then(data => {
+            const rows = data.split('\n');
+            const headers = rows[0].split(',');
+            const events = [];
+      
+            // Parse the CSV data
+            for (let i = 1; i < rows.length; i++) {
+              const row = rows[i].split(',');
+              const event = {};
+              for (let j = 0; j < headers.length; j++) {
+                event[headers[j]] = row[j];
+              }
+              events.push(event);
+            }
+      
+            // Add the cards and modals
+            events.forEach((event, index) => {
+              const cardHTML = `
+                <div class="col-lg-4 col-md-3 col-sm-2 p-2">
+                    <figure id="fig${index+1}" class="imageRoll" style="--imageUrl: url('assets/images/events/${event.Image}');">
+                    <i><i><i><i><i><i><i><i><i><i>
+                        <i><i><i><i><i><i><i><i><i><i>
+                            <i><i><i><i><i><i><i><i><i><i>
+                                <i><i><i><i><i><i><i><i><i><i>
+                                    <i><i><i><i><i><i><i><i><i><i>
+                                        <i><i><i><i><i><i><i><i><i><i>                            
+                                        </i></i></i></i></i></i></i></i></i></i>
+                                    </i></i></i></i></i></i></i></i></i></i>
+                                </i></i></i></i></i></i></i></i></i></i>
+                            </i></i></i></i></i></i></i></i></i></i>
+                        </i></i></i></i></i></i></i></i></i></i>
+                    </i></i></i></i></i></i></i></i></i></i>
+                    <figcaption class="">
+        <strong>
+          ${event.Event_Name}
+        </strong>
+        <div class="card-footer border ">
+          <button id="btn_${index+1}" class="btn modalBtn menu-button-class">Event Details</button>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+`;
+
+const modalHTML = `
+  <div id="modal_${index+1}" class="modal">
+    <!-- Modal content -->
+    <div class="emodal-content" id="modalContent_${index+1}" aria-labelledby="${event.Event_No}" data-bs-parent="#${event.Event_No}">
+      <p class="eclose">&times;</p>
+      <div class="emodal-header">
+        <div class="emodal-header-border">
+          <div class="emodal-headings">
+            <img src="${event.Image}" alt="${event.Image}">
+            <div class="title">
+                <h2 class="modal__title">${event.Event_Name} </h2>
+                <h4 style="color: rgba(255, 255, 255, 0.747);">${event.Event_Descript}</h4>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="emodal-body">
+    <blockquote style="color: rgba(255, 255, 255, 0.747);">
+        <h5>
+            <q style="color: rgba(255, 255, 255, 0.747);"><i>${event.Event_About}</i></q>
+        </h5>
+    </blockquote>
+    <br>
+    <h5 style="color: rgba(255, 255, 255, 0.747);">General Instructions: <br> ${event.Instructions}</h5><br>
+    <br>
+    <p>
+    <h5><b>Eligibility</b> : ${event.Eligibility}</h5>
+    </p>
+    <br>
+    <p>
+    <h5><b>Team Size</b>: ${event.Team_Size}</h5>
+    </p>
+    <br>
+    <p>
+    <h5><b>Team allowed per School</b>: ${event.No_of_Teams}</h5>
+    </p>
+    <br>
+    <p>
+    <h5><b>Theme </b></h5>
+    </p>
+    <br>
+    <p>
+    <h5> <b><u>Judgement Criteria:</u> </b></h5>
+    <ul>
+${event.Judgment}
+    </ul>
+    </p>
+    <br>
+    <p>
+    <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
+    <h5><b>Contact Number</b> : 9811661581</h5>
+    </p>
+    <br>
+    <br>
+</div>
+</div>
+</div>
+        `;
+        document.getElementById('card-group').innerHTML += cardHTML;
+document.getElementById('modals').innerHTML += modalHTML;
+});
+
+// Add event listeners to the buttons and modals
+document.querySelectorAll('.modalBtn').forEach(function (button) {
+button.onclick = function () {
+var modalId = button.id.replace('btn_', 'modal_');
+var modal = document.getElementById(modalId);
+var modalContent = modal.querySelector('.emodal-content');
+modalContent.innerHTML = event.Event_Descript; // Set the modal content
+openModal(modal);
+};
+});
+document.querySelectorAll('.eclose').forEach(function (closeBtn) {
+closeBtn.onclick = function () {
+  var modal = closeBtn.closest('.modal');
+  closeModal(modal);
+};
+});
+window.onclick = function (event) {
+document.querySelectorAll('.modal').forEach(function (modal) {
+  if (event.target == modal) {
+    closeModal(modal);
+  }
+});
+}
+});
+
+//     const imageRoll = document.querySelector('.imageRoll');
+
+// imageRoll.style.position = 'relative';
+// imageRoll.style.width = '300px';
+// imageRoll.style.height = '300px';
+// imageRoll.style.backgroundColor = '#fff';
+// imageRoll.style.boxShadow = '1em 0.5em 2em #1234, 0 0 5em #1234 inset';
+
+// const iElements = imageRoll.querySelectorAll('i');
+
+// iElements.forEach((i, index) => {
+//   i.style.position = 'absolute';
+//   i.style.left = 'calc(100% - 1px)';
+//   i.style.width = '6px';
+//   i.style.height = '100%';
+//   i.style.transformStyle = 'preserve-3d';
+//   i.style.transformOrigin = 'left';
+//   i.style.transition = `transform 0.6s var(--delay, 0s) ease-in-out`;
+//   i.style.backgroundImage = `linear-gradient(#0003, #0000 5% 95%, #0003), var(--imageUrl, "")`;
+//   i.style.backgroundPositionX = `calc(var(--bpx, 0) + 1px)`;
+//   i.style.backgroundSize = '300px 300px';
+
+//   if (index === 0) {
+//     i.style.left = '0';
+//     i.style.width = '5px';
+//   }
+
+//   const delay = 0.01 * index;
+//   const delay2 = 0.6 - 0.01 * index;
+//   const bpx = -5 * index + 'px';
+//   const angle = -10 - 0.1 * index + 'deg';
+//   const skew = -0.1 * index + 'deg';
+
+//   i.style.setProperty('--delay', delay + 's');
+//   i.style.setProperty('--delay2', delay2 + 's');
+//   i.style.setProperty('--bpx', bpx);
+//   i.style.setProperty('--angle', angle);
+//   i.style.setProperty('--skew', skew);
+// });
+
+// imageRoll.addEventListener('mouseover', () => {
+//   iElements.forEach(i => {
+//     i.style.transform = `rotateY(var(--angle, 0deg)) skewY(var(--skew, 0deg))`;
+//     i.style.transitionDelay = `var(--delay2, 0s)`;
+//   });
+// });
+
+</script>
+</body>
+</html>
