@@ -2,47 +2,35 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="The Digilogous - Rukmini Devi Public School">
   <meta name="author" content="Rukmini Devi Public School">
   <link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
-
   <title>The Digilogous</title>
-
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Additional CSS Files -->
   <link rel="stylesheet" href="assets/css/fontawesome.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
-
+  <link rel="stylesheet" href="./assets/css/efects.css">
   <!--MY LINK-->
   <link rel="stylesheet" href="assets/css/master.css">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
     integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
   <style>
-    .emodal-content {
-      height: 80vh;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
   </style>
-<link rel="stylesheet" href="./assets/css/efects.css">
-</head>
+
 <body>
   <div id="demo-content">
     <div id="content">
@@ -56,7 +44,6 @@
                   <h4 class="mt-0"> <img style="width: 100px;" src="assets/images/schlogo.png" alt="logo" class="mt-0">
                   </h4>
                 </a>
-
                 <!-- ***** Logo Start ***** -->
                 <div class="logo align-items-center">
                   <h4 class="mt-0"> <img src="assets/images/logobolder.png" alt="logo" class="mt-0">
@@ -92,39 +79,28 @@
 
           </div>
         </div>
-
       </div>
-
       <canvas style=" position: fixed;top: 0;left: 0; height: 1000px;" id="Matrix">
       </canvas>
       <script>
         const canvas = document.getElementById('Matrix');
         const context = canvas.getContext('2d');
-
         const katakana = '10.0  ';
         const nums = 'DIGILOGOUS ';
-
         const alphabet = katakana + nums;
-
         const fontSize = 16;
-
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
-
         const rows = Math.floor(canvas.height / fontSize);
         const rainDrops = [];
-
         for (let y = 0; y < rows; y++) {
           rainDrops[y] = Math.floor(Math.random() * canvas.width / fontSize);
         }
-
         const draw = () => {
           context.fillStyle = 'rgba(0, 0, 0, 0.05)';
           context.fillRect(0, 0, canvas.width, canvas.height);
-
           context.fillStyle = '#4DA699';
           context.font = fontSize + 'px monospace';
-
           for (let i = 0; i < rainDrops.length; i++) {
             const text = alphabet.charAt((rainDrops[i]) % alphabet.length);
             context.fillText(text, rainDrops[i] * fontSize, i * fontSize);
@@ -132,16 +108,13 @@
             if (rainDrops[i] * fontSize > canvas.width && Math.random() > 0.975) {
               rainDrops[i] = 0;
             }
-
             rainDrops[i]++;
           }
         }
-
         setInterval(draw, 100);
-      </script> -->
-
+      </script>
       <section class="property">
-        <div class="gallery">
+        <div class="event-content">
           <div class="container">
             <div class="row">
               <div class="card-group" id="card-group">
@@ -149,68 +122,67 @@
               </div>
             </div>
           </div>
-      </section>
+          <!-- Modals will be added here -->
+          <div id="modals"></div>
+        </div>
 
-      <!-- Modals will be added here -->
-      <div id="modals"></div>
+        <script>
+          // Load the CSV file
+          fetch('events.csv')
+            .then(response => response.text())
+            .then(data => {
+              const rows = data.split('\n');
+              const headers = rows[0].split(',');
+              const events = [];
 
-      <script>
-        // Load the CSV file
-        fetch('events.csv')
-          .then(response => response.text())
-          .then(data => {
-            const rows = data.split('\n');
-            const headers = rows[0].split(',');
-            const events = [];
-
-            // Parse the CSV data
-            for (let i = 1; i < rows.length; i++) {
-              const row = rows[i].split(',');
-              const event = {};
-              for (let j = 0; j < headers.length; j++) {
-                event[headers[j]] = row[j];
+              // Parse the CSV data
+              for (let i = 1; i < rows.length; i++) {
+                const row = rows[i].split(',');
+                const event = {};
+                for (let j = 0; j < headers.length; j++) {
+                  event[headers[j]] = row[j];
+                }
+                events.push(event);
               }
-              events.push(event);
-            }
-            // Event_No., Image, Event_Name, Event_Descript, Eligibility, Team_Size, No_of_Teams, Event_About, Instructions, Judgment
 
-            // Add the cards and modals
-            events.forEach((event, index) => {
-              const cardHTML = `
-                    <div class="col-lg-4 col-md-3 col-sm-2 p-2">
+              // Add the cards and modals
+              events.forEach((event, index) => {
+                const cardHTML = `
+                <div class="col-lg-4 col-md-4 col-sm-6 p-2">
+                    <figure id="fig${index}" class="imageRoll" style="--imageUrl: url('../images/events/${event.Image}');">
+                    <i><i><i><i><i><i><i><i><i><i>
+                        <i><i><i><i><i><i><i><i><i><i>
+                            <i><i><i><i><i><i><i><i><i><i>
+                                <i><i><i><i><i><i><i><i><i><i>
+                                    <i><i><i><i><i><i><i><i><i><i>
+                                        <i><i><i><i><i><i><i><i><i><i>                            
+                                        </i></i></i></i></i></i></i></i></i></i>
+                                    </i></i></i></i></i></i></i></i></i></i>
+                                </i></i></i></i></i></i></i></i></i></i>
+                            </i></i></i></i></i></i></i></i></i></i>
+                        </i></i></i></i></i></i></i></i></i></i>
+                    </i></i></i></i></i></i></i></i></i></i>
+                    <figcaption class="">
+        <strong>
+          ${event.Event_Name}
+        </strong>
+        <div class="card-footer border ">
+          <button id="btn_${index}" class="btn modalBtn menu-button-class">Event Details</button>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+`;
 
-
-                        <figure id="fig1" class="imageRoll">
-                            <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
-                                                                                                                                                                                                                                                                        </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
-                            <figcaption class="">
-                            <strong>
-                            ${event.Event_Name}
-                            </strong>
-                            <div class="card-footer border ">
-                                    <button id="btn_${index}" class="btn modalBtn menu-button-class">Event Details</button>
-                                </div>
-                                </figcaption>
-                        </figure>
-
-
-
-
-
-                    </div>
-                `;
-
-              const modalHTML = `
-                    
+                const modalHTML = `
 <div id="modal_${index}" class="modal">
-
     <!-- Modal content -->
     <div class="emodal-content" id="modalContent_${index}" aria-labelledby="${event.Event_No}" data-bs-parent="#${event.Event_No}">
         <p class="eclose">&times;</p>
         <div class="emodal-header">
             <div class="emodal-header-border">
                 <div class="emodal-headings">
-                    <img src="assets/images/${event.Image}" alt="${event.Image}">
+                    <img src="assets/images/events/${event.Image}" alt="${event.Image}">
                     <div class="title">
                         <h2 class="modal__title">${event.Event_Name} </h2>
                         <h4 style="color: rgba(255, 255, 255, 0.747);">${event.Event_Descript}</h4>
@@ -258,101 +230,58 @@ ${event.Judgment}
             <br>
         </div>
     </div>
-
 </div>
-                   
                 `;
-
-              document.getElementById('card-group').innerHTML += cardHTML;
-              document.getElementById('modals').innerHTML += modalHTML;
-            });
-
-            // Add event listeners to the buttons and modals
-            document.querySelectorAll('.modalBtn').forEach(function (button) {
-              button.onclick = function () {
-                var modalId = button.id.replace('btn_', 'modal_');
-                var modal = document.getElementById(modalId);
-                openModal(modal);
-              };
-            });
-
-            document.querySelectorAll('.eclose').forEach(function (closeBtn) {
-              closeBtn.onclick = function () {
-                var modal = closeBtn.closest('.modal');
-                closeModal(modal);
-              };
-            });
-
-            window.onclick = function (event) {
-              document.querySelectorAll('.modal').forEach(function (modal) {
-                if (event.target == modal) {
-                  closeModal(modal);
-                }
+                document.getElementById('card-group').innerHTML += cardHTML;
+                document.getElementById('modals').innerHTML += modalHTML;
               });
-            }
-          });
-
-        // Function to open a modal
-        function openModal(modal) {
-          modal.style.display = "block";
-        }
-
-        // Function to close a modal
-        function closeModal(modal) {
-          modal.style.display = "none";
-        }
-      </script>
-      <div id="scroll-top" class="btn-scroll-top">
-        <div class="text">
-          <span>Back</span>
-          <span>to</span>
-          <span>top</span>
-        </div>
-        <div class="clone">
-          <span>Back</span>
-          <span>to</span>
-          <span>top</span>
-        </div>
-
-        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
-          xmlns="http://www.w3.org/2000/svg" width="50px">
-          <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
-        </svg>
-      </div>
-      <!-- Wavy Footer Starts -->
-      <footer>
-        <div class="wave wave1">
-          <div class="footer-content">
-            <p>Copyright &#169; Rukmini Devi Public School, Pitampura
-              <br>Developed By : Arjan Singh Jassal | Harman Singh Jassal
-            </p>
+              // Add event listeners to the buttons and modals
+              document.querySelectorAll('.modalBtn').forEach(function (button) {
+                button.onclick = function () {
+                  var modalId = button.id.replace('btn_', 'modal_');
+                  var modal = document.getElementById(modalId);
+                  openModal(modal);
+                };
+              });
+              document.querySelectorAll('.eclose').forEach(function (closeBtn) {
+                closeBtn.onclick = function () {
+                  var modal = closeBtn.closest('.modal');
+                  closeModal(modal);
+                };
+              });
+              window.onclick = function (event) {
+                document.querySelectorAll('.modal').forEach(function (modal) {
+                  if (event.target == modal) {
+                    closeModal(modal);
+                  }
+                });
+              }
+            });
+          // Function to open a modal
+          function openModal(modal) {
+            modal.style.display = "block";
+          }
+          // Function to close a modal
+          function closeModal(modal) {
+            modal.style.display = "none";
+          }
+        </script>
+        <!-- Wavy Footer Starts -->
+        <footer>
+          <div class="wave wave1">
+            <div class="footer-content">
+              <p>Copyright &#169; Rukmini Devi Public School, Pitampura
+                <br>Developed By : Arjan Singh Jassal | Harman Singh Jassal
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="wave wave2"></div>
-        <div class="wave wave3"></div>
-        <div class="wave wave4"></div>
-      </footer>
+          <div class="wave wave2"></div>
+          <div class="wave wave3"></div>
+          <div class="wave wave4"></div>
+        </footer>
     </div>
   </div>
-
   </div>
-  <script>
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          $('#scroll-top').fadeIn();
-        } else {
-          $('#scroll-top').fadeOut();
-        }
-      });
-      $('#scroll-top').click(function () {
-        $("html, body").animate({
-          scrollTop: 0
-        }, 600);
-        return false;
-      });
-    });
-  </script>
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

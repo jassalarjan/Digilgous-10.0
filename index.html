@@ -14,82 +14,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
     <title>The Digilogous</title>
-    <!-- Bootstrap core CSS -->
+    <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Additional CSS
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <!--MY LINK-->
+    <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    MY CSS
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
     <link rel="stylesheet" href="assets/css/master.css">
-    <style>
-        #canvas .circle {
-            display: inline-flex;
-            text-align: center;
-            margin: 1em;
-        }
-
-        .circles-decimals {
-            font-size: .4em;
-        }
-
-        .containbar {
-            position: relative;
-            width: auto;
-            display: flex;
-            justify-content: space-around;
-        }
-
-        .containbar .cardbar {
-            position: relative;
-            background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 300px;
-            border-radius: 4px;
-            text-align: center;
-            overflow: hidden;
-            transition: 0.5s;
-        }
-
-        .containbar .cardbar:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-        }
-
-        .containbar .cardbar:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.03);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .cardbar:hover .percent .number h2 span {
-            color: #fff;
-        }
-
-        .cardbar:hover .text {
-            color: #fff;
-        }
-
-
-        /* :root {
-            font-size: calc(16px + (24 - 16)*(50vw - 320px)/ (1280 - 320));
-        } */
-    </style>
-    <script src="assets/js/circles.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/efects.css">
+
 </head>
 
 <body>
-    <!-- ***** Preloader Start ***** -->
+    <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Preloader Strart
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
     <div id="js-preloader" class="js-preloader">
         <div class="preloader">
             <div class="preloader__ring">
@@ -188,10 +137,18 @@
             </svg>
         </main> -->
     </div>
-    <!-- ***** Preloader End ***** -->
+    <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Preloader end
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
     <div id="demo-content">
         <div id="content">
-            <!-- ***** Header Area Start ***** -->
+            <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Header Area Start
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
             <header style="margin-bottom: 40px;" class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
                 <div class="container h-100">
                     <div class="row h-100">
@@ -234,10 +191,19 @@
                     </div>
                 </div>
             </header>
-            <!-- ***** Header Area End ***** -->
+            <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Header Area end
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
+
+
+            <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    jumbotron-main begin
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
             <div style="margin-top: 2em; position: absolute;" class="jumbotron jumbotron-main" id="top">
-                <!-- <div id="particles-js"></div> -->
-                <!-- <span><img style=" position: absolute; bottom: 0px; right: 0px;" src="assets/images/1st.png" alt=""></span> -->
                 <div style="z-index: 1000;" class="container center-vertically-holder">
                     <div class="center-vertically">
                         <div id="scaleReveal" class="col-sm-offset-2 col-lg-offset-3 text-center">
@@ -263,19 +229,17 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- /.column -->
                     </div>
-                    <!-- /.vertical center -->
                 </div>
-                <!-- /.container -->
             </div>
             <canvas style=" position: relative;width: 100%;" id="Matrix">
 
             </canvas>
-            <!-- Begin Jumbotron -->
-
-            <!-- </canvas> -->
-            <!-- End Jumbotron -->
+            <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    jumbotron-main end
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
             <script>
                 const canvas = document.getElementById('Matrix');
                 const context = canvas.getContext('2d');
@@ -322,7 +286,11 @@
 
                 setInterval(draw, 100);
             </script>
-            <!-- In the memory of -->
+<!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    IN MEMORY SECTION
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
             <div class="memory" style=" position: relative;  padding-bottom: 50px;  padding-top: 5em;">
                 <center>
                     <section class="about">
@@ -360,11 +328,25 @@
                     </section>
                 </center>
             </div>
-            <!-- In the memory of -->
+
+
+<!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    IN MEMORY SECTION
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
+
+
+
             <section>
-                <!--    Glimpses Video start -->
 
 
+
+<!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    TECH CHAMPIONS START
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
 
                 <section style="position: relative;" class="gal">
                     <center>
@@ -373,7 +355,6 @@
                         </div>
                         <hr class="solid2">
                     </center>
-
                     <div class="gallery-n">
                         <div class="container">
                             <div class="row">
@@ -399,10 +380,20 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
-                <!--    Glimpses Video end -->
-                <!--    Distinguished start -->
+
+<!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    TECH CHAMPIONS END
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
+
+
+<!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Distinguished Guests
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
                 <section style=" position: relative; margin-top:40px;" class="gal">
                     <center>
                         <div class="section-heading">
@@ -537,7 +528,7 @@
                     <span>to</span>
                     <span>top</span>
                 </div>
-                
+
                 <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" class="h-6 w-6"
                     xmlns="http://www.w3.org/2000/svg" width="50px">
                     <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linejoin="round" stroke-linecap="round"></path>
@@ -795,7 +786,7 @@
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
+    <!-- <script src="assets/js/owl-carousel.js"></script> -->
     <script src="assets/js/animation.js"></script>
     <script src="assets/js/imagesloaded.js"></script>
     <script src="assets/js/custom.js"></script>
@@ -804,6 +795,7 @@
     <script src="assets/js/parallax.min.js"></script>
     <script src="assets/js/modernizr-2.6.2.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="assets/js/circles.js"></script>
 
     <script>
         var slideIndex = 1;

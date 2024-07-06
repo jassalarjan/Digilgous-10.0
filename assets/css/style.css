@@ -1,41 +1,34 @@
-/*
 
-TemplateMo 563 SEO Dream
+/* --------------------------------------------------------------------------------------- 
+                                   Table of Contents 
+------------------------------------------------------------------------------------------ 
 
-https://templatemo.com/tm-563-seo-dream
 
-/
-/* ---------------------------------------------
-Table of contents
-------------------------------------------------
-01. font & reset css
-02. reset
-03. global styles
-04. header
-05. banner
-06. features
-07. testimonials
-08. contact
-09. footer
-10. preloader
-11. search
-12. portfolio
 
---------------------------------------------- */
+01. Body Start CSS Important***
+02. Global Styles
+03. Header Area
+04. Features Section
+05. About US Section
+06. Contact Us 
+07. Responsive
 
-/* 
----------------------------------------------
-font & reset css
---------------------------------------------- 
-*/
 
+
+
+
+ ---------------------------------------------------------------------------------------
+                                      Table of Contents
+------------------------------------------------------------------------------------------*/
+
+
+
+
+/* ---------------------------------------------------------------------------------------
+                                Body Start CSS Important*** 
+------------------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-/* 
----------------------------------------------
-reset
---------------------------------------------- 
-*/
 
 html,
 body,
@@ -102,28 +95,6 @@ figcaption {
 }
 
 /* clear fix */
-
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-  width: 50%;
-}
-
-.grid-item {
-  float: left;
-}
-
-.grid-item img {
-  display: block;
-  max-width: 100%;
-}
 
 .clearfix:after {
   content: ".";
@@ -207,11 +178,9 @@ img {
   overflow: hidden;
 }
 
-/* 
----------------------------------------------
-global styles
---------------------------------------------- 
-*/
+/* ---------------------------------------------------------------------------------------
+                                    Global  Styles
+------------------------------------------------------------------------------------------*/
 
 html,
 body {
@@ -333,11 +302,11 @@ body {
   border-bottom: 2px solid #33ccc5 !important;
 }
 
-/* 
----------------------------------------------
-header
---------------------------------------------- 
-*/
+/* ---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                        Header Area 
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
 
 .main-nav {
   align-items: center;
@@ -824,7 +793,9 @@ header
 }
 
 /* ---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
                                         Features Section 
+------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------*/
 
 #features {
@@ -1041,11 +1012,11 @@ header
   border-bottom: 2px solid #fff !important;
 }
 
-/* 
----------------------------------------------
-About Us Style
---------------------------------------------- 
-*/
+/* ---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                        About Us Section 
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
 
 #about {
   padding-top: 130px;
@@ -1065,21 +1036,6 @@ About Us Style
   margin-bottom: 8px;
 }
 
-/* .about-us .left-image {
-    margin-right: 45px;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-}
-
-.about-us .left-image img {
-max-height: 50vh;
-max-width: 80vw;
-border: 2px solid rgb(156, 155, 155);
-border-radius: 20px 0px 8px 20px;
-box-shadow: 1px black;
-} */
-
 .about-us .about-item h4 {
   font-size: 38px;
   font-weight: 800;
@@ -1098,181 +1054,11 @@ box-shadow: 1px black;
   margin: 40px 0px;
   font-size: 19px;
 }
-
-/* 
----------------------------------------------
-Services Style
---------------------------------------------- 
-*/
-
-.our-services {
-  padding-top: 120px;
-}
-
-.our-services .section-heading {
-  text-align: center;
-  margin-left: 75px;
-  margin-right: 75px;
-}
-
-.our-services .container-fluid {
-  padding: 0px 80px;
-}
-
-.service-item {
-  padding: 60px 30px;
-  border: 2px solid #f7f7f7;
-  border-radius: 5px;
-  transition: all 0.3s;
-  margin-bottom: 30px;
-}
-
-.service-item:hover {
-  background-color: #fff;
-  border: 2px solid transparent;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.service-item .icon {
-  margin-top: 10px;
-  width: 80px;
-  height: 80px;
-  display: inline-block;
-  text-align: center;
-  line-height: 80px;
-  background-color: #f7f7f7;
-  border-radius: 50%;
-}
-
-.service-item .icon img {
-  width: 38px;
-  height: 38px;
-}
-
-.service-item h4 {
-  font-size: 22px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 15px;
-}
-
-/* 
----------------------------------------------
-Portfolio
---------------------------------------------- 
-*/
-
-.our-portfolio {
-  padding-top: 100px;
-  overflow: hidden;
-}
-
-.our-portfolio .container-fluid {
-  padding-right: 0px;
-  padding-left: 0px;
-}
-
-.portfolio-item {
-  margin-bottom: 30px;
-  border-radius: 50px;
-  padding: 20px;
-}
-
-.portfolio-item:hover .thumb .hover-content {
-  opacity: 1;
-  visibility: visible;
-}
-
-.portfolio-item .thumb {
-  position: relative;
-  border-radius: 50px;
-}
-
-.portfolio-item .thumb img {
-  border-radius: 50px;
-  overflow: hidden;
-}
-
-.portfolio-item .thumb .hover-content {
-  border-radius: 50px;
-  overflow: hidden;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: rgb(51, 204, 197);
-  background: linear-gradient(
-    105deg,
-    rgba(51, 204, 197, 1) 0%,
-    rgba(8, 141, 195, 1) 100%
-  );
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s;
-}
-
-.portfolio-item .thumb .hover-content .inner-content {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.portfolio-item .thumb .hover-content .inner-content h4 {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 10px;
-}
-
-.portfolio-item .thumb .hover-content .inner-content span {
-  font-size: 15px;
-  color: #fff;
-}
-
-.our-portfolio .owl-nav {
-  display: inline-block !important;
-  position: absolute;
-  top: -117px;
-  right: 15%;
-  max-width: 1320px;
-}
-
-.our-portfolio .owl-nav .owl-next {
-  margin-left: 10px;
-}
-
-.our-portfolio .owl-nav span {
-  width: 46px;
-  height: 46px;
-  display: inline-block;
-  text-align: center;
-  line-height: 35px;
-  font-size: 30px;
-  border: 2px solid #eee;
-  border-radius: 50%;
-  color: #ddd;
-  transition: all 0.5s;
-}
-
-.our-portfolio .owl-nav span:hover {
-  color: #33ccc5;
-  border-color: #33ccc5;
-}
-
-/* 
----------------------------------------------
-contact
---------------------------------------------- 
-*/
-
-/* 
----------------------------------------------
-contact
---------------------------------------------- 
-*/
+/* ---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                        Contact Us 
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
 
 .contact-us {
   padding: 120px 0px;
@@ -1400,31 +1186,11 @@ form#contact button:hover {
   border-bottom: 2px solid #33ccc5 !important;
 }
 
-/* 
----------------------------------------------
-Footer Style
---------------------------------------------- 
-*/
-
-/* footer p {
-    text-align: center;
-    margin: 30px 0px;
-}
-
-footer p a {
-    color: #33ccc5;
-    transition: all .5s;
-}
-
-footer p a:hover {
-    color: #4771cb;
-} */
-
-/* 
----------------------------------------------
-responsive
---------------------------------------------- 
-*/
+/* ---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                        Responsive 
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------*/
 @media (max-width: 1440px) {
   .header-area .main-nav .logo h4 img {
     margin-left: 0px;
@@ -1469,21 +1235,13 @@ responsive
   .skill-item {
     margin-bottom: 30px;
   }
-  .service-item {
-    text-align: center;
-  }
-  .service-item .icon {
-    margin-top: 0px;
-    margin-bottom: 30px;
-  }
+  
   .about-us .left-image {
     margin-right: 30px;
     margin-left: 30px;
     margin-bottom: 45px;
   }
-  .our-portfolio .owl-nav {
-    display: none !important;
-  }
+  
   .contact-info {
     margin-top: 60px;
   }
@@ -1506,29 +1264,7 @@ responsive
   .main-banner .info-stat {
     margin-bottom: 15px;
   }
-  .service-item {
-    text-align: center;
-    padding: 30px;
-  }
-  .service-item .icon {
-    float: none;
-    margin-right: 0px;
-    margin-bottom: 15px;
-  }
-  .service-item .right-content {
-    display: inline-block;
-  }
-  .our-portfolio .section-heading,
-  .about-us .section-heading,
-  .about-us .about-item,
-  .about-us p,
-  .about-us .main-green-button {
-    text-align: center;
-  }
-  .our-services .section-heading {
-    margin-left: 15px;
-    margin-right: 15px;
-  }
+  
   .about-us .about-item {
     margin-top: 15px;
   }
@@ -1536,665 +1272,8 @@ responsive
     padding: 30px;
   }
 }
-/* 
----------------------------
-POP-UP VIDEO
----------------------------
- */
-
-.digi-popup{
-  width: 560px;
-  height: 315px;
-}
-@media (max-width: 700px) {
-.digi-popup{
-  width: 260px;
-  height: 146.25px;
-}
-}
-
-@media (max-width: 350px) {
-  .digi-popup{
-    width: 210px;
-    height: 118.13px;
-  }
-  }
-
-.gallery {
-  display: grid;
-  width: 100%;
-  /* max-width: 1002px; */
-  grid-gap: 50px;
-  margin: 5rem;
-  padding: 10rem;
-  grid-template-columns: repeat(auto-fit, 300px);
-  grid-template-rows: auto;
-  justify-content: center;
-  /* margin-top: 50px; */
-}
-
-figure {
-  width: 300px;
-  perspective: 900px;
-    box-shadow: 5px 5px #686868 !important;
-    margin: 1rem;
-    z-index: 1;
-}
-
-#fig1 {
-  --imageUrl: url("../images/glimpses/1.png");
-}
-
-#fig2 {
-  --imageUrl: url("../images/glimpses/2.png");
-}
-
-#fig3 {
-  --imageUrl: url("../images/glimpses/3.png");
-}
-
-#fig4 {
-  --imageUrl: url("../images/glimpses/4.png");
-}
-
-#fig5 {
-  --imageUrl: url("../images/glimpses/5.png");
-}
-
-
-figure img {
-  width: 100%;
-}
-
-.imageRoll {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  background-color: #fff;
-  box-shadow: 1em 0.5em 2em #1234, 0 0 5em #1234 inset;
-}
-
-.imageRoll i {
-  position: absolute;
-  left: calc(100% - 1px);
-  width: 6px;
-  height: 100%;
-  transform-style: preserve-3d;
-  transform-origin: left;
-  transition: transform 0.6s var(--delay, 0s) ease-in-out;
-  background-image: linear-gradient(#0003, #0000 5% 95%, #0003), var(--imageUrl, "");
-  background-position-x: calc(var(--bpx, 0) + 1px);
-  background-size: 300px 300px;
-}
-
-.imageRoll>i {
-  left: 0;
-  width: 5px;
-}
-
-.imageRoll:hover i {
-  transform: rotateY(var(--angle, 0deg)) skewY(var(--skew, 0deg));
-  transition-delay: var(--delay2, 0s);
-}
-
-.imageRoll>i {
-  --bpx: 0px;
-  --delay: 0s;
-  --delay2: 0.6s;
-  --angle: -10deg;
-  --skew: 0deg;
-}
-
-.imageRoll>i>i {
-  --bpx: -5px;
-  --delay: 0.01s;
-  --delay2: 0.59s;
-  --angle: -10.1deg;
-  --skew: -0.1deg;
-}
-
-.imageRoll>i>i>i {
-  --bpx: -10px;
-  --delay: 0.02s;
-  --delay2: 0.58s;
-  --angle: -10.2deg;
-  --skew: -0.2deg;
-}
-
-.imageRoll>i>i>i>i {
-  --bpx: -15px;
-  --delay: 0.03s;
-  --delay2: 0.57s;
-  --angle: -10.3deg;
-  --skew: -0.3deg;
-}
-
-.imageRoll>i>i>i>i>i {
-  --bpx: -20px;
-  --delay: 0.04s;
-  --delay2: 0.56s;
-  --angle: -10.4deg;
-  --skew: -0.4deg;
-}
-
-.imageRoll>i>i>i>i>i>i {
-  --bpx: -25px;
-  --delay: 0.05s;
-  --delay2: 0.55s;
-  --angle: -10.5deg;
-  --skew: -0.5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i {
-  --bpx: -30px;
-  --delay: 0.06s;
-  --delay2: 0.54s;
-  --angle: -10.6deg;
-  --skew: -0.6deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i {
-  --bpx: -35px;
-  --delay: 0.07s;
-  --delay2: 0.53s;
-  --angle: -10.7deg;
-  --skew: -0.7deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i {
-  --bpx: -40px;
-  --delay: 0.08s;
-  --delay2: 0.52s;
-  --angle: -10.8deg;
-  --skew: -0.8deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -45px;
-  --delay: 0.09s;
-  --delay2: 0.51s;
-  --angle: -10.9deg;
-  --skew: -0.9deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -50px;
-  --delay: 0.1s;
-  --delay2: 0.5s;
-  --angle: -11deg;
-  --skew: -1deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -55px;
-  --delay: 0.11s;
-  --delay2: 0.49s;
-  --angle: -11.1deg;
-  --skew: -1.1deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -60px;
-  --delay: 0.12s;
-  --delay2: 0.48s;
-  --angle: -11.2deg;
-  --skew: -1.2deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -65px;
-  --delay: 0.13s;
-  --delay2: 0.47s;
-  --angle: -11.3deg;
-  --skew: -1.3deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -70px;
-  --delay: 0.14s;
-  --delay2: 0.46s;
-  --angle: -11.4deg;
-  --skew: -1.4deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -75px;
-  --delay: 0.15s;
-  --delay2: 0.45s;
-  --angle: -11.5deg;
-  --skew: -1.5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -80px;
-  --delay: 0.16s;
-  --delay2: 0.44s;
-  --angle: -11.6deg;
-  --skew: -1.6deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -85px;
-  --delay: 0.17s;
-  --delay2: 0.43s;
-  --angle: -11.7deg;
-  --skew: -1.7deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -90px;
-  --delay: 0.18s;
-  --delay2: 0.42s;
-  --angle: -11.8deg;
-  --skew: -1.8deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -95px;
-  --delay: 0.19s;
-  --delay2: 0.41s;
-  --angle: -11.9deg;
-  --skew: -1.9deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -100px;
-  --delay: 0.2s;
-  --delay2: 0.4s;
-  --angle: -12deg;
-  --skew: -2deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -105px;
-  --delay: 0.21s;
-  --delay2: 0.39s;
-  --angle: -12.1deg;
-  --skew: -2.1deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -110px;
-  --delay: 0.22s;
-  --delay2: 0.38s;
-  --angle: -12.2deg;
-  --skew: -2.2deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -115px;
-  --delay: 0.23s;
-  --delay2: 0.37s;
-  --angle: -12.3deg;
-  --skew: -2.3deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -120px;
-  --delay: 0.24s;
-  --delay2: 0.36s;
-  --angle: -12.4deg;
-  --skew: -2.4deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -125px;
-  --delay: 0.25s;
-  --delay2: 0.35s;
-  --angle: -12.5deg;
-  --skew: -2.5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -130px;
-  --delay: 0.26s;
-  --delay2: 0.34s;
-  --angle: -12.6deg;
-  --skew: -2.6deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -135px;
-  --delay: 0.27s;
-  --delay2: 0.33s;
-  --angle: -12.7deg;
-  --skew: -2.7deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -140px;
-  --delay: 0.28s;
-  --delay2: 0.32s;
-  --angle: -12.8deg;
-  --skew: -2.8deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -145px;
-  --delay: 0.29s;
-  --delay2: 0.31s;
-  --angle: -12.9deg;
-  --skew: -2.9deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -150px;
-  --delay: 0.3s;
-  --delay2: 0.3s;
-  --angle: -13deg;
-  --skew: -3deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -155px;
-  --delay: 0.31s;
-  --delay2: 0.29s;
-  --angle: -13.1deg;
-  --skew: -3.1deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -160px;
-  --delay: 0.32s;
-  --delay2: 0.28s;
-  --angle: -13.2deg;
-  --skew: -3.2deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -165px;
-  --delay: 0.33s;
-  --delay2: 0.27s;
-  --angle: -13.3deg;
-  --skew: -3.3deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -170px;
-  --delay: 0.34s;
-  --delay2: 0.26s;
-  --angle: -13.4deg;
-  --skew: -3.4deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -175px;
-  --delay: 0.35s;
-  --delay2: 0.25s;
-  --angle: -13.5deg;
-  --skew: -3.5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -180px;
-  --delay: 0.36s;
-  --delay2: 0.24s;
-  --angle: -13.6deg;
-  --skew: -3.6deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -185px;
-  --delay: 0.37s;
-  --delay2: 0.23s;
-  --angle: -13.7deg;
-  --skew: -3.7deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -190px;
-  --delay: 0.38s;
-  --delay2: 0.22s;
-  --angle: -13.8deg;
-  --skew: -3.8deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -195px;
-  --delay: 0.39s;
-  --delay2: 0.21s;
-  --angle: -13.9deg;
-  --skew: -3.9deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -200px;
-  --delay: 0.4s;
-  --delay2: 0.2s;
-  --angle: -14deg;
-  --skew: -4deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -205px;
-  --delay: 0.41s;
-  --delay2: 0.19s;
-  --angle: -14.1deg;
-  --skew: -4.1deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -210px;
-  --delay: 0.42s;
-  --delay2: 0.18s;
-  --angle: -14.2deg;
-  --skew: -4.2deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -215px;
-  --delay: 0.43s;
-  --delay2: 0.17s;
-  --angle: -14.3deg;
-  --skew: -4.3deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -220px;
-  --delay: 0.44s;
-  --delay2: 0.16s;
-  --angle: -14.4deg;
-  --skew: -4.4deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -225px;
-  --delay: 0.45s;
-  --delay2: 0.15s;
-  --angle: -14.5deg;
-  --skew: -4.5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -230px;
-  --delay: 0.46s;
-  --delay2: 0.14s;
-  --angle: -14.6deg;
-  --skew: -4.6deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -235px;
-  --delay: 0.47s;
-  --delay2: 0.13s;
-  --angle: -14.7deg;
-  --skew: -4.7deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -240px;
-  --delay: 0.48s;
-  --delay2: 0.12s;
-  --angle: -14.8deg;
-  --skew: -4.8deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -245px;
-  --delay: 0.49s;
-  --delay2: 0.11s;
-  --angle: -14.9deg;
-  --skew: -4.9deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -250px;
-  --delay: 0.5s;
-  --delay2: 0.1s;
-  --angle: -15deg;
-  --skew: -5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -255px;
-  --delay: 0.51s;
-  --delay2: 0.09s;
-  --angle: -15.1deg;
-  --skew: -5.1deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -260px;
-  --delay: 0.52s;
-  --delay2: 0.08s;
-  --angle: -15.2deg;
-  --skew: -5.2deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -265px;
-  --delay: 0.53s;
-  --delay2: 0.07s;
-  --angle: -15.3deg;
-  --skew: -5.3deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -270px;
-  --delay: 0.54s;
-  --delay2: 0.06s;
-  --angle: -15.4deg;
-  --skew: -5.4deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -275px;
-  --delay: 0.55s;
-  --delay2: 0.05s;
-  --angle: -15.5deg;
-  --skew: -5.5deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -280px;
-  --delay: 0.56s;
-  --delay2: 0.04s;
-  --angle: -15.6deg;
-  --skew: -5.6deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -285px;
-  --delay: 0.57s;
-  --delay2: 0.03s;
-  --angle: -15.7deg;
-  --skew: -5.7deg;
-}
-
-.imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
-  --bpx: -290px;
-  --delay: 0.58s;
-  --delay2: 0.02s;
-  --angle: -15.8deg;
-  --skew: -5.8deg;
-}
-
-.imageRoll>figcaption {
-  position: absolute;
-  text-align: center;
-  padding-top: 2em;
-  padding-inline: 100px 25px;
-  z-index: -1;
-  font-size: 32px;
-  width: 100%;
-  height: 100%;
-}
-
-.imageRoll>figcaption strong {
-  display: block;color: #000000;
-}
-
-
-
-
-.img-n {
-  --s: 10px;
-  /* size of the frame */
-  --b: 2px;
-  /* border thickness */
-  --w: 400px;
-  /* width of the image */
-  --c: #ffffff;
-
-  width: var(--w);
-  /* aspect-ratio: 1; */
-  object-fit: contain;
-  padding: calc(2*var(--s));
-  --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
-  background:
-    linear-gradient(var(--_g)) 50%/100% var(--_i, 100%) no-repeat,
-    linear-gradient(90deg, var(--_g)) 50%/var(--_i, 100%) 100% no-repeat;
-  /* outline: calc(var(--w)/2) solid #0009; */
-  outline-offset: calc(var(--w)/-2 - 2*var(--s));
-  transition: .4s;
-  cursor: pointer;
-}
-
-.img-n:hover {
-  outline: var(--b) solid var(--c);
-  outline-offset: calc(var(--s)/-2);
-  --_i: calc(100% - 2*var(--s));
-  transform: scale(1.25);
-}
-
-
-
-/* Parallax Container */
-        :root {
-          --color: #333;
-        }
-    
-        .parallax-container {
-          text-align: center;
-          color: var(--color);
-          width: 100%;
-          min-height: 100vh;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          background-image: url("../images/background.jpg");
-          background-size: cover;
-          background-position: center;
-    
-          /*  this is where the magic happens:  */
-          background-attachment: fixed;
-        }
-    
-        .buffer,
-        .other {
-          width: 100%;
-          min-height: 60vh;
-          /* background-color: var(--color); */
-        }
-    
-        .para-2 {
-          /* background-image: url("../assets/images/background.jpg"); */
-          background-attachment: fixed;
-          /* height: 1200px; */
-        }
-    
-        .para-2 {
-          flex-direction: row;
-          gap: 1.6em;
-        }
+/* ---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                           End of Code 
+------------------------------------------------------------------------------------------ 
+------------------------------------------------------------------------------------------*/
