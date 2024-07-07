@@ -1,57 +1,62 @@
-<div id='modal_${index}' class='modal'>
-    <!-- Modal content -->
-    <div class='emodal-content' id='modalContent_${index}' aria-labelledby='${event.Event_No}'
-        data-bs-parent='#${event.Event_No}'>
-        <p class='eclose'>&times;</p>
-        <div class='emodal-header'>
-            <div class='emodal-header-border'>
-                <div class='emodal-headings'>
-                    <img src='assets/images/events/${event.Image}' alt='${event.Image}'>
-                    <div class='title'>
-                        <h2 class='modal__title'>${event.Event_Name} </h2>
-                        <h4 style='color: rgba(255, 255, 255, 0.747);'>${event.Event_Descript}</h4>
-                    </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Navbar</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+        .navbar-custom {
+            background-color: #4CAF50; /* Custom background color */
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white; /* Custom text color */
+        }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid">
+                <!-- First Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="logo1.png" alt="Logo 1" style="width: 40px;">
+                </a>
+                <!-- Second Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="logo2.png" alt="Logo 2" style="width: 40px;">
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class='emodal-body'>
-            <blockquote style='color: rgba(255, 255, 255, 0.747);'>
-                <h5>
-                    <i>${event.Event_About}</i>
-                </h5>
-            </blockquote>
-            <br>
-            <h5 style='color: rgba(255, 255, 255, 0.747);'>General Instructions: <br> ${event.Instructions}</h5><br>
-            <br>
-            <p>
-            <h5><b>Eligibility</b> : ${event.Eligibility}</h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Team Size</b>: ${event.Team_Size}</h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Team allowed per School</b>: ${event.No_of_Teams}</h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Theme </b></h5>
-            </p>
-            <br>
-            <p>
-            <h5> <b><u>Judgement Criteria:</u> </b></h5>
-            <ul>
-                ${event.Judgment}
-            </ul>
-            </p>
-            <br>
-            <p>
-            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
-            <h5><b>Contact Number</b> : 9811661581</h5>
-            </p>
-            <br>
-            <br>
-        </div>
-    </div>
-</div>
+        </nav>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

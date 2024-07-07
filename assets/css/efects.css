@@ -1082,3 +1082,12 @@ figure img {
     /* background-color: #fff; */
     border: 1px #fff solid;
 }
+
+  .navbar-custom {
+            background-color: #2ab0a9; /* Custom background color */
+            min-height: 80px;
+        }
+        .navbar-custom .navbar-brand,
+        .navbar-custom .navbar-nav .nav-link {
+            color: white; /* Custom text color */
+        }
