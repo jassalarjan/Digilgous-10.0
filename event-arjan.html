@@ -1,88 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="The Digilogous - Rukmini Devi Public School">
-  <meta name="author" content="Rukmini Devi Public School">
-  <link rel="icon" type="image/ico" href="assets/images/LOGO.png" />
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
-  <title>The Digilogous</title>
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/animated.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="./assets/css/efects.css">
-  <!--MY LINK-->
-  <link rel="stylesheet" href="assets/css/master.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
-    integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-  <style>
-  </style>
-
-<body>
-  <div id="demo-content">
-    <div id="content">
-      <!-- ***** Header Area Start ***** -->
-      <header class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
-        <div class="container h-100">
-          <div class="row h-100">
-            <div class="col-12">
-              <nav class="main-nav h-100">
-                <a style="margin-left: -100px;" href="#top" class="logo d-flex align-items-center">
-                  <h4 class="mt-0"> <img style="width: 100px;" src="assets/images/schlogo.png" alt="logo" class="mt-0">
-                  </h4>
-                </a>
-                <!-- ***** Logo Start ***** -->
-                <div class="logo align-items-center">
-                  <h4 class="mt-0"> <img src="assets/images/logobolder.png" alt="logo" class="mt-0">
-                  </h4>
-                </div>
-                <!-- ***** Logo End ***** -->
-                <!-- ***** Menu Start ***** -->
-                <ul class="nav">
-                  <li class="scroll-to-section"><a href="index.html" class=" active text-center"> Home
-                    </a>
-                  </li>
-                  <li class="scroll-to-section"><a class="text-center" href="#about">About Us</a>
-                  </li>
-                  <li class="scroll-to-section"><a href="events.html" class="text-center" href="#separate">Events</a>
-                  </li>
-                  <li class="scroll-to-section"><a href="#team">Our Team</a></li>
-                  <li class="scroll-to-section"><a href="#contact-us-too">Contact Us</a></li>
-                </ul>
-                <a class="menu-trigger">
-                  <span>Menu</span>
-                </a>
-                <!-- ***** Menu End ***** -->
-              </nav>
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- ***** Header Area End ***** -->
-      <div class="gallery">
-        <div class="container">
-          <div class="row">
-            <div class="event-content"></div>
-
-          </div>
-        </div>
-      </div>
-      <canvas style=" position: fixed;top: 0;left: 0; height: 1000px;" id="Matrix">
-      </canvas>
-      <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="The Digilogous - Rukmini Devi Public School">
+        <meta name="author" content="Rukmini Devi Public School">
+        <link rel="icon" type="image/ico" href="assets/images/LOGO.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,200&display=swap" rel="stylesheet">
+        <title>The Digilogous</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="assets/css/fontawesome.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/animated.css">
+        <link rel="stylesheet" href="assets/css/owl.css">
+        <link rel="stylesheet" href="./assets/css/efects.css">
+        <!--MY LINK-->
+        <link rel="stylesheet" href="assets/css/master.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+            integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <style></style>
+        <body>
+            <div id="demo-content">
+                <div id="content">
+                    <!-- ***** Header Area Start ***** -->
+                    <header class="header-area" data-wow-duration="0.75s" data-wow-delay="0s">
+                        <div class="container h-100">
+                            <div class="row h-100">
+                                <div class="col-12">
+                                    <nav class="main-nav h-100">
+                                        <a style="margin-left: -100px;" href="#top" class="logo d-flex align-items-center">
+                                            <h4 class="mt-0">
+                                                <img
+                                                    style="width: 100px;"
+                                                    src="assets/images/schlogo.png"
+                                                    alt="logo"
+                                                    class="mt-0"
+                                                >
+                                            </h4>
+                                        </a>
+                                        <!-- ***** Logo Start ***** -->
+                                        <div class="logo align-items-center">
+                                            <h4 class="mt-0">
+                                                <img src="assets/images/logobolder.png" alt="logo" class="mt-0">
+                                            </h4>
+                                        </div>
+                                        <!-- ***** Logo End ***** -->
+                                        <!-- ***** Menu Start ***** -->
+                                        <ul class="nav">
+                                            <li class="scroll-to-section">
+                                                <a href="index.html" class=" active text-center">
+                                                    Home
+                                                </a>
+                                            </li>
+                                            <li class="scroll-to-section">
+                                                <a class="text-center" href="#about">About Us</a>
+                                            </li>
+                                            <li class="scroll-to-section">
+                                                <a href="events.html" class="text-center" href="#separate">Events</a>
+                                            </li>
+                                            <li class="scroll-to-section">
+                                                <a href="#team">Our Team</a>
+                                            </li>
+                                            <li class="scroll-to-section">
+                                                <a href="#contact-us-too">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                        <a class="menu-trigger">
+                                            <span>Menu</span>
+                                        </a>
+                                        <!-- ***** Menu End ***** -->
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- ***** Header Area End ***** -->
+                    <div class="gallery">
+                        <div class="container">
+                            <div class="row">
+                                <div class="event-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas style=" position: fixed;top: 0;left: 0; height: 1000px;" id="Matrix"></canvas>
+                    <script>
         const canvas = document.getElementById('Matrix');
         const context = canvas.getContext('2d');
         const katakana = '10.0  ';
@@ -112,185 +124,202 @@
           }
         }
         setInterval(draw, 100);
-      </script>
-      <section class="property">
-        <div class="event-content">
-          <div class="container">
-            <div class="row">
-              <div class="card-group" id="card-group">
-                <!-- Cards will be added here -->
+                    </script>
+                    <section class="property">
+                        <div class="event-content">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="card-group" id="card-group">
+                                        <!-- Cards will be added here --></div>
+                                </div>
+                            </div>
+                            <!-- Modals will be added here -->
+                            <div id="modals"></div>
+                        </div>
+                        <script>
+  // Function to read and parse XLSX file
+  function readXLSX(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const data = new Uint8Array(e.target.result);
+        const workbook = XLSX.read(data, { type: 'array' });
+        const sheetName = workbook.SheetNames[0];
+        const worksheet = workbook.Sheets[sheetName];
+        const json = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+        resolve(json);
+      };
+      reader.onerror = function(error) {
+        reject(error);
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  }
+
+  // Load the XLSX file
+  fetch('events.xlsx')
+    .then(response => response.blob())
+    .then(blob => readXLSX(blob))
+    .then(data => {
+      const headers = data[0];
+      const events = [];
+
+      // Parse the XLSX data
+      for (let i = 1; i < data.length; i++) {
+        const row = data[i];
+        const event = {};
+        for (let j = 0; j < headers.length; j++) {
+          event[headers[j]] = row[j];
+        }
+        events.push(event);
+      }
+
+      // Add the cards and modals
+      events.forEach((event, index) => {
+        const cardHTML = `
+          <div class='col-lg-4 col-md-4 col-sm-6 p-2'>
+            <figure id='fig${index}' class='imageRoll bg-info' style='--imageUrl: url("../images/events/${event.Image}");'>
+              <i><i><i><i><i><i><i><i><i><i>
+                <i><i><i><i><i><i><i><i><i><i>
+                  <i><i><i><i><i><i><i><i><i><i>
+                    <i><i><i><i><i><i><i><i><i><i>
+                      <i><i><i><i><i><i><i><i><i><i>
+                        <i><i><i><i><i><i><i><i><i>
+
+                        </i></i></i></i></i></i></i></i></i>
+                      </i></i></i></i></i></i></i></i></i></i>
+                    </i></i></i></i></i></i></i></i></i></i>
+                  </i></i></i></i></i></i></i></i></i></i>
+                </i></i></i></i></i></i></i></i></i></i>
+              </i></i></i></i></i></i></i></i></i></i>
+              <figcaption class=''>
+                <div class='fs-3 m-0 p-0 text-white'>
+                  ${event.Event_Name}
+                </div>
+                <div>
+                  <button id='btn_${index}' class='btn modalBtn btn-outline-light'>Event Details</button>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+        `;
+
+        const modalHTML = `
+          <div id='modal_${index}' class='modal'>
+            <!-- Modal content -->
+            <div class='emodal-content' id='modalContent_${index}' aria-labelledby='${event.Event_No}' data-bs-parent='#${event.Event_No}'>
+              <p class='eclose'>&times;</p>
+              <div class='emodal-header'>
+                <div class='emodal-header-border'>
+                  <div class='emodal-headings'>
+                    <img src='assets/images/events/${event.Image}' alt='${event.Image}'>
+                    <div class='title'>
+                      <h2 class='modal__title'>${event.Event_Name}</h2>
+                      <h4 style='color: rgba(255, 255, 255, 0.747);'>${event.Event_Descript}</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class='emodal-body'>
+                <blockquote style='color: rgba(255, 255, 255, 0.747);'>
+                  <h5 style='color: rgba(255, 255, 255, 0.747);'><i>${event.Event_About}</i></h5>
+                </blockquote>
+                <br>
+                <h5 style='color: rgba(255, 255, 255, 0.747);'>General Instructions: <br> ${event.Instructions}</h5><br>
+                <br>
+                <p>
+                  <h5><b>Eligibility</b>: ${event.Eligibility}</h5>
+                </p>
+                <br>
+                <p>
+                  <h5><b>Team Size</b>: ${event.Team_Size}</h5>
+                </p>
+                <br>
+                <p>
+                  <h5><b>Team allowed per School</b>: ${event.No_of_Teams}</h5>
+                </p>
+                <br>
+                <p>
+                  <h5><b>Theme</b></h5>
+                </p>
+                <br>
+                <p>
+                  <h5><b><u>Judgement Criteria:</u></b></h5>
+                  <ul>${event.Judgment}</ul>
+                </p>
+                <br>
+                <p>
+                  <h5><b>Teacher In-charge</b>: Ms. Kanika Gupta</h5>
+                  <h5><b>Contact Number</b>: 9811661581</h5>
+                </p>
+                <br>
+                <br>
               </div>
             </div>
           </div>
-          <!-- Modals will be added here -->
-          <div id="modals"></div>
-        </div>
+        `;
+        document.getElementById('card-group').innerHTML += cardHTML;
+        document.getElementById('modals').innerHTML += modalHTML;
+      });
 
-        <script>
-          // Load the CSV file
-          fetch('events.csv')
-            .then(response => response.text())
-            .then(data => {
-              const rows = data.split('\n');
-              const headers = rows[0].split(',');
-              const events = [];
+      // Add event listeners to the buttons and modals
+      document.querySelectorAll('.modalBtn').forEach(function(button) {
+        button.onclick = function() {
+          var modalId = button.id.replace('btn_', 'modal_');
+          var modal = document.getElementById(modalId);
+          openModal(modal);
+        };
+      });
+      document.querySelectorAll('.eclose').forEach(function(closeBtn) {
+        closeBtn.onclick = function() {
+          var modal = closeBtn.closest('.modal');
+          closeModal(modal);
+        };
+      });
+      window.onclick = function(event) {
+        document.querySelectorAll('.modal').forEach(function(modal) {
+          if (event.target == modal) {
+            closeModal(modal);
+          }
+        });
+      };
+    });
 
-              // Parse the CSV data
-              for (let i = 1; i < rows.length; i++) {
-                const row = rows[i].split(',');
-                const event = {};
-                for (let j = 0; j < headers.length; j++) {
-                  event[headers[j]] = row[j];
-                }
-                events.push(event);
-              }
+  // Function to open a modal
+  function openModal(modal) {
+    modal.style.display = "block";
+  }
 
-              // Add the cards and modals
-              events.forEach((event, index) => {
-                const cardHTML = `
-                <div class="col-lg-4 col-md-6 col-sm-6 p-2">
-                    <figure id="fig${index}" class="imageRoll" style="--imageUrl: url('../images/events/${event.Image}');">
-                    <i><i><i><i><i><i><i><i><i><i>
-                        <i><i><i><i><i><i><i><i><i><i>
-                            <i><i><i><i><i><i><i><i><i><i>
-                                <i><i><i><i><i><i><i><i><i><i>
-                                    <i><i><i><i><i><i><i><i><i><i>
-                                        <i><i><i><i><i><i><i><i><i><i>                            
-                                        </i></i></i></i></i></i></i></i></i></i>
-                                    </i></i></i></i></i></i></i></i></i></i>
-                                </i></i></i></i></i></i></i></i></i></i>
-                            </i></i></i></i></i></i></i></i></i></i>
-                        </i></i></i></i></i></i></i></i></i></i>
-                    </i></i></i></i></i></i></i></i></i></i>
-                    <figcaption class="">
-        <strong>
-          ${event.Event_Name}
-        </strong>
-        <div class="card-footer border ">
-          <button id="btn_${index}" class="btn modalBtn menu-button-class">Event Details</button>
-        </div>
-      </figcaption>
-    </figure>
-  </div>
-`;
-
-                const modalHTML = `
-<div id='modal_${index}' class='modal'>
-    <!-- Modal content -->
-    <div class='emodal-content' id='modalContent_${index}' aria-labelledby='${event.Event_No}'
-        data-bs-parent='#${event.Event_No}'>
-        <p class='eclose'>&times;</p>
-        <div class='emodal-header'>
-            <div class='emodal-header-border'>
-                <div class='emodal-headings'>
-                    <img src='assets/images/events/${event.Image}' alt='${event.Image}'>
-                    <div class='title'>
-                        <h2 class='modal__title'>${event.Event_Name} </h2>
-                        <h4 style='color: rgba(255, 255, 255, 0.747);'>${event.Event_Descript}</h4>
+  // Function to close a modal
+  function closeModal(modal) {
+    modal.style.display = "none";
+  }
+                        </script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+                        <footer>
+                            <div class="wave wave1">
+                                <div class="footer-content">
+                                    <p>
+                                        Copyright &#169; Rukmini Devi Public School, Pitampura
+                                        <br>
+                                        Developed By : Arjan Singh Jassal
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="wave wave2"></div>
+                            <div class="wave wave3"></div>
+                            <div class="wave wave4"></div>
+                        </footer>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class='emodal-body'>
-            <blockquote style='color: rgba(255, 255, 255, 0.747);'>
-                <h5>
-                    <i>${event.Event_About}</i>
-                </h5>
-            </blockquote>
-            <br>
-            <h5 style='color: rgba(255, 255, 255, 0.747);'>General Instructions: <br> ${event.Instructions}</h5><br>
-            <br>
-            <p>
-            <h5><b>Eligibility</b> : ${event.Eligibility}</h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Team Size</b>: ${event.Team_Size}</h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Team allowed per School</b>: ${event.No_of_Teams}</h5>
-            </p>
-            <br>
-            <p>
-            <h5><b>Theme </b></h5>
-            </p>
-            <br>
-            <p>
-            <h5> <b><u>Judgement Criteria:</u> </b></h5>
-            <ul>
-                ${event.Judgment}
-            </ul>
-            </p>
-            <br>
-            <p>
-            <h5><b>Teacher In-charge</b> : Ms. Kanika Gupta</h5>
-            <h5><b>Contact Number</b> : 9811661581</h5>
-            </p>
-            <br>
-            <br>
-        </div>
-    </div>
-</div>
-                `;
-                document.getElementById('card-group').innerHTML += cardHTML;
-                document.getElementById('modals').innerHTML += modalHTML;
-              });
-              // Add event listeners to the buttons and modals
-              document.querySelectorAll('.modalBtn').forEach(function (button) {
-                button.onclick = function () {
-                  var modalId = button.id.replace('btn_', 'modal_');
-                  var modal = document.getElementById(modalId);
-                  openModal(modal);
-                };
-              });
-              document.querySelectorAll('.eclose').forEach(function (closeBtn) {
-                closeBtn.onclick = function () {
-                  var modal = closeBtn.closest('.modal');
-                  closeModal(modal);
-                };
-              });
-              window.onclick = function (event) {
-                document.querySelectorAll('.modal').forEach(function (modal) {
-                  if (event.target == modal) {
-                    closeModal(modal);
-                  }
-                });
-              }
-            });
-          // Function to open a modal
-          function openModal(modal) {
-            modal.style.display = "block";
-          }
-          // Function to close a modal
-          function closeModal(modal) {
-            modal.style.display = "none";
-          }
-        </script>
-        <!-- Wavy Footer Starts -->
-        <footer>
-          <div class="wave wave1">
-            <div class="footer-content">
-              <p>Copyright &#169; Rukmini Devi Public School, Pitampura
-                <br>Developed By : Arjan Singh Jassal
-              </p>
-            </div>
-          </div>
-          <div class="wave wave2"></div>
-          <div class="wave wave3"></div>
-          <div class="wave wave4"></div>
-        </footer>
-    </div>
-  </div>
-  </div>
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script src="assets/js/modernizr-2.6.2.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-</body>
-
-</html>
+            <script src="vendor/jquery/jquery.slim.min.js"></script>
+            <script src="vendor/jquery/jquery.min.js"></script>
+            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/js/owl-carousel.js"></script>
+            <script src="assets/js/animation.js"></script>
+            <script src="assets/js/custom.js"></script>
+            <script src="assets/js/modernizr-2.6.2.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        </body>
+    </html>
