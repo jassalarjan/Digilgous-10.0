@@ -8,6 +8,7 @@
     position: relative;
     padding-bottom: 2em;
     cursor: pointer;
+    z-index: 1000000;
 }
 
 .btn-scroll-top>div,
@@ -965,11 +966,12 @@ figure img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background-dark.jpeg");
     background-size: cover;
     background-position: center;
     /*  this is where the magic happens:  */
     background-attachment: fixed;
+    
 }
 
 .buffer,
@@ -982,6 +984,7 @@ figure img {
 .para-2 {
     /* background-image: url("../assets/images/background.jpg"); */
     background-attachment: fixed;
+    background-color: #000000;
     /* height: 1200px; */
 }
 
@@ -1068,4 +1071,14 @@ figure img {
     align-items: center;
     border-radius: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.info-circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    padding: 1.5rem;
+    font-size: 40px;
+    /* background-color: #fff; */
+    border: 1px #fff solid;
 }

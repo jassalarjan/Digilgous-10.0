@@ -20,6 +20,7 @@
         <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/fontawesome.css">
         <link rel="stylesheet" href="assets/css/animated.css">
+        <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
         <!---------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
                                     MY CSS
@@ -427,7 +428,7 @@
 ------------------------------------------------------------------------------------------>
                 <section class="parallax-container para-2">
                     <div id="about" class="about-us section ">
-                        <div class="bg-success bg-opacity-10 p-5 pt-2 pb-1 rounded-5 m-2 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div style="background-color: rgba(255,255,255,0.5);" class="p-5 pt-2 pb-1 rounded-5 m-2 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
                             <center>
                                 <div class="section-heading">
                                     <h6>About us</h6>
@@ -458,74 +459,6 @@
                 <!---------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
                                 About Us Section End
-------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------->
-                <!---------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------
-                                    Team Start
-------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------->
-                <section id="team">
-                    <div class="wow fadeIn">
-                        <div class="expert-team">
-                            <div class="container">
-                                <center>
-                                    <div class="section-heading">
-                                        <h6> DIGILOGOUS 10.0 Core Team</h6>
-                                    </div>
-                                    <hr class="solid2">
-                                </center>
-                                <div id="team-sect"></div>
-                                <center>
-                                    <div class="section-heading">
-                                        <h6> DIGILOGOUS 10.0 Alumini Team</h6>
-                                    </div>
-                                    <hr class="solid2">
-                                </center>
-                                <div id="team-sect-2"></div>
-                                <script>
-          // Load the CSV file
-          fetch('team.csv')
-            .then(response => response.text())
-            .then(data => {
-              const rows = data.split('\n');
-              const headers = rows[0].split(',');
-              const teams = [];
-
-              // Parse the CSV data
-              for (let i = 1; i < rows.length; i++) {
-                const row = rows[i].split(',');
-                const team = {};
-                for (let j = 0; j < headers.length; j++) {
-                  team[headers[j]] = row[j];
-                }
-                teams.push(team);
-              }
-
-              // Add the cards and modals
-              teams.forEach((team, index) => {
-                const cardHTML = `
-                <div class="our-team m-1">
-                    <img class="pic" src="./assets/images/team/${team.Core_team}" alt="">
-                </div>           
-`; 
-                document.getElementById('team-sect').innerHTML += cardHTML;
-                const team_2 = `
-                <div class="our-team m-1">
-                    <img class="pic" src="./assets/images/team/${team.Alumini}" alt="">
-                </div>           
-`; 
-                document.getElementById('team-sect-2').innerHTML += team_2;
-              });
-            });
-                                </script>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!---------------------------------------------------------------------------------------
-------------------------------------------------------------------------------------------
-                                    Team End
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------>
                 <!---------------------------------------------------------------------------------------
@@ -567,9 +500,11 @@
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------>
                 <center>
-                    <div class="info-box align-content-center">
+                    <div class="info-box align-content-center m-5 p-5 buffer">
                         <div class="info-box__content">
-                            <i class="text-white fa fa-circle-info"></i>
+                            <div class="info-circle">
+                                <i class="lni lni-information text-center"></i>
+                            </div>
                             <div class="info-box__title fs-2">General Instructions</div>
                             <br>
                             <br>
@@ -582,37 +517,75 @@
                         </div>
                     </div>
                 </center>
-                <!-- <div style="position: relative;" id="features" class="features">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="features-content">
-                                    <div class="row">
-                                        <div id="first" class="col-lg-6 col-md-6 col-sm-12">
-                                            <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                                                <div class="first-number number">
-                                                    <h6>01</h6>
-                                                </div>
-                                                <div class="icon"></div>
-                                                <h4>General Instructions</h4>
-                                                <div class="line-dec"></div>
-                                                <div class="btn">
-                                                    <p class="bts">
-                                                        <a style="color: #fff; text-decoration: none;" href=" https://drive.google.com/file/d/1eBlXtuKZ5NLVT0KYURqUSaAw2nikhI6h/view?usp=drive_link
-                                                        ">Details</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 <!---------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
                                 Genereal Instructions End
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
+                <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Team Start
+------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------>
+                <section class="parallax-container para-2" id="team">
+                    <div class="wow fadeIn">
+                        <div class="expert-team">
+                            <div class="container">
+                                <center>
+                                    <div class="section-heading">
+                                        <h6> DIGILOGOUS 10.0 Core Team</h6>
+                                    </div>
+                                </center>
+                                <div class="mb-4" id="team-sect"></div>
+                                <center>
+                                    <div class="section-heading mt-5">
+                                        <h6> DIGILOGOUS 10.0 Alumini Team</h6>
+                                    </div>
+                                </center>
+                                <div id="team-sect-2"></div>
+                                <script>
+          // Load the CSV file
+          fetch('team.csv')
+            .then(response => response.text())
+            .then(data => {
+              const rows = data.split('\n');
+              const headers = rows[0].split(',');
+              const teams = [];
+
+              // Parse the CSV data
+              for (let i = 1; i < rows.length; i++) {
+                const row = rows[i].split(',');
+                const team = {};
+                for (let j = 0; j < headers.length; j++) {
+                  team[headers[j]] = row[j];
+                }
+                teams.push(team);
+              }
+
+              // Add the cards and modals
+              teams.forEach((team, index) => {
+                const cardHTML = `
+                <div class="our-team m-3">
+                    <img class="pic" src="./assets/images/team/${team.Core_team}" alt="">
+                </div>           
+`; 
+                document.getElementById('team-sect').innerHTML += cardHTML;
+                const team_2 = `
+                <div class="our-team m-3">
+                    <img class="pic" src="./assets/images/team/${team.Alumini}" alt="">
+                </div>           
+`; 
+                document.getElementById('team-sect-2').innerHTML += team_2;
+              });
+            });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------
+                                    Team End
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------>
                 <!---------------------------------------------------------------------------------------
