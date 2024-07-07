@@ -960,7 +960,7 @@ figure img {
     text-align: center;
     color: var(--color);
     width: 100%;
-    min-height: 90vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
