@@ -302,18 +302,19 @@ body {
   border-bottom: 2px solid #33ccc5 !important;
 }
 
+
 /* ---------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
                                         Header Area 
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------*/
-
+/* 
 .main-nav {
   align-items: center;
 }
 
 .background-header {
-  background-color: rgb(30, 41, 75) !important;
+  background-color:  #2ab0a9 !important;
   height: 80px !important;
   position: fixed !important;
   top: 0px;
@@ -337,14 +338,14 @@ body {
 }
 
 .header-area {
-  /* background-color: rgb(0, 104, 145); */
+  background-color: rgb(0, 104, 145);
   background-color: #2ab0a9;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;
+  top: 0; 
+  width: 100%; 
   left: 0px;
   right: 0px;
-  z-index: 100;
+  z-index: 100000;
   height: 100px;
   -webkit-transition: all 0.5s ease 0s;
   -moz-transition: all 0.5s ease 0s;
@@ -428,7 +429,7 @@ body {
   display: block;
   font-weight: 500;
   font-size: 15px;
-  /* color: #fff; */
+  color: #fff;
   text-transform: capitalize;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -493,7 +494,7 @@ body {
 .header-area .main-nav .nav li.submenu ul li a {
   opacity: 1;
   display: block;
-  /* background: #f7f7f7; */
+  background: #f7f7f7;
   color: #2a2a2a !important;
   padding-left: 20px;
   height: 40px;
@@ -668,7 +669,7 @@ body {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 76px) {
   .header-area .main-nav .nav {
     float: right;
     margin-top: 100px;
@@ -696,7 +697,6 @@ body {
     width: 100%;
   }
   .header-area {
-    background-color: rgb(47, 47, 47);
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
@@ -784,13 +784,7 @@ body {
   .header-area .main-nav .nav li.submenu:focus ul {
     height: 0px;
   }
-}
-
-@media (min-width: 767px) {
-  .header-area .main-nav .nav {
-    display: flex !important;
-  }
-}
+} */
 
 /* ---------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
@@ -1026,6 +1020,8 @@ body {
   justify-items: center;
   padding-left: 10vw;
   padding-right: 10vw;
+  background-color: rgba(68, 68, 68, 0.5); 
+  z-index: 10;
 }
 
 .about-us p {

@@ -851,6 +851,8 @@ TEAM
 
 .team {
   padding-bottom: 25px;
+background-color: rgba(53, 53, 53, 0.5); 
+z-index: 10;
 }
 
 .expert-team {
@@ -894,7 +896,7 @@ TEAM
   position: relative;
   border: 1px solid #00bed3;
   transition: all 0.5s ease 0s;
-  width: 300px;
+  width: 250px;
 }
 
 .our-team:hover .pic {
@@ -1118,8 +1120,8 @@ In the memory of
 }
 
 .text-center h1 {
-  font-weight: 50;
-  font-size: 50px;
+  font-weight: 500;
+  /* font-size: 50px; */
 }
 
 .jumbotron.jumbotron-end {
@@ -1237,10 +1239,17 @@ In the memory of
     font-size: 24px;
   }
   .digi-title{  
-    font-size: 48px;
+    font-size: 40px;
     font-family: Source Sans Pro;
   }
   
+  
+}
+
+@media only screen and (max-width: 426px) {
+  .big-logo{  
+    width: 100px;
+  }
   
 }
 

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Image Gallery</title>
+<style>
+    /* styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333;
+}
+
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-30deg) rotateY(-45deg);
+    animation: rotate 10s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #333;
+}
+
+.front  { transform: translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.right  { transform: rotateY(90deg) translateZ(100px); }
+.top    { transform: rotateX(90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+@keyframes rotate {
+    from {
+        transform: rotateX(-30deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(-30deg) rotateY(315deg);
+    }
+}
+
+</style>
+<script>
+    // script.js
+const cube = document.querySelector('.cube');
+let isDragging = false;
+let startX, startY;
+let initialRotX = -30, initialRotY = -45;
+let currentRotX = initialRotX, currentRotY = initialRotY;
+
+cube.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        const deltaX = e.clientX - startX;
+        const deltaY = e.clientY - startY;
+        currentRotY = initialRotY + deltaX * 0.5;
+        currentRotX = initialRotX - deltaY * 0.5;
+        cube.style.transform = `rotateX(${currentRotX}deg) rotateY(${currentRotY}deg)`;
+    }
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    initialRotX = currentRotX;
+    initialRotY = currentRotY;
+});
+
+</script>
+</head>
+<body>
+    <div class="scene">
+        <div class="cube">
+<div class="face front"><img src="image1.jpg" alt="Front"></div>
+<div class="face back"><img src="image2.jpg" alt="Back"></div>
+<div class="face left"><img src="image3.jpg" alt="Left"></div>
+<div class="face right"><img src="image4.jpg" alt="Right"></div>
+<div class="face top"><img src="image5.jpg" alt="Top"></div>
+<div class="face bottom"><img src="image6.jpg" alt="Bottom"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
