@@ -471,11 +471,18 @@
                             <div class="container">
                                 <center>
                                     <div class="section-heading">
-                                        <h6> DIGILOGOUS 10.0 Team</h6>
+                                        <h6> DIGILOGOUS 10.0 Core Team</h6>
                                     </div>
                                     <hr class="solid2">
                                 </center>
                                 <div id="team-sect"></div>
+                                <center>
+                                    <div class="section-heading">
+                                        <h6> DIGILOGOUS 10.0 Alumini Team</h6>
+                                    </div>
+                                    <hr class="solid2">
+                                </center>
+                                <div id="team-sect-2"></div>
                                 <script>
           // Load the CSV file
           fetch('team.csv')
@@ -503,6 +510,12 @@
                 </div>           
 `; 
                 document.getElementById('team-sect').innerHTML += cardHTML;
+                const team_2 = `
+                <div class="our-team m-1">
+                    <img class="pic" src="./assets/images/team/${team.Alumini}" alt="">
+                </div>           
+`; 
+                document.getElementById('team-sect-2').innerHTML += team_2;
               });
             });
                                 </script>
@@ -553,7 +566,23 @@
                                 General Instructions Start
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------>
-                <div style="position: relative;" id="features" class="features">
+                <center>
+                    <div class="info-box align-content-center">
+                        <div class="info-box__content">
+                            <i class="text-white fa fa-circle-info"></i>
+                            <div class="info-box__title fs-2">General Instructions</div>
+                            <br>
+                            <br>
+                            <div class="btn">
+                                <p class="bts">
+                                    <a style="color: #fff; text-decoration: none;" href=" https://drive.google.com/file/d/1eBlXtuKZ5NLVT0KYURqUSaAw2nikhI6h/view?usp=drive_link
+                                                        ">Details</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </center>
+                <!-- <div style="position: relative;" id="features" class="features">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-8">
@@ -580,7 +609,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!---------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------
                                 Genereal Instructions End
@@ -847,6 +876,8 @@
     <script src="assets/js/modernizr-2.6.2.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="assets/js/circles.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/9358c2b7ff.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="assets/js/all.min.js"></script> -->
     <script>
         var slideIndex = 1;
         showSlides(slideIndex);
