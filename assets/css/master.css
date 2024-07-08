@@ -914,28 +914,29 @@ z-index: 10;
   opacity: 0;
   transform-origin: 0 0 0;
   transition: all 0.5s ease 0s;
-}
-
-.our-team:hover .pic:after {
-  height: 100%;
-  opacity: 0.85;
-}
-
-.our-team img {
-  width: 100%;
-  height: auto;
-}
-
+  }
+  
+  .our-team:hover .pic:after {
+    height: 100%;
+    background-color: rgba(52, 52, 52, 0.5);
+    opacity: 0.5;
+    }
+    
+    .our-team img {
+      width: 100%;
+      height: auto;
+      }
+      
 .our-team .team-content {
   width: 100%;
   position: absolute;
-  top: -50%;
+  /* top:40%; */
   left: 0;
   transition: all 0.5s ease 0.2s;
 }
 
 .our-team:hover .team-content {
-  top: 38%;
+  top: 62%;
 }
 
 .our-team .title {
