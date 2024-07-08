@@ -161,44 +161,62 @@
                                     Header Area end
 ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------>
-                    <div class="gallery">
+                    <div class="gallery  section pb-5">
                         <div class="container">
                             <div class="row">
+                                <div style="z-index: 10;" class="section-heading">
+                                    <h6>Events</h6>
+                                </div>
                                 <div class="event-content"></div>
                             </div>
                         </div>
                     </div>
-                    <canvas style=" position: fixed;top: 0;left: 0; height: 1000px;" id="Matrix"></canvas>
+                    <canvas style=" position: fixed;top: 0;left: 0; height: 1000px; z-index: 0;" id="Matrix"></canvas>
                     <script>
-        const canvas = document.getElementById('Matrix');
-        const context = canvas.getContext('2d');
-        const katakana = '10.0  ';
-        const nums = 'DIGILOGOUS ';
-        const alphabet = katakana + nums;
-        const fontSize = 16;
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        const rows = Math.floor(canvas.height / fontSize);
-        const rainDrops = [];
-        for (let y = 0; y < rows; y++) {
-          rainDrops[y] = Math.floor(Math.random() * canvas.width / fontSize);
-        }
-        const draw = () => {
-          context.fillStyle = 'rgba(0, 0, 0, 0.05)';
-          context.fillRect(0, 0, canvas.width, canvas.height);
-          context.fillStyle = '#4DA699';
-          context.font = fontSize + 'px monospace';
-          for (let i = 0; i < rainDrops.length; i++) {
-            const text = alphabet.charAt((rainDrops[i]) % alphabet.length);
-            context.fillText(text, rainDrops[i] * fontSize, i * fontSize);
+                const canvas = document.getElementById('Matrix');
+                const context = canvas.getContext('2d');
 
-            if (rainDrops[i] * fontSize > canvas.width && Math.random() > 0.975) {
-              rainDrops[i] = 0;
-            }
-            rainDrops[i]++;
-          }
-        }
-        setInterval(draw, 100);
+                const katakana = '10.0  ';
+                const nums = 'DIGILOGOUS ';
+
+                const alphabet = katakana + nums;
+
+                const fontSize = 16;
+
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+
+                context.fillStyle = 'black';
+                context.fillRect(0, 0, canvas.width, canvas.height);
+
+                const rows = Math.floor(canvas.height / fontSize);
+                const rainDrops = [];
+
+                for (let y = 0; y < rows; y++) {
+                    rainDrops[y] = Math.floor(Math.random() * canvas.width / fontSize);
+                }
+
+                const draw = () => {
+                    context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                    context.fillRect(0, 0, canvas.width, canvas.height);
+
+                    context.fillStyle = '#4DA699';
+                    context.font = fontSize + 'px monospace';
+
+                    for (let i = 0; i < rainDrops.length; i++) {
+                        const text = alphabet.charAt((rainDrops[i]) % alphabet.length);
+                        context.fillText(text, rainDrops[i] * fontSize, i * fontSize);
+
+                        if (rainDrops[i] * fontSize > canvas.width && Math.random() > 0.975) {
+                            rainDrops[i] = 0;
+                        }
+
+                        rainDrops[i]++;
+                    }
+                }
+
+                setInterval(draw, 100);
                     </script>
                     <section class="property">
                         <div class="event-content">
