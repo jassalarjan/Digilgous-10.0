@@ -977,7 +977,8 @@ figure img {
 .buffer,
 .other {
     width: 100%;
-    min-height: 60vh;
+    padding: 2rem;
+    /* min-height: 50vh; */
     /* background-color: var(--color); */
 }
 
@@ -1021,11 +1022,12 @@ figure img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    /* height: 300px; */
     border-radius: 4px;
     text-align: center;
     overflow: hidden;
     transition: 0.5s;
+    width: 100%;
 }
 
 .containbar .cardbar:hover {
@@ -1060,8 +1062,8 @@ figure img {
 ------------------------------------------------------------------------------------------*/
 
 .info-box{
-    width: 300px;
-    height: 300px;
+    width: 50%;
+    height: 500px;
     background: #6cbbb7;
     vertical-align: middle;
     align-items: center;
